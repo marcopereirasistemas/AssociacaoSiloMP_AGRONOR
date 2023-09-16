@@ -65,11 +65,14 @@ Public Class formPrincipal
         CarregaAssociacoes()
 
         Rotinas.EscreverEmLog("Associação Iniciada.", ClasseRotinasDiversas.Tipo.Geral)
-        '1598; 892
+
         Me.Width = 1598
         Me.Height = 892
+
         StartPosition = FormStartPosition.CenterParent
+
         'WindowState = FormWindowState.Maximized
+
     End Sub
 
     Private Sub DataGridView1_CellClick(sender As System.Object, e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellClick

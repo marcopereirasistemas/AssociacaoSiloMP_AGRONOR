@@ -49,7 +49,7 @@ Partial Class formPrincipal
         '
         'lblMensagem
         '
-        Me.lblMensagem.Size = New System.Drawing.Size(29687, 17)
+        Me.lblMensagem.Size = New System.Drawing.Size(30506, 17)
         Me.lblMensagem.Text = ""
         '
         'DataGridView1
@@ -83,7 +83,7 @@ Partial Class formPrincipal
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.LightGray
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkGray
         DataGridViewCellStyle4.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
         DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
@@ -179,10 +179,11 @@ Partial Class formPrincipal
         Me.btnDesassociarTodos.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDesassociarTodos.Image = Global.AssociacaoSiloMP.My.Resources.Resource1.cancel
         Me.btnDesassociarTodos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnDesassociarTodos.Location = New System.Drawing.Point(1158, 456)
-        Me.btnDesassociarTodos.Margin = New System.Windows.Forms.Padding(50, 4, 50, 4)
+        Me.btnDesassociarTodos.Location = New System.Drawing.Point(387, 456)
+        Me.btnDesassociarTodos.Margin = New System.Windows.Forms.Padding(10)
         Me.btnDesassociarTodos.Name = "btnDesassociarTodos"
-        Me.btnDesassociarTodos.Size = New System.Drawing.Size(324, 54)
+        Me.btnDesassociarTodos.Padding = New System.Windows.Forms.Padding(2)
+        Me.btnDesassociarTodos.Size = New System.Drawing.Size(350, 54)
         Me.btnDesassociarTodos.TabIndex = 27
         Me.btnDesassociarTodos.Text = "Desassociar todos os silos"
         Me.btnDesassociarTodos.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -197,10 +198,11 @@ Partial Class formPrincipal
         Me.btnDesassociar.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDesassociar.Image = Global.AssociacaoSiloMP.My.Resources.Resource1.cancel
         Me.btnDesassociar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnDesassociar.Location = New System.Drawing.Point(970, 456)
+        Me.btnDesassociar.Location = New System.Drawing.Point(182, 456)
         Me.btnDesassociar.Margin = New System.Windows.Forms.Padding(10)
         Me.btnDesassociar.Name = "btnDesassociar"
-        Me.btnDesassociar.Size = New System.Drawing.Size(182, 54)
+        Me.btnDesassociar.Padding = New System.Windows.Forms.Padding(2)
+        Me.btnDesassociar.Size = New System.Drawing.Size(185, 54)
         Me.btnDesassociar.TabIndex = 26
         Me.btnDesassociar.Text = "Desassociar"
         Me.btnDesassociar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -214,7 +216,7 @@ Partial Class formPrincipal
         Me.btnAssociar.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAssociar.Image = Global.AssociacaoSiloMP.My.Resources.Resource1.apply
         Me.btnAssociar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAssociar.Location = New System.Drawing.Point(814, 456)
+        Me.btnAssociar.Location = New System.Drawing.Point(13, 456)
         Me.btnAssociar.Margin = New System.Windows.Forms.Padding(10)
         Me.btnAssociar.Name = "btnAssociar"
         Me.btnAssociar.Size = New System.Drawing.Size(149, 54)
@@ -229,7 +231,7 @@ Partial Class formPrincipal
         Me.Panel2.BackColor = System.Drawing.Color.Yellow
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel2.Controls.Add(Me.Label3)
-        Me.Panel2.Location = New System.Drawing.Point(13, 460)
+        Me.Panel2.Location = New System.Drawing.Point(22, 377)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(788, 46)
         Me.Panel2.TabIndex = 30
@@ -253,6 +255,7 @@ Partial Class formPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.ClientSize = New System.Drawing.Size(1287, 538)
+        Me.ControlBox = False
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.btnFechar)
@@ -262,7 +265,7 @@ Partial Class formPrincipal
         Me.MaximizeBox = True
         Me.MinimizeBox = True
         Me.Name = "formPrincipal"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = " Associação de Silo com Matéria-Prima"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Controls.SetChildIndex(Me.pnlMensagens, 0)
