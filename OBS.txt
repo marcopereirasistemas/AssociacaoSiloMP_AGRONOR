@@ -1,0 +1,40 @@
+﻿
+
+ASSOCIACAOSILOMP - CHAVES:
+-------
+SUPERVISORIO_NODE				=
+PASTA_DYNAMICS					=
+EXE_WORKSPACE					=
+VERIFICA_SUPERVISORIO_ATIVO		=
+UNIDADE_DESCRICAO				=
+GUABI_MISTURA_ConnectionString	=
+
+
+28/11/2020
+---------------------------
+1. EXE separado
+2. incluido na tela de assocociações e pesquisa da materia-prima o lote atual
+
+06/03/2021
+----------
+1. atualizar a tabela de silos			- FEITO
+2. atualizar a tabela de balancas		- FEITO
+3. associar silo x materia-prima		- FEITO 
+4. cadastro de ordens por linha			- FEITO
+5. relatorio por linha, seleção da tela de filto e destaque na impressão
+	1. gravar na pasta c:\automacao\linha	- FEITO
+
+6. troca de lotes, na tela de cadastros - FEITO
+7. troca de silo antes de iniciar a produção
+
+
+        'Dim Processo = System.Diagnostics.Process.GetCurrentProcess()
+        'Dim JaEstaRodando = System.Diagnostics.Process.GetProcessesByName(Processo.ProcessName).Any(Function(P) P.Id <> Processo.Id)
+        '' VB.NET
+        'If (JaEstaRodando) Then
+        '    MsgBox("A ASSOCIAÇÃO JÁ ESTA EM EXECUÇÃO." & vbCrLf & vbCrLf & _
+        '           "UTILIZE O ALT + TAB", _
+        '           MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, _
+        '           "AVISO")
+        '    End
+        'End If
