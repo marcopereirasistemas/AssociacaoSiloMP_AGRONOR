@@ -49,7 +49,7 @@ Partial Class formAssociacaoSelecaoMP
         '
         'lblMensagem
         '
-        Me.lblMensagem.Size = New System.Drawing.Size(5777, 17)
+        Me.lblMensagem.Size = New System.Drawing.Size(6742, 17)
         Me.lblMensagem.Text = ""
         '
         'txtPesquisa
@@ -129,7 +129,7 @@ Partial Class formAssociacaoSelecaoMP
         Me.btnFechar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LemonChiffon
         Me.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnFechar.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnFechar.Image = Global.AssociacaoSiloMP.My.Resources.Resource1.FINALIZAR1
+        Me.btnFechar.Image = Global.AssociacaoSiloMP.My.Resources.Resource1.Sair1
         Me.btnFechar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnFechar.Location = New System.Drawing.Point(1311, 406)
         Me.btnFechar.Name = "btnFechar"
