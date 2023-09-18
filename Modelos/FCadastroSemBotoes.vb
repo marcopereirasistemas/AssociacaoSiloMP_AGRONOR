@@ -31,7 +31,7 @@ Public Class FCadastroSemBotoes
 
         Rotinas = New ClasseRotinasDiversas
 
-        stringConexao = My.Settings.GUABI_MISTURA_ConnectionString
+        stringConexao = My.Settings.JOFEGE_ARGAMASSA_ConnectionString
 
         BancoDados = New ClasseBancoDados(stringConexao)
 

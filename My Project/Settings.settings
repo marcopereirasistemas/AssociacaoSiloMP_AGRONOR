@@ -17,7 +17,7 @@
     <Setting Name="UNIDADE_DESCRICAO" Type="System.String" Scope="User">
       <Value Profile="(Default)">JOFEGE - Argamassa</Value>
     </Setting>
-    <Setting Name="GUABI_MISTURA_ConnectionString" Type="(Connection string)" Scope="Application">
+    <Setting Name="JOFEGE_ARGAMASSA_ConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
   &lt;ConnectionString&gt;Data Source=.\sql2014;Initial Catalog=JOFEGE_ARGAMASSA;User ID=sa;Password=sa@123;MultipleActiveResultSets=TRUE&lt;/ConnectionString&gt;
