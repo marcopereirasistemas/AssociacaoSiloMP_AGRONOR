@@ -122,7 +122,7 @@ Partial Class formCadastro
         '
         'btnExcluir
         '
-        Me.btnExcluir.Image = Global.AssociacaoSiloMP.My.Resources.Resource1.Excluir
+        Me.btnExcluir.Image = Global.AssociacaoSiloMP_JOFEGE.My.Resources.Resource1.Excluir
         Me.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.btnExcluir.Location = New System.Drawing.Point(324, -1)
         Me.btnExcluir.Margin = New System.Windows.Forms.Padding(2)
@@ -136,7 +136,7 @@ Partial Class formCadastro
         'btnClonar
         '
         Me.btnClonar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.btnClonar.Image = Global.AssociacaoSiloMP.My.Resources.Resource1.Clipboard_Copy
+        Me.btnClonar.Image = Global.AssociacaoSiloMP_JOFEGE.My.Resources.Resource1.Clipboard_Copy
         Me.btnClonar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.btnClonar.Location = New System.Drawing.Point(647, -1)
         Me.btnClonar.Margin = New System.Windows.Forms.Padding(2)

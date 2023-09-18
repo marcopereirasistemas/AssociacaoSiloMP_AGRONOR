@@ -113,15 +113,15 @@ Namespace My
                 Me("UNIDADE_DESCRICAO") = value
             End Set
         End Property
-
-        <Global.System.Configuration.ApplicationScopedSettingAttribute(),
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),
-         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=.\sql2014;Initial Catalog=JOFEGE_ARGAMASSA;User ID=sa;Password=sa@123" &
-            ";MultipleActiveResultSets=TRUE")>
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=.\sql2014;Initial Catalog=JOFEGE_ARGAMASSA;User ID=sa;Password=sa@123"& _ 
+            ";MultipleActiveResultSets=TRUE")>  _
         Public ReadOnly Property JOFEGE_ARGAMASSA_ConnectionString() As String
             Get
-                Return CType(Me("JOFEGE_ARGAMASSA_ConnectionString"), String)
+                Return CType(Me("JOFEGE_ARGAMASSA_ConnectionString"),String)
             End Get
         End Property
     End Class
@@ -135,9 +135,9 @@ Namespace My
     Friend Module MySettingsProperty
         
         <Global.System.ComponentModel.Design.HelpKeywordAttribute("My.Settings")>  _
-        Friend ReadOnly Property Settings() As Global.AssociacaoSiloMP.My.MySettings
+        Friend ReadOnly Property Settings() As Global.AssociacaoSiloMP_JOFEGE.My.MySettings
             Get
-                Return Global.AssociacaoSiloMP.My.MySettings.Default
+                Return Global.AssociacaoSiloMP_JOFEGE.My.MySettings.Default
             End Get
         End Property
     End Module

@@ -38,7 +38,7 @@ Public Class formPrincipal
     Dim formTrocarSiloNova As Object
     Dim RotinasDiversas As New ClasseRotinasDiversas
     Dim teclaCtrlPressionada As Boolean
-    Dim Versao As String = " - Versão 1.0.2 - 16/09/2023"
+    Dim Versao As String = " - Versão 1.0.2 - 18/09/2023"
 #End Region
 
 #Region "Eventos de componentes"
@@ -217,14 +217,15 @@ Public Class formPrincipal
         Dim rdrRegistro As SqlDataReader
 
         sqlTemp = "SELECT "
-        sqlTemp += " cs.BalancaID, "
-        sqlTemp += " cs.Numero   , "
-        sqlTemp += " cmp.Descricao "
-        sqlTemp += "FROM cadastrosilos cs "
-        sqlTemp += " LEFT JOIN AssociacaoSiloMP ass     ON ass.siloid = cs.ID "
-        sqlTemp += " LEFT JOIN CadastroMateriaPrima cmp ON ass.CodigoMateriaPrima = cmp.CodigoMateriaPrima "
+        sqlTemp += "    cb.Numero as BalancaNumero, "
+        sqlTemp += "    cs.Numero as SiloNumero   , "
+        sqlTemp += "    cmp.Descricao "
+        sqlTemp += " FROM cadastrosilos cs "
+        sqlTemp += "    LEFT JOIN CadastroBalancas cb		ON cb.id = cs.BalancaID "
+        sqlTemp += "    LEFT JOIN AssociacaoSiloMP ass		ON ass.siloid = cs.ID  "
+        sqlTemp += "    LEFT JOIN CadastroMateriaPrima cmp	ON ass.CodigoMateriaPrima = cmp.CodigoMateriaPrima "
         sqlTemp += " ORDER BY "
-        sqlTemp += "    cs.BalancaID, "
+        sqlTemp += "    cb.Numero, "
         sqlTemp += "    cs.Numero "
 
         Try
@@ -245,10 +246,10 @@ Public Class formPrincipal
 
                 '-- carrega o tag para escrever a descricao da materia-prima associada,
                 '-- o tag é composto pelo numero da balanca e o o numero do silo
-                Rotinas.EscreverEmLog("AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> " & rdrRegistro("BalancaID") & " _SILO_<NUMERO> " & rdrRegistro("NUMERO"), ClasseRotinasDiversas.Tipo.Geral)
+                Rotinas.EscreverEmLog("AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> " & rdrRegistro("BalancaNumero") & " _SILO_<NUMERO> " & rdrRegistro("SiloNumero"), ClasseRotinasDiversas.Tipo.Geral)
                 Rotinas.EscreverEmLog("", ClasseRotinasDiversas.Tipo.Traco)
 
-                TagEscrita = BuscarTag("DESC_MP_ASSOCIADA_B" & rdrRegistro("BalancaID").ToString() & "_SILO_" & rdrRegistro("NUMERO").ToString())
+                TagEscrita = BuscarTag("DESC_MP_ASSOCIADA_B" & rdrRegistro("BalancaNumero").ToString() & "_SILO_" & rdrRegistro("SiloNumero").ToString())
 
                 If TagEscrita <> "" Then
 

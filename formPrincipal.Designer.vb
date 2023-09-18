@@ -1,6 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class formPrincipal
-    Inherits AssociacaoSiloMP.FCadastroSemBotoes
+    Inherits AssociacaoSiloMP_JOFEGE.FCadastroSemBotoes
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()> _
@@ -160,7 +160,7 @@ Partial Class formPrincipal
         Me.btnFechar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LemonChiffon
         Me.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnFechar.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnFechar.Image = Global.AssociacaoSiloMP.My.Resources.Resource1.Sair1
+        Me.btnFechar.Image = Global.AssociacaoSiloMP_JOFEGE.My.Resources.Resource1.Sair1
         Me.btnFechar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnFechar.Location = New System.Drawing.Point(1156, 456)
         Me.btnFechar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
@@ -177,7 +177,7 @@ Partial Class formPrincipal
         Me.btnDesassociarTodos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LemonChiffon
         Me.btnDesassociarTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnDesassociarTodos.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDesassociarTodos.Image = Global.AssociacaoSiloMP.My.Resources.Resource1.cancel
+        Me.btnDesassociarTodos.Image = Global.AssociacaoSiloMP_JOFEGE.My.Resources.Resource1.cancel
         Me.btnDesassociarTodos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnDesassociarTodos.Location = New System.Drawing.Point(387, 456)
         Me.btnDesassociarTodos.Margin = New System.Windows.Forms.Padding(10)
@@ -196,7 +196,7 @@ Partial Class formPrincipal
         Me.btnDesassociar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LemonChiffon
         Me.btnDesassociar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnDesassociar.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDesassociar.Image = Global.AssociacaoSiloMP.My.Resources.Resource1.cancel
+        Me.btnDesassociar.Image = Global.AssociacaoSiloMP_JOFEGE.My.Resources.Resource1.cancel
         Me.btnDesassociar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnDesassociar.Location = New System.Drawing.Point(182, 456)
         Me.btnDesassociar.Margin = New System.Windows.Forms.Padding(10)
@@ -214,7 +214,7 @@ Partial Class formPrincipal
         Me.btnAssociar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LemonChiffon
         Me.btnAssociar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAssociar.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAssociar.Image = Global.AssociacaoSiloMP.My.Resources.Resource1.apply
+        Me.btnAssociar.Image = Global.AssociacaoSiloMP_JOFEGE.My.Resources.Resource1.apply
         Me.btnAssociar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnAssociar.Location = New System.Drawing.Point(13, 456)
         Me.btnAssociar.Margin = New System.Windows.Forms.Padding(10)
