@@ -38,7 +38,7 @@ Public Class formPrincipal
     Dim formTrocarSiloNova As Object
     Dim RotinasDiversas As New ClasseRotinasDiversas
     Dim teclaCtrlPressionada As Boolean
-    Dim Versao As String = " - Versão 1.0.2 - 19/09/2023"
+    Dim Versao As String = " - Versão 1.0.3 - 21/09/2023"
 #End Region
 
 #Region "Eventos de componentes"
