@@ -23,6 +23,7 @@ Partial Class formPrincipal
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(formPrincipal))
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SILONUMERO = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -49,7 +50,7 @@ Partial Class formPrincipal
         '
         'lblMensagem
         '
-        Me.lblMensagem.Size = New System.Drawing.Size(30506, 17)
+        Me.lblMensagem.Size = New System.Drawing.Size(32144, 17)
         Me.lblMensagem.Text = ""
         '
         'DataGridView1
@@ -262,8 +263,7 @@ Partial Class formPrincipal
         Me.Controls.Add(Me.btnDesassociarTodos)
         Me.Controls.Add(Me.btnDesassociar)
         Me.Controls.Add(Me.btnAssociar)
-        Me.MaximizeBox = True
-        Me.MinimizeBox = True
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "formPrincipal"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = " Associação de Silo com Matéria-Prima"
