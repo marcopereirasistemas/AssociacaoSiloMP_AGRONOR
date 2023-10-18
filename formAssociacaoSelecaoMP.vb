@@ -18,8 +18,8 @@ Public Class formAssociacaoSelecaoMP
 #Region "Eventos de Componentes"
 
     Private Sub btnFechar_Click(sender As System.Object, e As System.EventArgs) Handles btnFechar.Click, btnConfirma.Click
-        ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
         MateriaPrimaSelecionada = False
+
         Close()
 
     End Sub

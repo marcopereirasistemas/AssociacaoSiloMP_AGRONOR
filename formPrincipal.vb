@@ -38,7 +38,7 @@ Public Class formPrincipal
     Dim formTrocarSiloNova As Object
     Dim RotinasDiversas As New ClasseRotinasDiversas
     Dim teclaCtrlPressionada As Boolean
-    Dim Versao As String = " - Versão 1.0.3 - 21/09/2023"
+    Dim Versao As String = " - Versão 1.0.4 - 17/10/2023"
 #End Region
 
 #Region "Eventos de componentes"
@@ -211,10 +211,12 @@ Public Class formPrincipal
         Dim sqlTemp As String
         Dim TagEscrita As String
         Dim TagEscritaValor As String = ""
-        Dim NumeroEscritas As Integer = 5
-        Dim IntervaloEntreEscritas As Integer = 50
+        Dim NumeroEscritas As Integer = 3
+        Dim IntervaloEntreEscritas As Integer = 5
         Dim cmdComandoSQL As SqlCommand
         Dim rdrRegistro As SqlDataReader
+        Dim horaInicial As String
+        Dim horaFinal As String
 
         sqlTemp = "SELECT "
         sqlTemp += "    cb.Numero as BalancaNumero, "
@@ -241,6 +243,8 @@ Public Class formPrincipal
             Panel2.Visible = True
 
             Me.Refresh()
+
+            horaInicial = Now.ToString
 
             While rdrRegistro.Read()
 
@@ -275,6 +279,7 @@ Public Class formPrincipal
                 End If
 
             End While
+            horaFinal = Now.ToString
 
             rdrRegistro.Close()
             cmdComandoSQL.Dispose()
@@ -286,6 +291,12 @@ Public Class formPrincipal
                 Process.Start(My.Settings.PASTA_DYNAMICS & "DBBSAVE.exe", "-D")
 
             End If
+
+            MsgBox("LOG DE ESCRITA: " & vbCrLf &
+                   "Inicio: " & horaInicial & vbCrLf &
+                   "Fim:    " & horaFinal,
+                   MessageBoxButtons.OK + MessageBoxIcon.Information,
+                   "Aviso")
 
         Catch ex As Exception
 
