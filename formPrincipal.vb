@@ -256,6 +256,20 @@ Public Class formPrincipal
         sqlTemp += "    cb.Numero, "
         sqlTemp += "    cs.Numero "
 
+
+        'Select Case
+        'cs.id,
+        'cb.Numero As BalancaNumero, 
+        'cs.Numero as SiloNumero,
+        'ass.codigoMateriaPrima,
+        'cmp.Descricao,
+        '(SELECT Tipo_Tag FROM Referencia_Tag r WHERE r.Tipo_Tag Like 'DESC_MP_ASSOCIADA_B'+LTRIM(RTRIM(STR(CB.NUMERO)))+'_SILO_'+LTRIM(RTRIM(STR(CS.Numero)))) AS TIPO_TAG
+        'From cadastrosilos cs 	
+        'Left Join AssociacaoSiloMP ass		ON ass.siloid = cs.ID      
+        'Left Join CadastroBalancas cb		ON cb.id = cs.BalancaID     
+        'Left Join CadastroMateriaPrima cmp	ON ass.CodigoMateriaPrima = cmp.CodigoMateriaPrima  
+        'ORDER BY cb.Numero, cs.Numero 
+
         Try
 
             btnFechar.Enabled = False
