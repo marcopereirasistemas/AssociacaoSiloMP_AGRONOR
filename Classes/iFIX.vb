@@ -71,9 +71,9 @@ Public Class iFIX
 
     End Function
 
-    Public Sub EscreverNoTag(ByVal strEscreverNoTag As String, ByVal strTagGrupo As String, ByVal ValorEscreverNoTag As Object)
-        Dim FdsTemp As New FixDataSystem
-
+    Public Sub EscreverNoTag(ByVal strEscreverNoTag As String, ByVal strTagGrupo As String, ByVal ValorEscreverNoTag As Object, ByRef _FdsTemp As FixDataSystem)
+        'Dim FdsTemp As New FixDataSystem
+        Dim _tag As String = My.Settings.SUPERVISORIO_NODE & "." & strEscreverNoTag.ToString
         Try
             '-- A_DESC
             If strEscreverNoTag.Substring(strEscreverNoTag.Length - 6, 6) = "A_DESC" Then
@@ -91,11 +91,15 @@ Public Class iFIX
                 ValorEscreverNoTag = Convert.ToDouble(Replace(ValorEscreverNoTag, ".", ","))
             End If
 
-            FdsTemp.Groups.Add(strTagGrupo)
-            FdsTemp.Groups.item(strTagGrupo).dataitems.add(My.Settings.SUPERVISORIO_NODE & "." & strEscreverNoTag.ToString)
-            FdsTemp.Groups.item(strTagGrupo).dataitems.item(1).VALUE = ValorEscreverNoTag
-            FdsTemp.Groups.item(strTagGrupo).write()
-            FdsTemp.Groups.REMOVE(strTagGrupo)
+            'FDS.Groups.Item(Grupo).DataItems.Add(str_NodeDaAplicacao & Tag)
+            'FDS.Groups.Item(Grupo).DataItems.Item(str_NodeDaAplicacao & Tag).Value = Valor
+            'FDS.Groups.Item(Grupo).DataItems.Item(str_NodeDaAplicacao & Tag).Write(Valor)
+
+            _FdsTemp.Groups.Add(strTagGrupo)
+            _FdsTemp.Groups.item(strTagGrupo).dataitems.add(_tag)
+            _FdsTemp.Groups.item(strTagGrupo).dataitems.item(1).VALUE = ValorEscreverNoTag
+            _FdsTemp.Groups.item(strTagGrupo).write()
+            _FdsTemp.Groups.REMOVE(strTagGrupo)
 
         Catch ex As Exception
 
@@ -105,10 +109,10 @@ Public Class iFIX
 
     End Sub
 
-    Public Sub SupervisorioEscrever( _
-                            ByVal parTagEscrever As String, _
-                            ByVal parTagGrupo As String, _
-                            ByVal parValorEscreverNoTag As VariantType, _
+    Public Sub SupervisorioEscrever(
+                            ByVal parTagEscrever As String,
+                            ByVal parTagGrupo As String,
+                            ByVal parValorEscreverNoTag As VariantType,
                             Optional ByVal parEscreverTipo As TagTipoEscrita = TagTipoEscrita.Data_Texto)
 
         Dim FdsTemp As New FixDataSystem
@@ -148,9 +152,9 @@ Public Class iFIX
 
     End Sub
 
-    Public Sub Escrever(ByVal parTagEscrever As String, _
-                        ByVal parTagGrupo As String, _
-                        ByVal parValorEscreverNoTag As Object, _
+    Public Sub Escrever(ByVal parTagEscrever As String,
+                        ByVal parTagGrupo As String,
+                        ByVal parValorEscreverNoTag As Object,
                         ByVal parEscritas As Integer,
                         Optional ByVal parIntervalo As Double = 250,
                         Optional ByVal parEscreverTipo As TagTipoEscrita = TagTipoEscrita.Data_Texto)
@@ -198,11 +202,6 @@ Public Class iFIX
 
 
     End Sub
-
-
-
-
-
 
     Public Sub EscreverNoTagFloatDouble(ByVal strEscreverNoTag As String, ByVal strTagGrupo As String, ByVal ValorEscreverNoTag As Double)
 
@@ -273,6 +272,74 @@ Public Class iFIX
         End Try
 
     End Sub
+
+
+
+#Region "Teste - 18/10/23"
+
+    Public Sub SupervisorioCriarTagGrupo(ByVal strTagGrupo As String, ByRef _FdsTemp As FixDataSystem)
+        _FdsTemp.Groups.Add(strTagGrupo)
+    End Sub
+
+    Public Sub SupervisorioAdicionarItemTagGrupo(ByVal _tagItemID As Integer,
+                                                ByVal _escreverNoTag As String,
+                                                ByVal _tagGrupo As String,
+                                                ByVal _valorEscreverNoTag As Object,
+                                                ByRef _FdsTemp As FixDataSystem)
+        'Dim FdsTemp As New FixDataSystem
+        Dim _tag As String = My.Settings.SUPERVISORIO_NODE & "." & _escreverNoTag.ToString
+        Try
+            '-- A_DESC
+            If _escreverNoTag.Substring(_escreverNoTag.Length - 6, 6) = "A_DESC" Then
+                _valorEscreverNoTag = CStr(_valorEscreverNoTag)
+            End If
+
+            '-- A_CV
+            If _escreverNoTag.Substring(_escreverNoTag.Length - 4, 4) = "A_CV" Then
+                _valorEscreverNoTag = CStr(_valorEscreverNoTag)
+            End If
+
+            '-- <> A_DESC 
+            '-- <> A_CV
+            If _escreverNoTag.Substring(_escreverNoTag.Length - 6, 6) <> "A_DESC" And _escreverNoTag.Substring(_escreverNoTag.Length - 6, 6) = "A_CV" Then
+                _valorEscreverNoTag = Convert.ToDouble(Replace(_valorEscreverNoTag, ".", ","))
+            End If
+
+            'FDS.Groups.Item(Grupo).DataItems.Add(str_NodeDaAplicacao & Tag)
+            'FDS.Groups.Item(Grupo).DataItems.Item(str_NodeDaAplicacao & Tag).Value = Valor
+            'FDS.Groups.Item(Grupo).DataItems.Item(str_NodeDaAplicacao & Tag).Write(Valor)
+
+            '_FdsTemp.Groups.Add(_tagGrupo)
+            _FdsTemp.Groups.item(_tagGrupo).dataitems.add(_tag)
+            _FdsTemp.Groups.item(_tagGrupo).dataitems.item(_tagItemID).VALUE = _valorEscreverNoTag
+            '_FdsTemp.Groups.item(_tagGrupo).write()
+            '_FdsTemp.Groups.REMOVE(_tagGrupo)
+
+        Catch ex As Exception
+
+            MsgBox("EscreverNoTag(): Erro: " & ex.Message)
+
+        End Try
+
+    End Sub
+
+    Public Sub SupervisorioEsreverTagItens(ByVal strTagGrupo As String, ByRef _FdsTemp As FixDataSystem)
+
+        Try
+
+            _FdsTemp.Groups.item(strTagGrupo).write()
+            _FdsTemp.Groups.REMOVE(strTagGrupo)
+
+        Catch ex As Exception
+
+            MsgBox("SupervisorioEsreverTagItens(): Erro: " & ex.Message)
+
+        End Try
+
+    End Sub
+
+#End Region
+
 
 
 End Class

@@ -13,6 +13,7 @@ Imports System.Collections
 Imports System.Diagnostics
 Imports System.Threading
 Imports System.ComponentModel
+Imports FixDataSystems
 
 Public Class formPrincipal
 
@@ -29,6 +30,8 @@ Public Class formPrincipal
         Public Mensagem As String
     End Structure
 
+    Dim FdsTemp As New FixDataSystem
+
     Dim FIX As New iFIX
     Dim AssociacaoSiloID As Integer
     Dim AssiciacaoSiloDescricao As String
@@ -38,7 +41,11 @@ Public Class formPrincipal
     Dim formTrocarSiloNova As Object
     Dim RotinasDiversas As New ClasseRotinasDiversas
     Dim teclaCtrlPressionada As Boolean
-    Dim Versao As String = " - Versão 1.0.4 - 17/10/2023"
+    Dim Versao As String = " - Versão 1.0.5 - 18/10/2023"
+    Dim horaInicioEnvio As String
+    Dim horaFinalEnvio As String
+    Dim horaInicial As DateTime
+    Dim horaFinal As DateTime
 #End Region
 
 #Region "Eventos de componentes"
@@ -47,10 +54,26 @@ Public Class formPrincipal
         Dim TextoMensagem As String = "ATENÇÃO:" & vbCrLf & vbCrLf &
                                         "Atualizar o supervisório com as descrições" & vbCrLf &
                                         "das matérias-primas associadas aos Silos ???"
+        Dim ini As String
+        Dim fin As String
+        Dim temp As String
 
         If MsgBox(TextoMensagem, MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirmação") = vbYes Then
 
             AtualizaAssociacoesSupervisorio()
+
+            If Rotinas.ArquivoExistePastaAplicacao("TESTE.TXT") Then
+
+                ini = $"Inicio: {horaInicial}"
+                fin = $"Fim: {horaFinal}"
+                temp = $"{DateDiff(DateInterval.Second, horaInicial, horaFinal)} segundos"
+
+                MsgBox($"Descricões atualizadas: " & vbCrLf & vbCrLf &
+                       ini & vbCrLf &
+                       fin & vbCrLf & vbCrLf &
+                       temp, MessageBoxButtons.OK + MessageBoxIcon.Information, "Aviso")
+
+            End If
 
         End If
 
@@ -215,8 +238,11 @@ Public Class formPrincipal
         Dim IntervaloEntreEscritas As Integer = 5
         Dim cmdComandoSQL As SqlCommand
         Dim rdrRegistro As SqlDataReader
-        Dim horaInicial As String
-        Dim horaFinal As String
+
+        Dim tipoTagTemp As String
+        Dim contadorTagItem As Integer = 1
+        Dim nomeTagGrupo As String
+
 
         sqlTemp = "SELECT "
         sqlTemp += "    cb.Numero as BalancaNumero, "
@@ -246,6 +272,15 @@ Public Class formPrincipal
 
             horaInicial = Now.ToString
 
+            nomeTagGrupo = "PRODUCAO"
+
+            FIX.SupervisorioCriarTagGrupo(nomeTagGrupo, FdsTemp)
+
+            Debug.Print("------------------------------------------------------------------")
+            Debug.Print($"{Now} - INICIO DO ENVIO DOS TAGS AO SUPERVISORIO.")
+            Rotinas.EscreverEmLog("INICIO DO ENVIO DOS TAGS AO SUPERVISORIO.", ClasseRotinasDiversas.Tipo.Geral)
+            Debug.Print("")
+
             While rdrRegistro.Read()
 
                 '-- carrega o tag para escrever a descricao da materia-prima associada,
@@ -253,9 +288,10 @@ Public Class formPrincipal
                 Rotinas.EscreverEmLog("AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> " & rdrRegistro("BalancaNumero") & " _SILO_<NUMERO> " & rdrRegistro("SiloNumero"), ClasseRotinasDiversas.Tipo.Geral)
                 Rotinas.EscreverEmLog("", ClasseRotinasDiversas.Tipo.Traco)
 
-                TagEscrita = BuscarTag("DESC_MP_ASSOCIADA_B" & rdrRegistro("BalancaNumero").ToString() & "_SILO_" & rdrRegistro("SiloNumero").ToString())
+                tipoTagTemp = "DESC_MP_ASSOCIADA_B" & rdrRegistro("BalancaNumero").ToString() & "_SILO_" & rdrRegistro("SiloNumero").ToString()
+                TagEscrita = BuscarTag(tipoTagTemp)
 
-                If TagEscrita <> "" Then
+                If TagEscrita <> "" And TagEscrita <> "Não Definido" And TagEscrita <> "-1" Then
 
                     If Not IsDBNull(rdrRegistro("descricao")) Then
 
@@ -274,11 +310,33 @@ Public Class formPrincipal
                                               ClasseRotinasDiversas.Tipo.Geral)
 
                     End If
-                    TagEscreverString("PRODUCAO", NumeroEscritas, IntervaloEntreEscritas, TagEscrita, TagEscritaValor)
-                    Debug.Print(TagEscrita + " - " + TagEscritaValor)
+
+                    FIX.SupervisorioAdicionarItemTagGrupo(contadorTagItem, TagEscrita, nomeTagGrupo, TagEscritaValor, FdsTemp)
+
+                    Debug.Print($"[{contadorTagItem.ToString("00")}] - {Now} - TIPO_TAG: {tipoTagTemp} - TAG: {TagEscrita & vbTab} - Valor: {TagEscritaValor}")
+                    contadorTagItem += 1
+
                 End If
 
             End While
+
+            Debug.Print("------------------------------------------------------------------")
+            Debug.Print(Now.ToString() & " - FIM DO ENVIO DOS tagsItens AO SUPERVISORIO.")
+            Rotinas.EscreverEmLog(" - FIM DO ENVIO DOS tagsItens AO SUPERVISORIO.", ClasseRotinasDiversas.Tipo.Geral)
+            Debug.Print("")
+            Debug.Print("------------------------------------------------------------------")
+            Debug.Print(Now.ToString() & " - EXECUTANDO O COMANDO WRITE INICIO")
+
+            Rotinas.EscreverEmLog(" - EXECUTANDO O COMANDO WRITE INICIO.", ClasseRotinasDiversas.Tipo.Geral)
+
+            FIX.SupervisorioEsreverTagItens(nomeTagGrupo, FdsTemp)
+
+            Debug.Print(Now.ToString() & " - EXECUTANDO O COMANDO WRITE FIM")
+
+            Rotinas.EscreverEmLog(" - EXECUTANDO O COMANDO WRITE FIM.", ClasseRotinasDiversas.Tipo.Geral)
+
+            Debug.Print("------------------------------------------------------------------")
+
             horaFinal = Now.ToString
 
             rdrRegistro.Close()
@@ -291,12 +349,6 @@ Public Class formPrincipal
                 Process.Start(My.Settings.PASTA_DYNAMICS & "DBBSAVE.exe", "-D")
 
             End If
-
-            MsgBox("LOG DE ESCRITA: " & vbCrLf &
-                   "Inicio: " & horaInicial & vbCrLf &
-                   "Fim:    " & horaFinal,
-                   MessageBoxButtons.OK + MessageBoxIcon.Information,
-                   "Aviso")
 
         Catch ex As Exception
 
@@ -351,7 +403,7 @@ Public Class formPrincipal
             scriptSqlTemp = "SELECT  "
             scriptSqlTemp += "* "
             scriptSqlTemp += " FROM referencia_tag "
-            scriptSqlTemp += " WHERE tipo_tag = '" & strTipoTagPesquisar.ToString.Trim & "' "
+            scriptSqlTemp += " WHERE tipo_tag = '" & strTipoTagPesquisar.ToString.Trim & "'"
 
             cmdBUscarTagComandoSQL = New SqlCommand(scriptSqlTemp, BancoDados.ConexaoAtiva)
             rdrBuscarTagRegistro = cmdBUscarTagComandoSQL.ExecuteReader()
@@ -386,25 +438,19 @@ Public Class formPrincipal
         Dim retornoTagEscrever As TagEscreverRetorno
         Dim Escrita As Integer = 0
         Dim QtdeEscritas As Integer = parEscritas
-
+        'QtdeEscritas = 1
         With retornoTagEscrever
             .ErroNumber = 0
             .Mensagem = ""
         End With
 
-        If Rotinas.ArquivoExiste(Application.StartupPath & "\MARCO.TXT") Then
-            Return retornoTagEscrever
-        End If
-
         Try
-
             Escrita = 0
 
             While Escrita <= QtdeEscritas
-                FIX.EscreverNoTag(parTagEscrever, parGrupoEscrever, parValor)
-                Thread.Sleep(parIntervaloEscritas)
+                FIX.EscreverNoTag(parTagEscrever, parGrupoEscrever, parValor, FdsTemp)
+                'Thread.Sleep(parIntervaloEscritas)
                 Escrita += 1
-
             End While
 
         Catch ex As Exception

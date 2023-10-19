@@ -32,9 +32,9 @@ Public Class ClasseRotinasDiversas
 
 #Region "Funções INI"
 
-    Public Function LeArquivoINI(ByVal parNomeArquivoINI As String, _
-                                  ByVal parSecao As String, _
-                                  ByVal parChave As String, _
+    Public Function LeArquivoINI(ByVal parNomeArquivoINI As String,
+                                  ByVal parSecao As String,
+                                  ByVal parChave As String,
                                   ByVal parValorPadrao As String) As String
 
         Const MAX_LENGTH As Integer = 500
@@ -51,9 +51,9 @@ Public Class ClasseRotinasDiversas
 
     End Function
 
-    Public Sub EscreverArquivoINI(ByVal parSecao As String, _
-                                  ByVal parChave As String, _
-                                  ByVal parValor As String, _
+    Public Sub EscreverArquivoINI(ByVal parSecao As String,
+                                  ByVal parChave As String,
+                                  ByVal parValor As String,
                                   ByVal parNomeArquivoINI As String)
 
         WritePrivateProfileString(parSecao, parChave, parValor.Trim, parNomeArquivoINI)
@@ -75,7 +75,18 @@ Public Class ClasseRotinasDiversas
 
     End Function
 
+    ''' <summary>
+    ''' Verifica se um arquivo existe na pasta da aplicacao
+    ''' </summary>
+    ''' <param name="parArquivoVerificar"></param>
+    ''' <returns>TRUE = arquivo existe, FALSE = arquivo nao existe</returns>
+    Public Function ArquivoExistePastaAplicacao(ByVal parArquivoVerificar As String) As Boolean
 
+        Dim localFolder As String = Application.StartupPath & "\"
+
+        Return My.Computer.FileSystem.FileExists(localFolder & parArquivoVerificar)
+
+    End Function
 
     Public Sub EscreverArquivoTXT(ByVal NomeArquivo As String, ByVal TextoEscrever As String)
 
@@ -175,9 +186,9 @@ Public Class ClasseRotinasDiversas
 
 #End Region
 
-    Public Sub EscreverEmLog(ByVal strTexto As String, _
-                             Optional intOutroTipo As Tipo = Tipo.Geral, _
-                             Optional iQtdeTracos As Integer = 80, _
+    Public Sub EscreverEmLog(ByVal strTexto As String,
+                             Optional intOutroTipo As Tipo = Tipo.Geral,
+                             Optional iQtdeTracos As Integer = 80,
                              Optional iTipoTraco As enumEstiloTraco = enumEstiloTraco.Simples)
 
         Dim TracoString As String = "-"
@@ -658,9 +669,9 @@ Public Class ClasseRotinasDiversas
 
     End Function
 
-    Function Formatar(ByVal Value As Double, _
-                        Optional nDecimal As Byte = 2, _
-                        Optional FlagThousand As Boolean = False, _
+    Function Formatar(ByVal Value As Double,
+                        Optional nDecimal As Byte = 2,
+                        Optional FlagThousand As Boolean = False,
                         Optional FlagNotZeros As Boolean = False) As String
 
         Dim I As Integer
@@ -753,19 +764,19 @@ Public Class ClasseRotinasDiversas
 
             If rdrRegistro.HasRows() Then
 
-                ConfigTemp = New ConfiguracoesSistema( _
-                                                        rdrRegistro("CARROSSEL_PESAGEM_MAXIMA"), _
-                                                        rdrRegistro("NUMERO_MAXIMO_BATCHS_CRIAR_ORDEM"), _
-                                                        rdrRegistro("CAR_HABILITAR_DIGITACAO"), _
-                                                        rdrRegistro("CAR_EXIBIR_ALERTA_VERIF_EQUIPAMENTO"), _
-                                                        rdrRegistro("CAR_BALANCA_CONFERENCIA_ABASTECIMENTO"), _
-                                                        rdrRegistro("CAR_CONFIRMA_PESAGEM_CODIGO_TAMBOR_ITEM_LOTE"), _
-                                                        rdrRegistro("CAR_EMITIR_TICKET_PESAGEM"), _
-                                                        rdrRegistro("CAR_ENVIAR_IMPRESSORA_TICKET_PESAGEM"), _
-                                                        rdrRegistro("CAR_NUMERO_COPIAS_TICKET_PESAGEM"), _
-                                                        rdrRegistro("CAR_TICKET_PESAGEM_GERAR_PDF"), _
-                                                        rdrRegistro("CAR_TICKET_PESAGEM_LOCAL_PDF"), _
-                                                        rdrRegistro("ABASTECIMENTO_HABILITA_DIGITACAO"), _
+                ConfigTemp = New ConfiguracoesSistema(
+                                                        rdrRegistro("CARROSSEL_PESAGEM_MAXIMA"),
+                                                        rdrRegistro("NUMERO_MAXIMO_BATCHS_CRIAR_ORDEM"),
+                                                        rdrRegistro("CAR_HABILITAR_DIGITACAO"),
+                                                        rdrRegistro("CAR_EXIBIR_ALERTA_VERIF_EQUIPAMENTO"),
+                                                        rdrRegistro("CAR_BALANCA_CONFERENCIA_ABASTECIMENTO"),
+                                                        rdrRegistro("CAR_CONFIRMA_PESAGEM_CODIGO_TAMBOR_ITEM_LOTE"),
+                                                        rdrRegistro("CAR_EMITIR_TICKET_PESAGEM"),
+                                                        rdrRegistro("CAR_ENVIAR_IMPRESSORA_TICKET_PESAGEM"),
+                                                        rdrRegistro("CAR_NUMERO_COPIAS_TICKET_PESAGEM"),
+                                                        rdrRegistro("CAR_TICKET_PESAGEM_GERAR_PDF"),
+                                                        rdrRegistro("CAR_TICKET_PESAGEM_LOCAL_PDF"),
+                                                        rdrRegistro("ABASTECIMENTO_HABILITA_DIGITACAO"),
                                                         IIf(IsDBNull(rdrRegistro("NOME_IMPRESSORA_PADRAO")), "", rdrRegistro("NOME_IMPRESSORA_PADRAO"))
                                                     )
 
@@ -812,8 +823,8 @@ Public Class ClasseRotinasDiversas
 
         Catch ex As Exception
 
-            MsgBox("Erro: " & ex.Message, _
-                   MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, _
+            MsgBox("Erro: " & ex.Message,
+                   MsgBoxStyle.Critical + MsgBoxStyle.OkOnly,
                    "RetornaCapacidadeMaximaMisturador")
 
         End Try
