@@ -305,15 +305,8 @@ Public Class iFIX
                 _valorEscreverNoTag = Convert.ToDouble(Replace(_valorEscreverNoTag, ".", ","))
             End If
 
-            'FDS.Groups.Item(Grupo).DataItems.Add(str_NodeDaAplicacao & Tag)
-            'FDS.Groups.Item(Grupo).DataItems.Item(str_NodeDaAplicacao & Tag).Value = Valor
-            'FDS.Groups.Item(Grupo).DataItems.Item(str_NodeDaAplicacao & Tag).Write(Valor)
-
-            '_FdsTemp.Groups.Add(_tagGrupo)
             _FdsTemp.Groups.item(_tagGrupo).dataitems.add(_tag)
             _FdsTemp.Groups.item(_tagGrupo).dataitems.item(_tagItemID).VALUE = _valorEscreverNoTag
-            '_FdsTemp.Groups.item(_tagGrupo).write()
-            '_FdsTemp.Groups.REMOVE(_tagGrupo)
 
         Catch ex As Exception
 
