@@ -117,8 +117,8 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=JFGPC000379\SQLEXPRESS;Initial Catalog=JOFEGE_ARGAMASSA;User ID=sa;Pa"& _ 
-            "ssword=@Jofege@itatiba;MultipleActiveResultSets=TRUE")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=JFGPC000379\SQLEXPRESS;Initial Catalog=ARGAMASSA_ITA;User ID=sa;Passw"& _ 
+            "ord=@Jofege@itatiba;MultipleActiveResultSets=TRUE")>  _
         Public ReadOnly Property JOFEGE_ARGAMASSA_ConnectionString() As String
             Get
                 Return CType(Me("JOFEGE_ARGAMASSA_ConnectionString"),String)
