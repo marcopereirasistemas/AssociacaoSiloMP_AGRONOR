@@ -38,6 +38,7 @@ Partial Class formPrincipal
         Me.btnAssociar = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.btnAtualizaTAGS = New System.Windows.Forms.Button()
         Me.pnlMensagens.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -50,7 +51,7 @@ Partial Class formPrincipal
         '
         'lblMensagem
         '
-        Me.lblMensagem.Size = New System.Drawing.Size(33782, 17)
+        Me.lblMensagem.Size = New System.Drawing.Size(37058, 17)
         Me.lblMensagem.Text = ""
         '
         'DataGridView1
@@ -252,10 +253,22 @@ Partial Class formPrincipal
         Me.Label3.Text = "Atualizando o supervisório com as matérias-primas associadas"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'btnAtualizaTAGS
+        '
+        Me.btnAtualizaTAGS.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnAtualizaTAGS.Location = New System.Drawing.Point(12, 421)
+        Me.btnAtualizaTAGS.Name = "btnAtualizaTAGS"
+        Me.btnAtualizaTAGS.Size = New System.Drawing.Size(86, 31)
+        Me.btnAtualizaTAGS.TabIndex = 31
+        Me.btnAtualizaTAGS.Text = "Button1"
+        Me.btnAtualizaTAGS.UseVisualStyleBackColor = True
+        Me.btnAtualizaTAGS.Visible = False
+        '
         'formPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.ClientSize = New System.Drawing.Size(1287, 538)
+        Me.Controls.Add(Me.btnAtualizaTAGS)
         Me.Controls.Add(Me.btnDesassociarTodos)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.DataGridView1)
@@ -275,6 +288,7 @@ Partial Class formPrincipal
         Me.Controls.SetChildIndex(Me.DataGridView1, 0)
         Me.Controls.SetChildIndex(Me.Panel2, 0)
         Me.Controls.SetChildIndex(Me.btnDesassociarTodos, 0)
+        Me.Controls.SetChildIndex(Me.btnAtualizaTAGS, 0)
         Me.pnlMensagens.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
@@ -302,4 +316,5 @@ Partial Class formPrincipal
     Friend WithEvents CodigoMateriaPrima As DataGridViewTextBoxColumn
     Friend WithEvents MateriaPrima As DataGridViewTextBoxColumn
     Friend WithEvents Lote As DataGridViewTextBoxColumn
+    Friend WithEvents btnAtualizaTAGS As Button
 End Class

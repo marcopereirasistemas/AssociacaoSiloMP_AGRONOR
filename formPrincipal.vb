@@ -475,6 +475,56 @@ Public Class formPrincipal
 
     End Function
 
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub btnAtualizaTAGS_Click(sender As Object, e As EventArgs) Handles btnAtualizaTAGS.Click
+
+        Dim strTagLido As String = ""
+        Dim scriptSqlTemp As String
+        Dim cmdBUscarTagComandoSQL As SqlCommand
+        Dim rdrBuscarTagRegistro As SqlDataReader
+        Dim bolProducaoEmAndamento As Boolean
+
+        Try
+            scriptSqlTemp = "SELECT  "
+            scriptSqlTemp += "* "
+            scriptSqlTemp += " FROM Referencia_Tag_TEMP "
+
+            cmdBUscarTagComandoSQL = New SqlCommand(scriptSqlTemp, BancoDados.ConexaoAtiva)
+            rdrBuscarTagRegistro = cmdBUscarTagComandoSQL.ExecuteReader()
+            If rdrBuscarTagRegistro.HasRows Then
+                While rdrBuscarTagRegistro.Read()
+                    If Not IsDBNull(rdrBuscarTagRegistro("tag")) Then
+
+                        BancoDados.ComandoSQL = "UPDATE REFERENCIA_TAG " &
+                                "     SET OPC = '" & IIf(rdrBuscarTagRegistro("TAG").ToString.Contains("A_DESC"), "IFIX", rdrBuscarTagRegistro("OPC")) & "'" &
+                                "   WHERE TIPO_TAG = '" & rdrBuscarTagRegistro("TIPO_TAG") & "'" &
+                                "   AND LINHAID = " & rdrBuscarTagRegistro("LINHAID")
+
+                        BancoDados.CriaComandoSQL()
+                        BancoDados.ExecutaSQL()
+
+                    Else
+                        strTagLido = "-1"
+                    End If
+                End While
+            End If
+            rdrBuscarTagRegistro.Close()
+            cmdBUscarTagComandoSQL.Dispose()
+
+            bolProducaoEmAndamento = True
+
+        Catch ex As Exception
+            strTagLido = "-1"
+        End Try
+
+
+    End Sub
+
+
+
 #End Region
 
 End Class
