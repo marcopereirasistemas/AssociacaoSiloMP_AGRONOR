@@ -124,6 +124,30 @@ Namespace My
                 Return CType(Me("JOFEGE_ARGAMASSA_ConnectionString"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("1000")>  _
+        Public Property OPC_UPDATE_RATE() As String
+            Get
+                Return CType(Me("OPC_UPDATE_RATE"),String)
+            End Get
+            Set
+                Me("OPC_UPDATE_RATE") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("ARGAMASSA")>  _
+        Public Property OPC_TOPICO() As String
+            Get
+                Return CType(Me("OPC_TOPICO"),String)
+            End Get
+            Set
+                Me("OPC_TOPICO") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

@@ -8,6 +8,23 @@ Public Class FCadastroSemBotoes
     Protected Sub Mensagem(ByVal strTexto As String)
         lblMensagem.Text = strTexto
     End Sub
+    Enum LadoMensagem
+        Direito = 1
+        Esquerdo = 2
+    End Enum
+    Protected Sub Mensagem(ByVal strTexto As String,
+                           Optional ByVal LadoExibir As LadoMensagem = LadoMensagem.Esquerdo)
+
+        If LadoExibir = LadoMensagem.Esquerdo Then
+            lblMensagem.Text = strTexto
+            lblMensagem.TextAlign = ContentAlignment.MiddleLeft
+        End If
+
+        If LadoExibir = LadoMensagem.Direito Then
+            lblMensagem.Text = strTexto
+            lblMensagem.TextAlign = ContentAlignment.MiddleRight
+        End If
+    End Sub
     'Private Sub btnSair_Click(sender As System.Object, e As System.EventArgs) Handles btnSair.Click
     '    Me.Close()
     'End Sub

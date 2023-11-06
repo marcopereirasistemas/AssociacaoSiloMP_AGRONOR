@@ -102,14 +102,15 @@
     <Compile Include="Classes\Declaracoes.vb" />
     <Compile Include="Classes\Formula.vb" />
     <Compile Include="Classes\FormulaItem.vb" />
-    <Compile Include="Classes\iFIX.vb" />
-    <Compile Include="Classes\iFIX2.vb" />
+    <Content Include="Classes\iFIX.txt" />
+    <Content Include="Classes\iFIX2.txt" />
     <Compile Include="Classes\Module1.vb" />
     <Compile Include="Classes\OrdemProducao.vb" />
     <Compile Include="Classes\Producao.vb" />
     <Compile Include="Classes\ProducaoFormulaItem.vb" />
     <Compile Include="Classes\ProducaoItem.vb" />
     <Compile Include="Classes\ProducaoMateriaPrima.vb" />
+    <Compile Include="Classes\TagRetorno.vb" />
     <Compile Include="Classes\Turno.vb" />
     <Compile Include="formAssociacaoSelecaoMP.Designer.vb">
       <DependentUpon>formAssociacaoSelecaoMP.vb</DependentUpon>
@@ -214,17 +215,6 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <COMReference Include="FixDataSystems">
-      <Guid>{D7DBE540-5A32-11D1-BEB0-006008354D92}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1.jpg" />
@@ -409,6 +399,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="OBS.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="RsiOPCAuto">
+      <Guid>{DFB83232-A952-11D2-A46B-00C04F796375}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

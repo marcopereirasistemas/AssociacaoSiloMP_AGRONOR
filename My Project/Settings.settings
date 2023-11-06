@@ -24,5 +24,11 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=JFGPC000379\SQLEXPRESS;Initial Catalog=ARGAMASSA_ITA;User ID=sa;Password=@Jofege@itatiba;MultipleActiveResultSets=TRUE</Value>
     </Setting>
+    <Setting Name="OPC_UPDATE_RATE" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1000</Value>
+    </Setting>
+    <Setting Name="OPC_TOPICO" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ARGAMASSA</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
