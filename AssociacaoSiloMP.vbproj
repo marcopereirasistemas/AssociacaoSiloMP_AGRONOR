@@ -110,6 +110,7 @@
     <Compile Include="Classes\ProducaoFormulaItem.vb" />
     <Compile Include="Classes\ProducaoItem.vb" />
     <Compile Include="Classes\ProducaoMateriaPrima.vb" />
+    <Compile Include="Classes\TagItem.vb" />
     <Compile Include="Classes\TagRetorno.vb" />
     <Compile Include="Classes\Turno.vb" />
     <Compile Include="formAssociacaoSelecaoMP.Designer.vb">
