@@ -20,7 +20,7 @@
     End Property
 
     Public Sub New(ByVal _parOpcItemID As Long, _parOpcItem As String)
-        _opcItem = _parOpcItemID
+        _opcItemID = _parOpcItemID
         _opcItem = _parOpcItem
     End Sub
 End Class

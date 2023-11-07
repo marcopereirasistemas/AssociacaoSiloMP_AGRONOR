@@ -13,6 +13,8 @@ Imports System.Diagnostics
 Imports System.Threading
 Imports System.ComponentModel
 Imports VB = Microsoft.VisualBasic
+
+
 Public Class formPrincipal
 
 #Region "Declarações nivel de formulário"
@@ -36,18 +38,23 @@ Public Class formPrincipal
     Dim formTrocarSiloNova As Object
     Dim RotinasDiversas As New ClasseRotinasDiversas
     Dim teclaCtrlPressionada As Boolean
-    Dim Versao As String = " - Versão 1.0.5 - 18/10/2023"
+    Dim Versao As String = " - Versão 1.0.6 - 07/11/2023"
     Dim horaInicioEnvio As String
     Dim horaFinalEnvio As String
     Dim horaInicial As DateTime
     Dim horaFinal As DateTime
+    Dim _opcItemID As Integer
+    Dim _opcItem As String
+    Dim _alias As String
+    Dim OpcTagItens As New List(Of TagItem)
+    Private vAppRValue As Object
+
 #End Region
 
 #Region "Declarãções para OPC"
 
     Private MyOPCServer As RsiOPCAuto.OPCServer
 
-    Private WithEvents MyOPCGroup As RsiOPCAuto.OPCGroup
     '-- DADOS DE PRODUCAO
     Private WithEvents AssMpSiloOPC As RsiOPCAuto.OPCGroup
 
@@ -59,14 +66,6 @@ Public Class formPrincipal
 
 #End Region
 
-    Private vAppRValue As Object
-
-    Dim _opcItemID As Integer
-    Dim _opcItem As String
-    Dim _alias As String
-    Dim OpcTagItens As New List(Of TagItem)
-
-
 #Region "DEFINIÇÕES DO OPC"
     Public Sub ConnectServer()
 
@@ -75,9 +74,6 @@ Public Class formPrincipal
 
             Cursor.Current = Cursors.WaitCursor
 
-            '-------------------------------------
-            '-- INICIO OPC
-            '-------------------------------------
             MyOPCServer = New RsiOPCAuto.OPCServer
             If MyOPCServer Is Nothing Then
 
@@ -86,13 +82,15 @@ Public Class formPrincipal
                    MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "  ATENÇÃO")
 
                 Me.Close()
-                'Rotinas.EscreverEmLog("formSolicitacaoProducao(): Falha ao criar referencia para o RSLinx OPC.")
+
                 Exit Sub
 
             End If
 
             Mensagem("Conectando RSLinx OPC Server ...", LadoMensagem.Esquerdo)
+
             Me.Refresh()
+
             MyOPCServer.Connect("RSLinx OPC Server")
 
             Cursor.Current = Cursors.Default
@@ -114,7 +112,7 @@ Public Class formPrincipal
         Try
 
             MyOPCServer.OPCGroups.RemoveAll()
-            MyOPCGroup = Nothing
+            AssMpSiloOPC = Nothing
             MyOPCServer.Disconnect()
 
         Catch ex As Exception
@@ -140,10 +138,13 @@ Public Class formPrincipal
         For Each opcI As TagItem In OpcTagItens
 
             OPCItem = opcI.OpcItem
+
             OPCClientHandles = opcI.OpcItemID
+
             AssMpSiloOPC.OPCItems.AddItem(OPCItem, OPCClientHandles)
 
         Next
+
     End Sub
 
     'Private Function LerOpcItem(ByVal opcGrupoPar As RsiOPCAuto.OPCGroup,
@@ -594,16 +595,13 @@ Erro:
             rdrTemp = cmdTemp.ExecuteReader()
 
             If rdrTemp.HasRows Then
-
                 While rdrTemp.Read()
-
                     OpcTagItens.Add(New TagItem(
-                                        rdrTemp("OpcItemId"),
-                                        rdrTemp("OpcItem")
+                                            rdrTemp("OpcItemId"),
+                                            rdrTemp("OpcItem")
                                         )
                                     )
                 End While
-
             End If
             rdrTemp.Close()
             cmdTemp.Dispose()
@@ -612,107 +610,106 @@ Erro:
 
         End Try
 
-
     End Sub
 
-    Private Function BuscaItemOPC(ByVal _parGrupOpc As String, ByVal _parAlias As String) As String
-        Dim strTagLido As String = ""
+    'Private Function BuscaItemOPC(ByVal _parGrupOpc As String, ByVal _parAlias As String) As String
+    '    Dim strTagLido As String = ""
 
-        Dim strBuscarTagSQL As String
-        Dim cmdBUscarTagComandoSQL As SqlCommand
-        Dim rdrBuscarTagRegistro As SqlDataReader
+    '    Dim strBuscarTagSQL As String
+    '    Dim cmdBUscarTagComandoSQL As SqlCommand
+    '    Dim rdrBuscarTagRegistro As SqlDataReader
 
-        BuscaItemOPC = ""
+    '    BuscaItemOPC = ""
 
-        Try
+    '    Try
 
-            strBuscarTagSQL = "SELECT "
-            strBuscarTagSQL += "  *  "
-            strBuscarTagSQL += " FROM [OpcTagItens] "
-            strBuscarTagSQL += " WHERE Alias = '" & _parAlias.ToString.Trim & "'"
-            strBuscarTagSQL += "  AND GrupoOpc = '" & _parGrupOpc.ToString.Trim & "'"
+    '        strBuscarTagSQL = "SELECT "
+    '        strBuscarTagSQL += "  *  "
+    '        strBuscarTagSQL += " FROM [OpcTagItens] "
+    '        strBuscarTagSQL += " WHERE Alias = '" & _parAlias.ToString.Trim & "'"
+    '        strBuscarTagSQL += "  AND GrupoOpc = '" & _parGrupOpc.ToString.Trim & "'"
 
-            cmdBUscarTagComandoSQL = New SqlCommand(strBuscarTagSQL, BancoDados.ConexaoAtiva)
-            rdrBuscarTagRegistro = cmdBUscarTagComandoSQL.ExecuteReader()
+    '        cmdBUscarTagComandoSQL = New SqlCommand(strBuscarTagSQL, BancoDados.ConexaoAtiva)
+    '        rdrBuscarTagRegistro = cmdBUscarTagComandoSQL.ExecuteReader()
 
-            _opcItemID = -1
-            _opcItem = ""
-            _alias = ""
+    '        _opcItemID = -1
+    '        _opcItem = ""
+    '        _alias = ""
 
-            If rdrBuscarTagRegistro.HasRows Then
+    '        If rdrBuscarTagRegistro.HasRows Then
 
-                rdrBuscarTagRegistro.Read()
+    '            rdrBuscarTagRegistro.Read()
 
-                strTagLido = rdrBuscarTagRegistro("OpcItemID").ToString.Trim
+    '            strTagLido = rdrBuscarTagRegistro("OpcItemID").ToString.Trim
 
-                _opcItemID = rdrBuscarTagRegistro("OpcItemID").ToString.Trim
-                _opcItem = rdrBuscarTagRegistro("OpcItem").ToString.Trim
-                _alias = rdrBuscarTagRegistro("Alias").ToString.Trim
+    '            _opcItemID = rdrBuscarTagRegistro("OpcItemID").ToString.Trim
+    '            _opcItem = rdrBuscarTagRegistro("OpcItem").ToString.Trim
+    '            _alias = rdrBuscarTagRegistro("Alias").ToString.Trim
 
-            End If
+    '        End If
 
-            rdrBuscarTagRegistro.Close()
-            cmdBUscarTagComandoSQL.Dispose()
+    '        rdrBuscarTagRegistro.Close()
+    '        cmdBUscarTagComandoSQL.Dispose()
 
-        Catch ex As Exception
+    '    Catch ex As Exception
 
-            strTagLido = ""
+    '        strTagLido = ""
 
-        End Try
+    '    End Try
 
-        BuscaItemOPC = strTagLido
+    '    BuscaItemOPC = strTagLido
 
-    End Function
+    'End Function
 
-    Private Function RetornaTagOPC(ByVal strTipoTagPesquisar As String) As TagRetorno
-        Dim strTagLido As String = ""
+    'Private Function RetornaTagOPC(ByVal strTipoTagPesquisar As String) As TagRetorno
+    '    Dim strTagLido As String = ""
 
-        Dim scriptSql As String
-        Dim _cmdSql As SqlCommand
-        Dim _rdr As SqlDataReader
+    '    Dim scriptSql As String
+    '    Dim _cmdSql As SqlCommand
+    '    Dim _rdr As SqlDataReader
 
-        Dim _tagRetorno As New TagRetorno() With {
-                                                .TipoTag = "",
-                                                .Tag = "",
-                                                .OPC = "",
-                                                .Limpa = 0,
-                                                .PosicaoInicial = 0,
-                                                .Tipo = 0
-                                                }
+    '    Dim _tagRetorno As New TagRetorno() With {
+    '                                            .TipoTag = "",
+    '                                            .Tag = "",
+    '                                            .OPC = "",
+    '                                            .Limpa = 0,
+    '                                            .PosicaoInicial = 0,
+    '                                            .Tipo = 0
+    '                                            }
 
-        Try
+    '    Try
 
-            scriptSql = "SELECT "
-            scriptSql += "  * "
-            scriptSql += " FROM referencia_tag "
-            scriptSql += " WHERE tipo_tag = '" & strTipoTagPesquisar.ToString.Trim & "'"
+    '        scriptSql = "SELECT "
+    '        scriptSql += "  * "
+    '        scriptSql += " FROM referencia_tag "
+    '        scriptSql += " WHERE tipo_tag = '" & strTipoTagPesquisar.ToString.Trim & "'"
 
-            _cmdSql = New SqlCommand(scriptSql, BancoDados.ConexaoAtiva)
-            _rdr = _cmdSql.ExecuteReader()
+    '        _cmdSql = New SqlCommand(scriptSql, BancoDados.ConexaoAtiva)
+    '        _rdr = _cmdSql.ExecuteReader()
 
-            If _rdr.HasRows Then
-                _rdr.Read()
-                _tagRetorno.Tag = _rdr("tag").ToString.Trim
-                _tagRetorno.OPC = _rdr("OPC").ToString.Trim
-                _tagRetorno.PosicaoInicial = _rdr("PosicaoInicial").ToString.Trim
-                _tagRetorno.TipoTag = _rdr("Tipo_Tag").ToString.Trim
-                _tagRetorno.Limpa = _rdr("limpa").ToString.Trim
-                _tagRetorno.Tipo = _rdr("Tipo").ToString.Trim
-            End If
+    '        If _rdr.HasRows Then
+    '            _rdr.Read()
+    '            _tagRetorno.Tag = _rdr("tag").ToString.Trim
+    '            _tagRetorno.OPC = _rdr("OPC").ToString.Trim
+    '            _tagRetorno.PosicaoInicial = _rdr("PosicaoInicial").ToString.Trim
+    '            _tagRetorno.TipoTag = _rdr("Tipo_Tag").ToString.Trim
+    '            _tagRetorno.Limpa = _rdr("limpa").ToString.Trim
+    '            _tagRetorno.Tipo = _rdr("Tipo").ToString.Trim
+    '        End If
 
-            _rdr.Close()
-            _cmdSql.Dispose()
+    '        _rdr.Close()
+    '        _cmdSql.Dispose()
 
-        Catch ex As Exception
+    '    Catch ex As Exception
 
-            'Rotinas.EscreverEmLog("BuscarTag(): Erro: " & ex.Message, ClasseRotinasDiversas.Tipo.Simples)
-            strTagLido = ""
+    '        'Rotinas.EscreverEmLog("BuscarTag(): Erro: " & ex.Message, ClasseRotinasDiversas.Tipo.Simples)
+    '        strTagLido = ""
 
-        End Try
+    '    End Try
 
-        Return _tagRetorno
+    '    Return _tagRetorno
 
-    End Function
+    'End Function
 
 
 #Region "Eventos de componentes"
@@ -751,8 +748,6 @@ Erro:
     Private Sub formAssociacaoSiloMP_Nova_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
 
         Me.Text = " Associção Silo X Matéria-Prima" & Versao
-
-
 
         CarregaAssociacoes()
 
@@ -899,6 +894,24 @@ Erro:
 
 #Region "Funções Diversas"
 
+    Private Sub LimparTags()
+        Dim opcIdTemp As Long
+        Dim valueTemp As String
+
+        For Each opcI As TagItem In OpcTagItens
+
+            opcIdTemp = opcI.OpcItemID
+
+            valueTemp = ""
+
+            EscreverStringOpcItem(AssMpSiloOPC, opcIdTemp, valueTemp)
+
+            Thread.Sleep(100)
+
+        Next
+
+    End Sub
+
     Private Sub AtualizaAssociacoesSupervisorio()
         Dim sqlTemp As String
         Dim cmdComandoSQL As SqlCommand
@@ -913,6 +926,7 @@ Erro:
 
         CreateObject()
 
+        LimparTags()
 
         sqlTemp = "SELECT "
         sqlTemp += "    cb.Numero as BalancaNumero, "
@@ -942,43 +956,31 @@ Erro:
 
             horaInicial = Now.ToString
 
-            'FIX.SupervisorioCriarTagGrupo(nomeTagGrupo, FdsTemp)
-
             While rdrRegistro.Read()
 
-                'Rotinas.EscreverEmLog("AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> " & rdrRegistro("BalancaNumero") & " _SILO_<NUMERO> " & rdrRegistro("SiloNumero"), ClasseRotinasDiversas.Tipo.Geral)
-                'Rotinas.EscreverEmLog("", ClasseRotinasDiversas.Tipo.Traco)
-
-                opcIdTemp = 0
                 For Each opcI As TagItem In OpcTagItens
-                    '-- 
-                    opcIdTemp = 0
-                    aliasTemp = $"MP{rdrRegistro("SiloNumero")}_B{rdrRegistro("BalancaNumero")}_DESC.Data"
-                    If opcI.OpcItem = aliasTemp Then
-                        Debug.Print(rdrRegistro("Descricao"))
+
+                    aliasTemp = $"MP{rdrRegistro("SiloNumero")}_B{rdrRegistro("BalancaNumero")}_DESC"
+
+                    If UCase(opcI.OpcItem) = UCase(aliasTemp) Then
+
                         opcIdTemp = opcI.OpcItemID
+
                         valueTemp = IIf(IsDBNull(rdrRegistro("Descricao")), "", rdrRegistro("Descricao"))
+
                         EscreverStringOpcItem(AssMpSiloOPC, opcI.OpcItemID, valueTemp)
+
+                        Debug.Print($"OpcItemID: {opcIdTemp} - {aliasTemp} - Valor: {valueTemp}")
+
                     End If
+
                 Next
+
             End While
 
-            Debug.Print("------------------------------------------------------------------")
-            Debug.Print(Now.ToString() & " - FIM Do ENVIO DOS tagsItens AO SUPERVISORIO.")
-            Rotinas.EscreverEmLog(" - FIM Do ENVIO DOS tagsItens AO SUPERVISORIO.", ClasseRotinasDiversas.Tipo.Geral)
-            Debug.Print("")
-            Debug.Print("------------------------------------------------------------------")
-            Debug.Print(Now.ToString() & " - EXECUTANDO O COMANDO WRITE INICIO")
-
-            Rotinas.EscreverEmLog(" - EXECUTANDO O COMANDO WRITE INICIO.", ClasseRotinasDiversas.Tipo.Geral)
-
-            'FIX.SupervisorioEsreverTagItens(nomeTagGrupo, FdsTemp)
-
-            Debug.Print(Now.ToString() & " - EXECUTANDO O COMANDO WRITE FIM")
-
-            Rotinas.EscreverEmLog(" - EXECUTANDO O COMANDO WRITE FIM.", ClasseRotinasDiversas.Tipo.Geral)
-
-            Debug.Print("------------------------------------------------------------------")
+            'Rotinas.EscreverEmLog(" - FIM Do ENVIO DOS tagsItens AO SUPERVISORIO.", ClasseRotinasDiversas.Tipo.Geral)
+            'Rotinas.EscreverEmLog(" - EXECUTANDO O COMANDO WRITE INICIO.", ClasseRotinasDiversas.Tipo.Geral)
+            'Rotinas.EscreverEmLog(" - EXECUTANDO O COMANDO WRITE FIM.", ClasseRotinasDiversas.Tipo.Geral)
 
             horaFinal = Now.ToString
 
@@ -1027,45 +1029,6 @@ Erro:
 
     End Sub
 
-    Private Function BuscarTag(ByVal strTipoTagPesquisar As String) As String
-        Dim strTagLido As String = ""
-        Dim scriptSqlTemp As String
-        Dim cmdBUscarTagComandoSQL As SqlCommand
-        Dim rdrBuscarTagRegistro As SqlDataReader
-        Dim bolProducaoEmAndamento As Boolean
-
-        BuscarTag = ""
-
-        Try
-            scriptSqlTemp = "SELECT  "
-            scriptSqlTemp += "* "
-            scriptSqlTemp += " FROM referencia_tag "
-            scriptSqlTemp += " WHERE tipo_tag = '" & strTipoTagPesquisar.ToString.Trim & "'"
-
-            cmdBUscarTagComandoSQL = New SqlCommand(scriptSqlTemp, BancoDados.ConexaoAtiva)
-            rdrBuscarTagRegistro = cmdBUscarTagComandoSQL.ExecuteReader()
-            rdrBuscarTagRegistro.Read()
-
-            If rdrBuscarTagRegistro.HasRows Then
-                If Not IsDBNull(rdrBuscarTagRegistro("tag")) Then
-                    strTagLido = rdrBuscarTagRegistro("tag").ToString.Trim
-                Else
-                    strTagLido = "-1"
-                End If
-            End If
-            rdrBuscarTagRegistro.Close()
-            cmdBUscarTagComandoSQL.Dispose()
-
-            bolProducaoEmAndamento = True
-
-        Catch ex As Exception
-            strTagLido = "-1"
-        End Try
-
-        BuscarTag = strTagLido
-
-    End Function
-
     'Private Function TagEscreverString(ByVal parGrupoEscrever As String,
     '                         ByVal parEscritas As Integer,
     '                         ByVal parIntervaloEscritas As Integer,
@@ -1097,7 +1060,6 @@ Erro:
     '    Return retornoTagEscrever
 
     'End Function
-
 
     Private Sub btnAtualizaTAGS_Click(sender As Object, e As EventArgs) Handles btnAtualizaTAGS.Click
         Dim balancaNumero As Integer
@@ -1171,7 +1133,7 @@ Erro:
                 BancoDados.AdicionarParametro("@parGrupoOpc", GROUP_NAME)
                 BancoDados.AdicionarParametro("@parOpcItemID", IDopcItem)
                 BancoDados.AdicionarParametro("@parAlias", "MP" & siloNumero & "_B" & balancaNumero & "_DESC")
-                BancoDados.AdicionarParametro("@parOpcItem", "MP" & siloNumero & "_B" & balancaNumero & "_Desc.DATA")
+                BancoDados.AdicionarParametro("@parOpcItem", "MP" & siloNumero & "_B" & balancaNumero & "_Desc")
                 BancoDados.AdicionarParametro("@parIndexado", 0)
                 BancoDados.AdicionarParametro("@parIndiceMatriz", siloNumero - 1)
                 BancoDados.AdicionarParametro("@parTipoAcao", "W")
@@ -1188,16 +1150,6 @@ Erro:
         Next
 
     End Sub
-
-
-
-
-    '    EscreverStringOPC(CONTROLE_PRODUTO_DESCRICAO_ID, lblProduto.Text.Trim)
-    'EscreverStringOPC(CONTROLE_FORMULA_DESCRICAO_ID, lblFormula.Text.Trim)
-    'EscreverNumeroOPC(CONTROLE_TAMANHO_BATCH_ID, Convert.ToDouble(lblTamanhoBatch.Text))
-
-
-
 
 #End Region
 
