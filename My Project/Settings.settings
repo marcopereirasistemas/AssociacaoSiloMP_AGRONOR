@@ -2,15 +2,6 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
   <Profiles />
   <Settings>
-    <Setting Name="SUPERVISORIO_NODE" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Fix32.JOFEGE</Value>
-    </Setting>
-    <Setting Name="PASTA_DYNAMICS" Type="System.String" Scope="User">
-      <Value Profile="(Default)">C:\DYNAMICS\</Value>
-    </Setting>
-    <Setting Name="EXE_WORKSPACE" Type="System.String" Scope="User">
-      <Value Profile="(Default)">WORKSPACE</Value>
-    </Setting>
     <Setting Name="VERIFICA_SUPERVISORIO_ATIVO" Type="System.String" Scope="User">
       <Value Profile="(Default)">1</Value>
     </Setting>

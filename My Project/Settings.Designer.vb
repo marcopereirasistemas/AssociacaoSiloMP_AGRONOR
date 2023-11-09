@@ -56,42 +56,6 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Fix32.JOFEGE")>  _
-        Public Property SUPERVISORIO_NODE() As String
-            Get
-                Return CType(Me("SUPERVISORIO_NODE"),String)
-            End Get
-            Set
-                Me("SUPERVISORIO_NODE") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("C:\DYNAMICS\")>  _
-        Public Property PASTA_DYNAMICS() As String
-            Get
-                Return CType(Me("PASTA_DYNAMICS"),String)
-            End Get
-            Set
-                Me("PASTA_DYNAMICS") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("WORKSPACE")>  _
-        Public Property EXE_WORKSPACE() As String
-            Get
-                Return CType(Me("EXE_WORKSPACE"),String)
-            End Get
-            Set
-                Me("EXE_WORKSPACE") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("1")>  _
         Public Property VERIFICA_SUPERVISORIO_ATIVO() As String
             Get

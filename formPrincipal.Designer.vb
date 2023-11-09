@@ -51,7 +51,7 @@ Partial Class formPrincipal
         '
         'lblMensagem
         '
-        Me.lblMensagem.Size = New System.Drawing.Size(37877, 17)
+        Me.lblMensagem.Size = New System.Drawing.Size(44429, 17)
         Me.lblMensagem.Text = ""
         '
         'DataGridView1
@@ -97,7 +97,7 @@ Partial Class formPrincipal
         Me.DataGridView1.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Verdana", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DataGridView1.RowTemplate.Height = 50
         Me.DataGridView1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.Size = New System.Drawing.Size(1263, 437)
+        Me.DataGridView1.Size = New System.Drawing.Size(1263, 432)
         Me.DataGridView1.TabIndex = 29
         '
         'ID
@@ -164,7 +164,7 @@ Partial Class formPrincipal
         Me.btnFechar.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnFechar.Image = Global.AssociacaoSiloMP_JOFEGE.My.Resources.Resource1.Sair1
         Me.btnFechar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnFechar.Location = New System.Drawing.Point(1156, 456)
+        Me.btnFechar.Location = New System.Drawing.Point(1156, 452)
         Me.btnFechar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnFechar.Name = "btnFechar"
         Me.btnFechar.Size = New System.Drawing.Size(119, 54)
@@ -200,7 +200,7 @@ Partial Class formPrincipal
         Me.btnDesassociar.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDesassociar.Image = Global.AssociacaoSiloMP_JOFEGE.My.Resources.Resource1.cancel
         Me.btnDesassociar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnDesassociar.Location = New System.Drawing.Point(171, 456)
+        Me.btnDesassociar.Location = New System.Drawing.Point(171, 452)
         Me.btnDesassociar.Margin = New System.Windows.Forms.Padding(10)
         Me.btnDesassociar.Name = "btnDesassociar"
         Me.btnDesassociar.Padding = New System.Windows.Forms.Padding(2)
@@ -218,7 +218,7 @@ Partial Class formPrincipal
         Me.btnAssociar.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAssociar.Image = Global.AssociacaoSiloMP_JOFEGE.My.Resources.Resource1.apply
         Me.btnAssociar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAssociar.Location = New System.Drawing.Point(13, 456)
+        Me.btnAssociar.Location = New System.Drawing.Point(13, 452)
         Me.btnAssociar.Margin = New System.Windows.Forms.Padding(10)
         Me.btnAssociar.Name = "btnAssociar"
         Me.btnAssociar.Size = New System.Drawing.Size(149, 54)
@@ -233,7 +233,7 @@ Partial Class formPrincipal
         Me.Panel2.BackColor = System.Drawing.Color.Yellow
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel2.Controls.Add(Me.Label3)
-        Me.Panel2.Location = New System.Drawing.Point(362, 460)
+        Me.Panel2.Location = New System.Drawing.Point(362, 456)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(788, 46)
         Me.Panel2.TabIndex = 30
@@ -244,22 +244,22 @@ Partial Class formPrincipal
         Me.Label3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label3.Font = New System.Drawing.Font("Verdana", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Verdana", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Red
         Me.Label3.Location = New System.Drawing.Point(5, 6)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(773, 31)
         Me.Label3.TabIndex = 0
-        Me.Label3.Text = "Atualizando o supervisório com as matérias-primas associadas"
+        Me.Label3.Text = "Atualizando as descrições das matérias-primas associadas aos silos"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'btnAtualizaTAGS
         '
-        Me.btnAtualizaTAGS.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnAtualizaTAGS.Location = New System.Drawing.Point(12, 421)
+        Me.btnAtualizaTAGS.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnAtualizaTAGS.Location = New System.Drawing.Point(1068, 451)
         Me.btnAtualizaTAGS.Name = "btnAtualizaTAGS"
         Me.btnAtualizaTAGS.Size = New System.Drawing.Size(86, 31)
-        Me.btnAtualizaTAGS.TabIndex = 31
+        Me.btnAtualizaTAGS.TabIndex = 33
         Me.btnAtualizaTAGS.Text = "Button1"
         Me.btnAtualizaTAGS.UseVisualStyleBackColor = True
         '
@@ -280,13 +280,13 @@ Partial Class formPrincipal
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = " Associação de Silo com Matéria-Prima"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
-        Me.Controls.SetChildIndex(Me.pnlMensagens, 0)
         Me.Controls.SetChildIndex(Me.btnAssociar, 0)
         Me.Controls.SetChildIndex(Me.btnDesassociar, 0)
         Me.Controls.SetChildIndex(Me.btnFechar, 0)
         Me.Controls.SetChildIndex(Me.DataGridView1, 0)
         Me.Controls.SetChildIndex(Me.Panel2, 0)
         Me.Controls.SetChildIndex(Me.btnDesassociarTodos, 0)
+        Me.Controls.SetChildIndex(Me.pnlMensagens, 0)
         Me.Controls.SetChildIndex(Me.btnAtualizaTAGS, 0)
         Me.pnlMensagens.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()

@@ -340,8 +340,6 @@ Public Class formPrincipal
     'End Function
 
 
-#End Region
-
     '    Public Function GetErrorString(ByRef lErrCode As Integer) As String
     '        Dim sText As String
 
@@ -711,6 +709,7 @@ Erro:
 
     'End Function
 
+#End Region
 
 #Region "Eventos de componentes"
 
@@ -906,7 +905,7 @@ Erro:
 
             EscreverStringOpcItem(AssMpSiloOPC, opcIdTemp, valueTemp)
 
-            Thread.Sleep(100)
+            Thread.Sleep(50)
 
         Next
 
@@ -919,6 +918,14 @@ Erro:
         Dim opcIdTemp As Long
         Dim aliasTemp As String
         Dim valueTemp As String
+
+        Panel2.Visible = True
+        btnAssociar.Enabled = False
+        btnDesassociar.Enabled = False
+
+        Me.Refresh()
+
+        horaInicial = Now.ToString
 
         ConnectServer()
 
@@ -950,11 +957,7 @@ Erro:
 
             rdrRegistro = cmdComandoSQL.ExecuteReader()
 
-            Panel2.Visible = True
 
-            Me.Refresh()
-
-            horaInicial = Now.ToString
 
             While rdrRegistro.Read()
 
@@ -995,6 +998,12 @@ Erro:
 
             btnFechar.Enabled = True
 
+            Panel2.Visible = True
+
+            btnAssociar.Enabled = True
+
+            btnDesassociar.Enabled = True
+
         Finally
 
         End Try
@@ -1026,6 +1035,156 @@ Erro:
 
         DataGridView1.DataSource = dtCadastro
         DataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+
+    End Sub
+
+    Private Sub btnAtualizaTAGS_Click(sender As Object, e As EventArgs) Handles btnAtualizaTAGS.Click
+        Dim balancaNumero As Integer
+        Dim siloNumero As Integer
+        Dim IDopcItem As Integer
+        Dim indicetag As Integer
+        'MP1_B1_Desc.DATA
+        '...
+        'MP9_B1_Desc.DATA
+
+        'MP1_B2_Desc.DATA
+        '...
+        'MP9_B2_Desc.DATA
+
+        'MP1_B3_Desc.DATA
+        '...
+        'MP9_B3_Desc.DATA
+
+        'MP1_B4_Desc.DATA
+        '...
+        'MP9_B4_Desc.DATA
+
+        'MP1_B5_Desc.DATA
+        '...
+        'MP9_B5_Desc.DATA
+
+        'MP1_B6_Desc.DATA
+        '...
+        'MP9_B6_Desc.DATA
+
+        'BancoDados.ComandoSQL = "DELETE FROM [dbo].[OpcTagItens] WHERE GrupoOpc LIKE '%ASSOCIACAO_SILO_MP%'"
+        'BancoDados.CriaComandoSQL()
+        'BancoDados.ExecutaSQL()
+
+        'IDopcItem = 0
+        'For balancaNumero = 1 To 6
+
+        '    For siloNumero = 1 To 9
+
+        '        BancoDados.ComandoSQL = "INSERT INTO [dbo].[OpcTagItens] " &
+        '            "  ([LinhaID]          " &
+        '            "  ,[GrupoOpc]         " &
+        '            "  ,[OpcItemID]        " &
+        '            "  ,[Alias]            " &
+        '            "  ,[OpcItem]          " &
+        '            "  ,[Indexado]         " &
+        '            "  ,[IndiceMatriz]     " &
+        '            "  ,[TipoAcao]         " &
+        '            "  ,[Valor]            " &
+        '            "  ,[TipoTag]          " &
+        '            "  ,[NumeroElementos]  " &
+        '            "  ,[Limpar]           " &
+        '            "  ,[Status])          " &
+        '            " VALUES " &
+        '            "      (@parLinhaID          " &
+        '            "      ,@parGrupoOpc         " &
+        '            "      ,@parOpcItemID        " &
+        '            "      ,@parAlias           " &
+        '            "      ,@parOpcItem          " &
+        '            "      ,@parIndexado         " &
+        '            "      ,@parIndiceMatriz     " &
+        '            "      ,@parTipoAcao         " &
+        '            "      ,@parValor            " &
+        '            "      ,@parTipoTag          " &
+        '            "      ,@parNumeroElementos  " &
+        '            "      ,@parLimpar           " &
+        '            "      ,@parStatus)          "
+        '        BancoDados.CriaComandoSQL()
+        '        BancoDados.AdicionarParametro("@parLinhaID", " ")
+        '        BancoDados.AdicionarParametro("@parGrupoOpc", GROUP_NAME)
+        '        BancoDados.AdicionarParametro("@parOpcItemID", IDopcItem)
+        '        BancoDados.AdicionarParametro("@parAlias", "MP" & siloNumero & "_B" & balancaNumero & "_DESC")
+        '        BancoDados.AdicionarParametro("@parOpcItem", "MP" & siloNumero & "_B" & balancaNumero & "_Desc")
+        '        BancoDados.AdicionarParametro("@parIndexado", 0)
+        '        BancoDados.AdicionarParametro("@parIndiceMatriz", siloNumero - 1)
+        '        BancoDados.AdicionarParametro("@parTipoAcao", "W")
+        '        BancoDados.AdicionarParametro("@parValor", "")
+        '        BancoDados.AdicionarParametro("@parTipoTag", "")
+        '        BancoDados.AdicionarParametro("@parNumeroElementos", 0)
+        '        BancoDados.AdicionarParametro("@parLimpar", 1)
+        '        BancoDados.AdicionarParametro("@parStatus", 1)
+        '        BancoDados.ExecutaSQL()
+
+        '        IDopcItem += 1
+
+        '    Next
+        'Next
+
+        'BAL 1 / 2
+        'SILO           DES		    E.MAX		E.MIN		REAL ON		REAL COL
+        'N29:0..15	    F21:0..19	F21:40..59	F21:20..39	F21:60..79	F26:0..19
+
+        'BAL 3 / 2
+        'SILO           DES		    E.MAX		E.MIN		REAL ON		REAL COL
+        'N29:40:0..15	F23:0..19	F23:40..49	F23:20..39	F23:60..79	F26:40..59
+
+        'BAL 5 / 2
+        'SILO           DES		    E.MAX		E.MIN		REAL ON		REAL COL
+        'N29:80:0..15	F27:0..19	F27:40..59	F27:20..39	F27:60..79	F26:80..99
+
+
+        balancaNumero = 5
+        IDopcItem = 0
+        indicetag = 129
+        For siloNumero = 0 To 15
+
+            BancoDados.ComandoSQL = "INSERT INTO [dbo].[OpcTagItens] " &
+                "  ([LinhaID]          " &
+                "  ,[GrupoOpc]         " &
+                "  ,[OpcItemID]        " &
+                "  ,[Alias]            " &
+                "  ,[OpcItem]          " &
+                "  ,[Indexado]         " &
+                "  ,[IndiceMatriz]     " &
+                "  ,[Valor]            " &
+                "  ,[NumeroElementos]  " &
+                "  ,[Limpar]           " &
+                "  ,[Status])          " &
+                " VALUES " &
+                "      (@parLinhaID          " &
+                "      ,@parGrupoOpc         " &
+                "      ,@parOpcItemID        " &
+                "      ,@parAlias           " &
+                "      ,@parOpcItem          " &
+                "      ,@parIndexado         " &
+                "      ,@parIndiceMatriz     " &
+                "      ,@parValor            " &
+                "      ,@parNumeroElementos  " &
+                "      ,@parLimpar           " &
+                "      ,@parStatus)          "
+            BancoDados.CriaComandoSQL()
+            BancoDados.AdicionarParametro("@parLinhaID", 2)
+            BancoDados.AdicionarParametro("@parGrupoOpc", "SP_PRODUCAO_L2")
+            BancoDados.AdicionarParametro("@parOpcItemID", IDopcItem)
+            BancoDados.AdicionarParametro("@parAlias", $"QTDE_REAL_BALANCA_{balancaNumero}_{siloNumero}")
+            BancoDados.AdicionarParametro("@parOpcItem", $"N129[{indicetag + siloNumero }]")
+            BancoDados.AdicionarParametro("@parIndexado", 0)
+            BancoDados.AdicionarParametro("@parIndiceMatriz", siloNumero)
+            BancoDados.AdicionarParametro("@parValor", "")
+            BancoDados.AdicionarParametro("@parNumeroElementos", 0)
+            BancoDados.AdicionarParametro("@parLimpar", 1)
+            BancoDados.AdicionarParametro("@parStatus", 1)
+            BancoDados.ExecutaSQL()
+
+            IDopcItem += 1
+
+        Next
+
 
     End Sub
 
@@ -1061,95 +1220,7 @@ Erro:
 
     'End Function
 
-    Private Sub btnAtualizaTAGS_Click(sender As Object, e As EventArgs) Handles btnAtualizaTAGS.Click
-        Dim balancaNumero As Integer
-        Dim siloNumero As Integer
-        Dim IDopcItem As Integer
-        'MP1_B1_Desc.DATA
-        '...
-        'MP9_B1_Desc.DATA
 
-        'MP1_B2_Desc.DATA
-        '...
-        'MP9_B2_Desc.DATA
-
-        'MP1_B3_Desc.DATA
-        '...
-        'MP9_B3_Desc.DATA
-
-        'MP1_B4_Desc.DATA
-        '...
-        'MP9_B4_Desc.DATA
-
-        'MP1_B5_Desc.DATA
-        '...
-        'MP9_B5_Desc.DATA
-
-        'MP1_B6_Desc.DATA
-        '...
-        'MP9_B6_Desc.DATA
-
-
-
-        BancoDados.ComandoSQL = "DELETE FROM [dbo].[OpcTagItens] WHERE GrupoOpc LIKE '%ASSOCIACAO_SILO_MP%'"
-        BancoDados.CriaComandoSQL()
-        BancoDados.ExecutaSQL()
-
-        IDopcItem = 0
-        For balancaNumero = 1 To 6
-
-            For siloNumero = 1 To 9
-
-                BancoDados.ComandoSQL = "INSERT INTO [dbo].[OpcTagItens] " &
-                    "  ([LinhaID]          " &
-                    "  ,[GrupoOpc]         " &
-                    "  ,[OpcItemID]        " &
-                    "  ,[Alias]            " &
-                    "  ,[OpcItem]          " &
-                    "  ,[Indexado]         " &
-                    "  ,[IndiceMatriz]     " &
-                    "  ,[TipoAcao]         " &
-                    "  ,[Valor]            " &
-                    "  ,[TipoTag]          " &
-                    "  ,[NumeroElementos]  " &
-                    "  ,[Limpar]           " &
-                    "  ,[Status])          " &
-                    " VALUES " &
-                    "      (@parLinhaID          " &
-                    "      ,@parGrupoOpc         " &
-                    "      ,@parOpcItemID        " &
-                    "      ,@parAlias           " &
-                    "      ,@parOpcItem          " &
-                    "      ,@parIndexado         " &
-                    "      ,@parIndiceMatriz     " &
-                    "      ,@parTipoAcao         " &
-                    "      ,@parValor            " &
-                    "      ,@parTipoTag          " &
-                    "      ,@parNumeroElementos  " &
-                    "      ,@parLimpar           " &
-                    "      ,@parStatus)          "
-                BancoDados.CriaComandoSQL()
-                BancoDados.AdicionarParametro("@parLinhaID", " ")
-                BancoDados.AdicionarParametro("@parGrupoOpc", GROUP_NAME)
-                BancoDados.AdicionarParametro("@parOpcItemID", IDopcItem)
-                BancoDados.AdicionarParametro("@parAlias", "MP" & siloNumero & "_B" & balancaNumero & "_DESC")
-                BancoDados.AdicionarParametro("@parOpcItem", "MP" & siloNumero & "_B" & balancaNumero & "_Desc")
-                BancoDados.AdicionarParametro("@parIndexado", 0)
-                BancoDados.AdicionarParametro("@parIndiceMatriz", siloNumero - 1)
-                BancoDados.AdicionarParametro("@parTipoAcao", "W")
-                BancoDados.AdicionarParametro("@parValor", "")
-                BancoDados.AdicionarParametro("@parTipoTag", "")
-                BancoDados.AdicionarParametro("@parNumeroElementos", 0)
-                BancoDados.AdicionarParametro("@parLimpar", 1)
-                BancoDados.AdicionarParametro("@parStatus", 1)
-                BancoDados.ExecutaSQL()
-
-                IDopcItem += 1
-
-            Next
-        Next
-
-    End Sub
 
 #End Region
 
