@@ -1127,7 +1127,7 @@ Erro:
 
         'BAL 1 / 2
         'SILO           DES		    E.MAX		E.MIN		REAL ON		REAL COL
-        'N29:0..15	    F21:0..19	F21:40..59	F21:20..39	F21:60..79	F26:0..19
+        'N29[0],0..15	    F21:0..19	F21:40..59	F21:20..39	F21:60..79	F26:0..19
 
         'BAL 3 / 2
         'SILO           DES		    E.MAX		E.MIN		REAL ON		REAL COL
@@ -1138,10 +1138,10 @@ Erro:
         'N29:80:0..15	F27:0..19	F27:40..59	F27:20..39	F27:60..79	F26:80..99
 
 
-        balancaNumero = 5
+        balancaNumero = 1
         IDopcItem = 0
-        indicetag = 129
-        For siloNumero = 0 To 15
+        indicetag = 0
+        For siloNumero = 0 To 19
 
             BancoDados.ComandoSQL = "INSERT INTO [dbo].[OpcTagItens] " &
                 "  ([LinhaID]          " &
@@ -1168,11 +1168,11 @@ Erro:
                 "      ,@parLimpar           " &
                 "      ,@parStatus)          "
             BancoDados.CriaComandoSQL()
-            BancoDados.AdicionarParametro("@parLinhaID", 2)
-            BancoDados.AdicionarParametro("@parGrupoOpc", "SP_PRODUCAO_L2")
+            BancoDados.AdicionarParametro("@parLinhaID", 1)
+            BancoDados.AdicionarParametro("@parGrupoOpc", "SP_PRODUCAO_L1")
             BancoDados.AdicionarParametro("@parOpcItemID", IDopcItem)
-            BancoDados.AdicionarParametro("@parAlias", $"QTDE_REAL_BALANCA_{balancaNumero}_{siloNumero}")
-            BancoDados.AdicionarParametro("@parOpcItem", $"N129[{indicetag + siloNumero }]")
+            BancoDados.AdicionarParametro("@parAlias", $"QTDE_REAL_BALANCA_{balancaNumero}_{IDopcItem}")
+            BancoDados.AdicionarParametro("@parOpcItem", $"F26[{ siloNumero }]")
             BancoDados.AdicionarParametro("@parIndexado", 0)
             BancoDados.AdicionarParametro("@parIndiceMatriz", siloNumero)
             BancoDados.AdicionarParametro("@parValor", "")
