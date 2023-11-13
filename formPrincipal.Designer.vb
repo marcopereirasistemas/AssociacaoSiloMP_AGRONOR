@@ -51,7 +51,7 @@ Partial Class formPrincipal
         '
         'lblMensagem
         '
-        Me.lblMensagem.Size = New System.Drawing.Size(44429, 17)
+        Me.lblMensagem.Size = New System.Drawing.Size(45248, 17)
         Me.lblMensagem.Text = ""
         '
         'DataGridView1
@@ -262,6 +262,7 @@ Partial Class formPrincipal
         Me.btnAtualizaTAGS.TabIndex = 33
         Me.btnAtualizaTAGS.Text = "Button1"
         Me.btnAtualizaTAGS.UseVisualStyleBackColor = True
+        Me.btnAtualizaTAGS.Visible = False
         '
         'formPrincipal
         '

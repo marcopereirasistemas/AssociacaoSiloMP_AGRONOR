@@ -105,6 +105,7 @@
     <Content Include="Classes\iFIX.txt" />
     <Content Include="Classes\iFIX2.txt" />
     <Compile Include="Classes\Module1.vb" />
+    <Compile Include="Classes\OpcTagItem.vb" />
     <Compile Include="Classes\OrdemProducao.vb" />
     <Compile Include="Classes\Producao.vb" />
     <Compile Include="Classes\ProducaoFormulaItem.vb" />
