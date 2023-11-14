@@ -36,7 +36,7 @@ Public Class formPrincipal
     Dim formTrocarSiloNova As Object
     Dim RotinasDiversas As New ClasseRotinasDiversas
     Dim teclaCtrlPressionada As Boolean
-    Dim Versao As String = " - Versão 1.0.7 - 13/11/2023"
+    Dim Versao As String = " - Versão 1.0.8 - 14/11/2023"
     Dim horaInicioEnvio As String
     Dim horaFinalEnvio As String
     Dim horaInicial As DateTime
@@ -1006,8 +1006,19 @@ Erro:
         sqlAssociacoes = "SELECT "
         sqlAssociacoes += "	      cs.id                         "
         sqlAssociacoes += "	    , cs.numero as SiloNumero       "
-        sqlAssociacoes += "	    , cs.descricao as SiloDescricao "
-        sqlAssociacoes += "     , cb.Descricao as BalancaDescricao  "
+
+        If HabilitarTestesLOG() Then
+            sqlAssociacoes += "	    , Ltrim(str(cs.Numero)) + ' - ' + cs.descricao as SiloDescricao "
+        Else
+            sqlAssociacoes += "	    , cs.descricao as SiloDescricao "
+        End If
+
+        If HabilitarTestesLOG() Then
+            sqlAssociacoes += "     , Ltrim(str(cb.Numero)) + ' - ' + cb.Descricao as BalancaDescricao  "
+        Else
+            sqlAssociacoes += "     , cb.Descricao as BalancaDescricao  "
+        End If
+
         sqlAssociacoes += "	    , asm.CodigoMateriaPrima        "
         sqlAssociacoes += "	    , asm.CodigoMateriaPrima + ' - ' + cmp.Descricao as MateriaPrima "
         sqlAssociacoes += "	    , cmp.Lote "
@@ -1025,6 +1036,21 @@ Erro:
         DataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect
 
     End Sub
+
+
+    Private Function HabilitarTestesLOG() As Boolean
+        Dim retornoHabilitaTestes As Boolean
+
+        retornoHabilitaTestes = False
+
+        If Rotinas.ArquivoExiste(Application.StartupPath & "\TESTE.TXT") Then
+            retornoHabilitaTestes = True
+        End If
+
+        Return retornoHabilitaTestes
+
+    End Function
+
 
     Private Function GerarItensOPC(ByVal _linhaID As Integer,
                                    ByVal _numeroElementos As Integer,
