@@ -720,7 +720,7 @@ Erro:
             If Rotinas.ArquivoExistePastaAplicacao("TESTE.TXT") Then
 
                 ini = $"Inicio: {horaInicial}"
-                fin = $"Fim: {horaFinal}"
+                fin = $"Fim...: {horaFinal}"
                 temp = $"{DateDiff(DateInterval.Second, horaInicial, horaFinal)} segundos"
 
                 MsgBox($"Descricões atualizadas: " & vbCrLf & vbCrLf &
@@ -1025,7 +1025,7 @@ Erro:
         sqlAssociacoes += "	FROM CadastroSilos cs "
         sqlAssociacoes += "	LEFT JOIN AssociacaoSiloMP	    asm ON cs.id = asm.SiloID "
         sqlAssociacoes += "	LEFT JOIN CadastroMateriaPrima	cmp ON asm.CodigoMateriaPrima = cmp.CodigoMateriaPrima "
-        sqlAssociacoes += " INNER JOIN CadastroBalancas		cb	ON cs.BalancaID = cb.ID "
+        sqlAssociacoes += " LEFT JOIN CadastroBalancas		cb	ON cs.BalancaID = cb.ID "
         sqlAssociacoes += " ORDER BY CS.BalancaID, CS.Numero"
 
         command.CommandText = sqlAssociacoes
@@ -1036,7 +1036,6 @@ Erro:
         DataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect
 
     End Sub
-
 
     Private Function HabilitarTestesLOG() As Boolean
         Dim retornoHabilitaTestes As Boolean
@@ -1116,6 +1115,8 @@ Erro:
         Dim indiceInicialTag As Integer
         Dim __opcTagItens As New List(Of OpcTagItem)()
         Dim _linhaID As Integer
+        Dim ScritpsSqlExecutar As New List(Of ScriptExecutar)()
+        Dim iLinhaID As Integer
 
 #Region "ATUALIZACAO DAS DESCRICOES DA MPs ASSOCIADAS"
         'MP1_B1_Desc.DATA
@@ -1202,6 +1203,33 @@ Erro:
 #End Region
 
 #Region "ITENS DE PRODUCAO"
+
+        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%SILO_BALANCA%'"))
+        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%QTDE_DESEJADA_BALANCA%'"))
+        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%ERRO_MIN_BALANCA%'"))
+        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%ERRO_MAX_BALANCA%'"))
+        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%QTDE_REAL_ONLINE_BALANCA%'"))
+        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%QTDE_REAL_BALANCA%'"))
+
+        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 2 And ALIAS Like '%SILO_BALANCA%'"))
+        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 2 And ALIAS Like '%QTDE_DESEJADA_BALANCA%'"))
+        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 2 And ALIAS Like '%ERRO_MIN_BALANCA%'"))
+        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 2 And ALIAS Like '%ERRO_MAX_BALANCA%'"))
+        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 2 And ALIAS Like '%QTDE_REAL_ONLINE_BALANCA%'"))
+        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 2 And ALIAS Like '%QTDE_REAL_BALANCA%'"))
+
+        iLinhaID = 2
+        Debug.Print("------------------------------------------------------------------")
+        For Each sc As ScriptExecutar In ScritpsSqlExecutar
+
+            Debug.Print($"GUID...: {sc.ID }")
+            Debug.Print($"COMANDO: {sc.Comando}")
+            Debug.Print("------------------------------------------------------------------")
+
+            BancoDados.ComandoSQL = sc.Comando
+            BancoDados.CriaComandoSQL()
+            BancoDados.ExecutaSQL()
+        Next
 
         _indiceGrupo = 0
         numeroElementos = 20
@@ -1565,10 +1593,10 @@ Erro:
 #End Region
 
 
-#Region "LINHA 2 - BALANCA 2"
+#Region "LINHA 2 - BALANCA 1"
 
         _linhaID = 2
-        _balancaNumero = 2
+        _balancaNumero = 1
         NomeGrupoOPC = "PRODUCAO_SP_L" & _linhaID
 
 
@@ -1589,7 +1617,7 @@ Erro:
 
         GravarOpcTagItens(__opcTagItens)
 
-
+        '_balancaNumero = 1
         partialNameAlias = "QTDE_DESEJADA_BALANCA"
         tagPartial_1 = "F21"
         indiceInicialTag = 0
@@ -1607,7 +1635,7 @@ Erro:
 
         GravarOpcTagItens(__opcTagItens)
 
-
+        '_balancaNumero = 1
         partialNameAlias = "ERRO_MIN_BALANCA"
         tagPartial_1 = "F21"
         indiceInicialTag = 20
@@ -1625,7 +1653,7 @@ Erro:
 
         GravarOpcTagItens(__opcTagItens)
 
-
+        '_balancaNumero = 1
         partialNameAlias = "ERRO_MAX_BALANCA"
         tagPartial_1 = "F21"
         indiceInicialTag = 40
@@ -1643,7 +1671,7 @@ Erro:
 
         GravarOpcTagItens(__opcTagItens)
 
-
+        '_balancaNumero = 1
         partialNameAlias = "QTDE_REAL_ONLINE_BALANCA"
         tagPartial_1 = "F21"
         indiceInicialTag = 60
@@ -1661,7 +1689,7 @@ Erro:
 
         GravarOpcTagItens(__opcTagItens)
 
-
+        '_balancaNumero = 1
         NomeGrupoOPC = "PRODUCAO_CL_L" & _linhaID
         partialNameAlias = "QTDE_REAL_BALANCA"
         tagPartial_1 = "F26"
@@ -1682,9 +1710,9 @@ Erro:
 
 #End Region
 
-#Region "LINHA 2 - BALANCA 4"
+#Region "LINHA 2 - BALANCA 3"
 
-        _balancaNumero = 4
+        _balancaNumero = 3
         NomeGrupoOPC = "PRODUCAO_SP_L" & _linhaID
 
         partialNameAlias = "SILO_BALANCA"
@@ -1704,7 +1732,7 @@ Erro:
 
         GravarOpcTagItens(__opcTagItens)
 
-
+        '_balancaNumero = 3
         partialNameAlias = "QTDE_DESEJADA_BALANCA"
         tagPartial_1 = "F23"
         indiceInicialTag = 0
@@ -1722,10 +1750,10 @@ Erro:
 
         GravarOpcTagItens(__opcTagItens)
 
-
+        '_balancaNumero = 3
         partialNameAlias = "ERRO_MIN_BALANCA"
-        indiceInicialTag = 20
         tagPartial_1 = "F23"
+        indiceInicialTag = 20
         __opcTagItens = GerarItensOPC(_linhaID,
                                       numeroElementos,
                                       _balancaNumero,
@@ -1740,7 +1768,7 @@ Erro:
 
         GravarOpcTagItens(__opcTagItens)
 
-
+        '_balancaNumero = 3
         partialNameAlias = "ERRO_MAX_BALANCA"
         tagPartial_1 = "F23"
         indiceInicialTag = 40
@@ -1760,7 +1788,7 @@ Erro:
 
 
         partialNameAlias = "QTDE_REAL_ONLINE_BALANCA"
-        tagPartial_1 = "F21"
+        tagPartial_1 = "F23"
         indiceInicialTag = 60
         __opcTagItens = GerarItensOPC(_linhaID,
                                       numeroElementos,
@@ -1776,11 +1804,11 @@ Erro:
 
         GravarOpcTagItens(__opcTagItens)
 
-
+        '_balancaNumero = 3
         NomeGrupoOPC = "PRODUCAO_CL_L" & _linhaID
         partialNameAlias = "QTDE_REAL_BALANCA"
         tagPartial_1 = "F26"
-        indiceInicialTag = 0
+        indiceInicialTag = 40
         __opcTagItens = GerarItensOPC(_linhaID,
                                       numeroElementos,
                                       _balancaNumero,
@@ -1797,29 +1825,30 @@ Erro:
 
 #End Region
 
-#Region "LINHA 2 - BALANCA 6"
+#Region "LINHA 2 - BALANCA 5"
 
-        _balancaNumero = 6
+        _balancaNumero = 5
         NomeGrupoOPC = "PRODUCAO_SP_L" & _linhaID
 
         partialNameAlias = "SILO_BALANCA"
         tagPartial_1 = "N29"
         indiceInicialTag = 80
         __opcTagItens = GerarItensOPC(_linhaID,
-                                      numeroElementos,
-                                      _balancaNumero,
-                                      NomeGrupoOPC,
-                                      partialNameAlias,
-                                      tagPartial_1,
-                                      indiceInicialTag,
-                                      0,
-                                      1,
-                                      0,
-                                      0)
+                                          numeroElementos,
+                                          _balancaNumero,
+                                          NomeGrupoOPC,
+                                          partialNameAlias,
+                                          tagPartial_1,
+                                          indiceInicialTag,
+                                          0,
+                                          1,
+                                          0,
+                                          0
+                                      )
 
         GravarOpcTagItens(__opcTagItens)
 
-
+        '_balancaNumero = 5
         NomeGrupoOPC = "PRODUCAO_SP_L" & _linhaID
         partialNameAlias = "QTDE_DESEJADA_BALANCA"
         tagPartial_1 = "F27"
@@ -1838,7 +1867,7 @@ Erro:
 
         GravarOpcTagItens(__opcTagItens)
 
-
+        '_balancaNumero = 5
         NomeGrupoOPC = "PRODUCAO_SP_L" & _linhaID
         partialNameAlias = "ERRO_MIN_BALANCA"
         tagPartial_1 = "F27"
@@ -1857,7 +1886,7 @@ Erro:
 
         GravarOpcTagItens(__opcTagItens)
 
-
+        '_balancaNumero = 5
         NomeGrupoOPC = "PRODUCAO_SP_L" & _linhaID
         partialNameAlias = "ERRO_MAX_BALANCA"
         tagPartial_1 = "F27"
@@ -1876,10 +1905,10 @@ Erro:
 
         GravarOpcTagItens(__opcTagItens)
 
-
+        '_balancaNumero = 5
         NomeGrupoOPC = "PRODUCAO_SP_L" & _linhaID
         partialNameAlias = "QTDE_REAL_ONLINE_BALANCA"
-        tagPartial_1 = "F21"
+        tagPartial_1 = "F27"
         indiceInicialTag = 60
         __opcTagItens = GerarItensOPC(_linhaID,
                                       numeroElementos,
@@ -1895,10 +1924,10 @@ Erro:
 
         GravarOpcTagItens(__opcTagItens)
 
-
+        '_balancaNumero = 5
         NomeGrupoOPC = "PRODUCAO_CL_L" & _linhaID
         partialNameAlias = "QTDE_REAL_BALANCA"
-        tagPartial_1 = "F26"
+        tagPartial_1 = "F27"
         indiceInicialTag = 80
         __opcTagItens = GerarItensOPC(_linhaID,
                                       numeroElementos,
@@ -1971,6 +2000,12 @@ Erro:
         Next
 
         _tagItens.Clear()
+
+    End Sub
+
+    Private Sub btnAtualizar_Click(sender As Object, e As EventArgs) Handles btnAtualizar.Click
+
+        CarregaAssociacoes()
 
     End Sub
 

@@ -39,6 +39,7 @@ Partial Class formPrincipal
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnAtualizaTAGS = New System.Windows.Forms.Button()
+        Me.btnAtualizar = New System.Windows.Forms.Button()
         Me.pnlMensagens.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -47,11 +48,11 @@ Partial Class formPrincipal
         'pnlMensagens
         '
         Me.pnlMensagens.Location = New System.Drawing.Point(0, 516)
-        Me.pnlMensagens.Size = New System.Drawing.Size(1287, 22)
+        Me.pnlMensagens.Size = New System.Drawing.Size(1615, 22)
         '
         'lblMensagem
         '
-        Me.lblMensagem.Size = New System.Drawing.Size(45248, 17)
+        Me.lblMensagem.Size = New System.Drawing.Size(48689, 17)
         Me.lblMensagem.Text = ""
         '
         'DataGridView1
@@ -97,7 +98,7 @@ Partial Class formPrincipal
         Me.DataGridView1.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Verdana", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DataGridView1.RowTemplate.Height = 50
         Me.DataGridView1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.Size = New System.Drawing.Size(1263, 432)
+        Me.DataGridView1.Size = New System.Drawing.Size(1591, 432)
         Me.DataGridView1.TabIndex = 29
         '
         'ID
@@ -130,7 +131,7 @@ Partial Class formPrincipal
         Me.BalancaDescricao.HeaderText = "Balança"
         Me.BalancaDescricao.Name = "BalancaDescricao"
         Me.BalancaDescricao.ReadOnly = True
-        Me.BalancaDescricao.Width = 350
+        Me.BalancaDescricao.Width = 450
         '
         'CodigoMateriaPrima
         '
@@ -146,7 +147,7 @@ Partial Class formPrincipal
         Me.MateriaPrima.HeaderText = "MateriaPrima"
         Me.MateriaPrima.Name = "MateriaPrima"
         Me.MateriaPrima.ReadOnly = True
-        Me.MateriaPrima.Width = 650
+        Me.MateriaPrima.Width = 600
         '
         'Lote
         '
@@ -154,7 +155,7 @@ Partial Class formPrincipal
         Me.Lote.HeaderText = "Lote"
         Me.Lote.Name = "Lote"
         Me.Lote.ReadOnly = True
-        Me.Lote.Width = 300
+        Me.Lote.Width = 275
         '
         'btnFechar
         '
@@ -164,7 +165,7 @@ Partial Class formPrincipal
         Me.btnFechar.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnFechar.Image = Global.AssociacaoSiloMP_JOFEGE.My.Resources.Resource1.Sair1
         Me.btnFechar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnFechar.Location = New System.Drawing.Point(1156, 452)
+        Me.btnFechar.Location = New System.Drawing.Point(1484, 452)
         Me.btnFechar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnFechar.Name = "btnFechar"
         Me.btnFechar.Size = New System.Drawing.Size(119, 54)
@@ -235,7 +236,7 @@ Partial Class formPrincipal
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Location = New System.Drawing.Point(362, 456)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(788, 46)
+        Me.Panel2.Size = New System.Drawing.Size(947, 46)
         Me.Panel2.TabIndex = 30
         Me.Panel2.Visible = False
         '
@@ -248,7 +249,7 @@ Partial Class formPrincipal
         Me.Label3.ForeColor = System.Drawing.Color.Red
         Me.Label3.Location = New System.Drawing.Point(5, 6)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(773, 31)
+        Me.Label3.Size = New System.Drawing.Size(932, 31)
         Me.Label3.TabIndex = 0
         Me.Label3.Text = "Atualizando as descrições das matérias-primas associadas aos silos"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -256,18 +257,35 @@ Partial Class formPrincipal
         'btnAtualizaTAGS
         '
         Me.btnAtualizaTAGS.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnAtualizaTAGS.Location = New System.Drawing.Point(1068, 451)
+        Me.btnAtualizaTAGS.Location = New System.Drawing.Point(1517, 414)
         Me.btnAtualizaTAGS.Name = "btnAtualizaTAGS"
         Me.btnAtualizaTAGS.Size = New System.Drawing.Size(86, 31)
         Me.btnAtualizaTAGS.TabIndex = 33
         Me.btnAtualizaTAGS.Text = "Button1"
         Me.btnAtualizaTAGS.UseVisualStyleBackColor = True
-        Me.btnAtualizaTAGS.Visible = False
+        '
+        'btnAtualizar
+        '
+        Me.btnAtualizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnAtualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LemonChiffon
+        Me.btnAtualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAtualizar.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAtualizar.Image = Global.AssociacaoSiloMP_JOFEGE.My.Resources.Resource1.atualiar_32x32
+        Me.btnAtualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAtualizar.Location = New System.Drawing.Point(1322, 452)
+        Me.btnAtualizar.Margin = New System.Windows.Forms.Padding(10)
+        Me.btnAtualizar.Name = "btnAtualizar"
+        Me.btnAtualizar.Size = New System.Drawing.Size(149, 54)
+        Me.btnAtualizar.TabIndex = 34
+        Me.btnAtualizar.Text = "Atualizar"
+        Me.btnAtualizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnAtualizar.UseVisualStyleBackColor = True
         '
         'formPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
-        Me.ClientSize = New System.Drawing.Size(1287, 538)
+        Me.ClientSize = New System.Drawing.Size(1615, 538)
+        Me.Controls.Add(Me.btnAtualizar)
         Me.Controls.Add(Me.btnAtualizaTAGS)
         Me.Controls.Add(Me.btnDesassociarTodos)
         Me.Controls.Add(Me.Panel2)
@@ -289,6 +307,7 @@ Partial Class formPrincipal
         Me.Controls.SetChildIndex(Me.btnDesassociarTodos, 0)
         Me.Controls.SetChildIndex(Me.pnlMensagens, 0)
         Me.Controls.SetChildIndex(Me.btnAtualizaTAGS, 0)
+        Me.Controls.SetChildIndex(Me.btnAtualizar, 0)
         Me.pnlMensagens.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
@@ -308,7 +327,7 @@ Partial Class formPrincipal
         InitializeComponent()
 
     End Sub
-
+    Friend WithEvents btnAtualizaTAGS As Button
     Friend WithEvents ID As DataGridViewTextBoxColumn
     Friend WithEvents SILONUMERO As DataGridViewTextBoxColumn
     Friend WithEvents SILODESCRICAO As DataGridViewTextBoxColumn
@@ -316,5 +335,5 @@ Partial Class formPrincipal
     Friend WithEvents CodigoMateriaPrima As DataGridViewTextBoxColumn
     Friend WithEvents MateriaPrima As DataGridViewTextBoxColumn
     Friend WithEvents Lote As DataGridViewTextBoxColumn
-    Friend WithEvents btnAtualizaTAGS As Button
+    Friend WithEvents btnAtualizar As Button
 End Class
