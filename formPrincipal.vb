@@ -142,99 +142,6 @@ Public Class formPrincipal
 
     End Sub
 
-    'Private Function LerOpcItem(ByVal opcGrupoPar As RsiOPCAuto.OPCGroup,
-    '                            ByVal IndiceOPC As Long) As LeituraOpcRetorno
-    '    Dim OPCReadItem As Object
-    '    Dim OPCQuality As Object
-    '    Dim ObjOPCItem As RsiOPCAuto.OPCItem
-    '    Dim _retornoLeitura As New LeituraOpcRetorno() With {.Valor = 0, .Status = True}
-
-    '    Try
-
-    '        ObjOPCItem = opcGrupoPar.OPCItems(IndiceOPC)
-    '        ObjOPCItem.Read(OPC_DS_DEVICE, OPCReadItem, OPCQuality)
-    '        vAppRValue = OPCReadItem
-    '        _retornoLeitura.Valor = OPCReadItem
-
-    '    Catch ex As Exception
-
-    '        Rotinas.EscreverEmLog("LerBitOPC(): Erro: " & ex.Message, False)
-
-    '        _retornoLeitura.Valor = -1
-    '        _retornoLeitura.Status = False
-
-    '    End Try
-
-    '    Return _retornoLeitura
-
-    'End Function
-
-    'Private Function EscreverOpcItem(ByVal opcGrupoPar As RsiOPCAuto.OPCGroup,
-    '                                 ByVal OPCClientHandles As Long,
-    '                                 Optional ByVal OPCValue As Long = 0) As Boolean
-
-    '    Dim ObjOPCItem As RsiOPCAuto.OPCItem
-    '    Dim retornoTemp As Boolean
-    '    Dim msgErro As String
-    '    Try
-
-    '        ObjOPCItem = ProducaoOpcGrup.OPCItems(OPCClientHandles)
-
-    '        ObjOPCItem.Write(OPCValue)
-
-    '        msgErro = $"EscreverOpcItem() - OPCClientHandles: {OPCClientHandles}, Valor:  {OPCValue}"
-
-    '        retornoTemp = True
-
-    '    Catch ex As Exception
-
-    '        msgErro = $"Erro ao escrever no item {OPCClientHandles}. Erro: " & ex.Message
-
-    '        MsgBox(msgErro, MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Erro")
-
-    '        Rotinas.EscreverEmLog("" & ex.Message, False)
-
-    '        retornoTemp = False
-
-    '    End Try
-
-    '    Return retornoTemp
-
-    'End Function
-
-    'Private Function EscreverNumeroInteiroOpcItem(ByVal opcGrupoPar As RsiOPCAuto.OPCGroup,
-    '                                             ByVal OPCClientHandles As Long,
-    '                                             Optional ByVal OPCValue As Integer = 0) As Boolean
-
-    '    Dim ObjOPCItem As RsiOPCAuto.OPCItem
-    '    Dim retornoTemp As Boolean
-    '    Dim msgErro As String
-    '    Try
-
-    '        ObjOPCItem = ProducaoOpcGrup.OPCItems(OPCClientHandles)
-
-    '        ObjOPCItem.Write(OPCValue)
-
-    '        msgErro = $"EscreverOpcItem() - OPCClientHandles: {OPCClientHandles}, Valor:  {OPCValue}"
-
-    '        retornoTemp = True
-
-    '    Catch ex As Exception
-
-    '        msgErro = $"Erro ao escrever no item {OPCClientHandles}. Erro: " & ex.Message
-
-    '        MsgBox(msgErro, MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Erro")
-
-    '        Rotinas.EscreverEmLog("" & ex.Message, False)
-
-    '        retornoTemp = False
-
-    '    End Try
-
-    '    Return retornoTemp
-
-    'End Function
-
     Private Function EscreverStringOpcItem(ByVal opcGrupoPar As RsiOPCAuto.OPCGroup,
                                             ByVal OPCClientHandles As Long,
                                             Optional ByVal OPCValue As String = "") As Boolean
@@ -1218,13 +1125,12 @@ Erro:
         ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 2 And ALIAS Like '%QTDE_REAL_ONLINE_BALANCA%'"))
         ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 2 And ALIAS Like '%QTDE_REAL_BALANCA%'"))
 
-        iLinhaID = 2
-        Debug.Print("------------------------------------------------------------------")
+        Debug.Print("------------------------------------------------------------------------------------")
         For Each sc As ScriptExecutar In ScritpsSqlExecutar
 
             Debug.Print($"GUID...: {sc.ID }")
             Debug.Print($"COMANDO: {sc.Comando}")
-            Debug.Print("------------------------------------------------------------------")
+            Debug.Print("------------------------------------------------------------------------------------")
 
             BancoDados.ComandoSQL = sc.Comando
             BancoDados.CriaComandoSQL()
@@ -1593,10 +1499,10 @@ Erro:
 #End Region
 
 
-#Region "LINHA 2 - BALANCA 1"
+#Region "LINHA 2 - BALANCA 4"
 
         _linhaID = 2
-        _balancaNumero = 1
+        _balancaNumero = 2
         NomeGrupoOPC = "PRODUCAO_SP_L" & _linhaID
 
 
@@ -1617,7 +1523,6 @@ Erro:
 
         GravarOpcTagItens(__opcTagItens)
 
-        '_balancaNumero = 1
         partialNameAlias = "QTDE_DESEJADA_BALANCA"
         tagPartial_1 = "F21"
         indiceInicialTag = 0
@@ -1635,7 +1540,6 @@ Erro:
 
         GravarOpcTagItens(__opcTagItens)
 
-        '_balancaNumero = 1
         partialNameAlias = "ERRO_MIN_BALANCA"
         tagPartial_1 = "F21"
         indiceInicialTag = 20
@@ -1653,7 +1557,6 @@ Erro:
 
         GravarOpcTagItens(__opcTagItens)
 
-        '_balancaNumero = 1
         partialNameAlias = "ERRO_MAX_BALANCA"
         tagPartial_1 = "F21"
         indiceInicialTag = 40
@@ -1671,7 +1574,6 @@ Erro:
 
         GravarOpcTagItens(__opcTagItens)
 
-        '_balancaNumero = 1
         partialNameAlias = "QTDE_REAL_ONLINE_BALANCA"
         tagPartial_1 = "F21"
         indiceInicialTag = 60
@@ -1689,7 +1591,6 @@ Erro:
 
         GravarOpcTagItens(__opcTagItens)
 
-        '_balancaNumero = 1
         NomeGrupoOPC = "PRODUCAO_CL_L" & _linhaID
         partialNameAlias = "QTDE_REAL_BALANCA"
         tagPartial_1 = "F26"
@@ -1710,9 +1611,9 @@ Erro:
 
 #End Region
 
-#Region "LINHA 2 - BALANCA 3"
+#Region "LINHA 2 - BALANCA 4"
 
-        _balancaNumero = 3
+        _balancaNumero = 4
         NomeGrupoOPC = "PRODUCAO_SP_L" & _linhaID
 
         partialNameAlias = "SILO_BALANCA"
@@ -1732,7 +1633,6 @@ Erro:
 
         GravarOpcTagItens(__opcTagItens)
 
-        '_balancaNumero = 3
         partialNameAlias = "QTDE_DESEJADA_BALANCA"
         tagPartial_1 = "F23"
         indiceInicialTag = 0
@@ -1750,7 +1650,6 @@ Erro:
 
         GravarOpcTagItens(__opcTagItens)
 
-        '_balancaNumero = 3
         partialNameAlias = "ERRO_MIN_BALANCA"
         tagPartial_1 = "F23"
         indiceInicialTag = 20
@@ -1768,7 +1667,6 @@ Erro:
 
         GravarOpcTagItens(__opcTagItens)
 
-        '_balancaNumero = 3
         partialNameAlias = "ERRO_MAX_BALANCA"
         tagPartial_1 = "F23"
         indiceInicialTag = 40
@@ -1804,7 +1702,6 @@ Erro:
 
         GravarOpcTagItens(__opcTagItens)
 
-        '_balancaNumero = 3
         NomeGrupoOPC = "PRODUCAO_CL_L" & _linhaID
         partialNameAlias = "QTDE_REAL_BALANCA"
         tagPartial_1 = "F26"
@@ -1825,9 +1722,9 @@ Erro:
 
 #End Region
 
-#Region "LINHA 2 - BALANCA 5"
+#Region "LINHA 2 - BALANCA 6"
 
-        _balancaNumero = 5
+        _balancaNumero = 6
         NomeGrupoOPC = "PRODUCAO_SP_L" & _linhaID
 
         partialNameAlias = "SILO_BALANCA"
@@ -1848,7 +1745,6 @@ Erro:
 
         GravarOpcTagItens(__opcTagItens)
 
-        '_balancaNumero = 5
         NomeGrupoOPC = "PRODUCAO_SP_L" & _linhaID
         partialNameAlias = "QTDE_DESEJADA_BALANCA"
         tagPartial_1 = "F27"
@@ -1867,7 +1763,6 @@ Erro:
 
         GravarOpcTagItens(__opcTagItens)
 
-        '_balancaNumero = 5
         NomeGrupoOPC = "PRODUCAO_SP_L" & _linhaID
         partialNameAlias = "ERRO_MIN_BALANCA"
         tagPartial_1 = "F27"
@@ -1886,7 +1781,6 @@ Erro:
 
         GravarOpcTagItens(__opcTagItens)
 
-        '_balancaNumero = 5
         NomeGrupoOPC = "PRODUCAO_SP_L" & _linhaID
         partialNameAlias = "ERRO_MAX_BALANCA"
         tagPartial_1 = "F27"
@@ -1905,7 +1799,6 @@ Erro:
 
         GravarOpcTagItens(__opcTagItens)
 
-        '_balancaNumero = 5
         NomeGrupoOPC = "PRODUCAO_SP_L" & _linhaID
         partialNameAlias = "QTDE_REAL_ONLINE_BALANCA"
         tagPartial_1 = "F27"
@@ -1924,7 +1817,6 @@ Erro:
 
         GravarOpcTagItens(__opcTagItens)
 
-        '_balancaNumero = 5
         NomeGrupoOPC = "PRODUCAO_CL_L" & _linhaID
         partialNameAlias = "QTDE_REAL_BALANCA"
         tagPartial_1 = "F27"
