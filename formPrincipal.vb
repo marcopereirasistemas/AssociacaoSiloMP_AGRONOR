@@ -1140,7 +1140,7 @@ Erro:
         _indiceGrupo = 0
         numeroElementos = 20
 
-#Region "LINHA 1 - BALANCA 1"
+#Region "MISTURADOR 1 - BALANCA 1"
 
         _linhaID = 1
         _balancaNumero = 1
@@ -1260,7 +1260,127 @@ Erro:
 
 #End Region
 
-#Region "LINHA 1 - BALANCA 3"
+#Region "MISTURADOR 1 - BALANCA 2"
+
+        _linhaID = 1
+        _balancaNumero = 2
+        NomeGrupoOPC = "PRODUCAO_SP_L" & _linhaID
+
+        partialNameAlias = "SILO_BALANCA"
+        tagPartial_1 = "N25"
+        indiceInicialTag = 20
+        __opcTagItens = GerarItensOPC(_linhaID,
+                                      numeroElementos,
+                                      _balancaNumero,
+                                      NomeGrupoOPC,
+                                      partialNameAlias,
+                                      tagPartial_1,
+                                      indiceInicialTag,
+                                      0,
+                                      1,
+                                      0,
+                                      0)
+
+        GravarOpcTagItens(__opcTagItens)
+
+
+        NomeGrupoOPC = "PRODUCAO_SP_L" & _linhaID
+        partialNameAlias = "QTDE_DESEJADA_BALANCA"
+        tagPartial_1 = "F120"
+        indiceInicialTag = 0
+        __opcTagItens = GerarItensOPC(_linhaID,
+                                      numeroElementos,
+                                      _balancaNumero,
+                                      NomeGrupoOPC,
+                                      partialNameAlias,
+                                      tagPartial_1,
+                                      indiceInicialTag,
+                                      0,
+                                      1,
+                                      0,
+                                      0)
+
+        GravarOpcTagItens(__opcTagItens)
+
+
+        NomeGrupoOPC = "PRODUCAO_SP_L" & _linhaID
+        partialNameAlias = "ERRO_MIN_BALANCA"
+        tagPartial_1 = "F120"
+        indiceInicialTag = 20
+        __opcTagItens = GerarItensOPC(_linhaID,
+                                      numeroElementos,
+                                      _balancaNumero,
+                                      NomeGrupoOPC,
+                                      partialNameAlias,
+                                      tagPartial_1,
+                                      indiceInicialTag,
+                                      0,
+                                      1,
+                                      0,
+                                      0)
+
+        GravarOpcTagItens(__opcTagItens)
+
+
+        NomeGrupoOPC = "PRODUCAO_SP_L" & _linhaID
+        partialNameAlias = "ERRO_MAX_BALANCA"
+        tagPartial_1 = "F120"
+        indiceInicialTag = 40
+        __opcTagItens = GerarItensOPC(_linhaID,
+                                      numeroElementos,
+                                      _balancaNumero,
+                                      NomeGrupoOPC,
+                                      partialNameAlias,
+                                      tagPartial_1,
+                                      indiceInicialTag,
+                                      0,
+                                      1,
+                                      0,
+                                      0)
+
+        GravarOpcTagItens(__opcTagItens)
+
+
+        NomeGrupoOPC = "PRODUCAO_SP_L" & _linhaID
+        partialNameAlias = "QTDE_REAL_ONLINE_BALANCA"
+        tagPartial_1 = "F120"
+        indiceInicialTag = 60
+        __opcTagItens = GerarItensOPC(_linhaID,
+                                      numeroElementos,
+                                      _balancaNumero,
+                                      NomeGrupoOPC,
+                                      partialNameAlias,
+                                      tagPartial_1,
+                                      indiceInicialTag,
+                                      0,
+                                      1,
+                                      0,
+                                      0)
+
+        GravarOpcTagItens(__opcTagItens)
+
+
+        NomeGrupoOPC = "PRODUCAO_CL_L" & _linhaID
+        partialNameAlias = "QTDE_REAL_BALANCA"
+        tagPartial_1 = "F26"
+        indiceInicialTag = 20
+        __opcTagItens = GerarItensOPC(_linhaID,
+                                      numeroElementos,
+                                      _balancaNumero,
+                                      NomeGrupoOPC,
+                                      partialNameAlias,
+                                      tagPartial_1,
+                                      indiceInicialTag,
+                                      0,
+                                      1,
+                                      0,
+                                      0)
+
+        GravarOpcTagItens(__opcTagItens)
+
+#End Region
+
+#Region "MISTURADOR 1 - BALANCA 3"
 
         _balancaNumero = 3
         NomeGrupoOPC = "PRODUCAO_SP_L" & _linhaID
@@ -1285,7 +1405,7 @@ Erro:
 
         NomeGrupoOPC = "PRODUCAO_SP_L" & _linhaID
         partialNameAlias = "QTDE_DESEJADA_BALANCA"
-        tagPartial_1 = "F23"
+        tagPartial_1 = "F22"
         indiceInicialTag = 0
         __opcTagItens = GerarItensOPC(_linhaID,
                                       numeroElementos,
@@ -1379,14 +1499,133 @@ Erro:
 
 #End Region
 
-#Region "LINHA 1 - BALANCA 5"
+#Region "MISTURADOR 1 - BALANCA 4"
+
+        _balancaNumero = 4
+        NomeGrupoOPC = "PRODUCAO_SP_L" & _linhaID
+
+        partialNameAlias = "SILO_BALANCA"
+        tagPartial_1 = "N29"
+        indiceInicialTag = 60
+        __opcTagItens = GerarItensOPC(_linhaID,
+                                      numeroElementos,
+                                      _balancaNumero,
+                                      NomeGrupoOPC,
+                                      partialNameAlias,
+                                      tagPartial_1,
+                                      indiceInicialTag,
+                                      0,
+                                      1,
+                                      0,
+                                      0)
+
+        GravarOpcTagItens(__opcTagItens)
+
+
+        NomeGrupoOPC = "PRODUCAO_SP_L" & _linhaID
+        partialNameAlias = "QTDE_DESEJADA_BALANCA"
+        tagPartial_1 = "F123"
+        indiceInicialTag = 0
+        __opcTagItens = GerarItensOPC(_linhaID,
+                                      numeroElementos,
+                                      _balancaNumero,
+                                      NomeGrupoOPC,
+                                      partialNameAlias,
+                                      tagPartial_1,
+                                      indiceInicialTag,
+                                      0,
+                                      1,
+                                      0,
+                                      0)
+
+        GravarOpcTagItens(__opcTagItens)
+
+
+        NomeGrupoOPC = "PRODUCAO_SP_L" & _linhaID
+        partialNameAlias = "ERRO_MIN_BALANCA"
+        tagPartial_1 = "F123"
+        indiceInicialTag = 20
+        __opcTagItens = GerarItensOPC(_linhaID,
+                                      numeroElementos,
+                                      _balancaNumero,
+                                      NomeGrupoOPC,
+                                      partialNameAlias,
+                                      tagPartial_1,
+                                      indiceInicialTag,
+                                      0,
+                                      1,
+                                      0,
+                                      0)
+
+        GravarOpcTagItens(__opcTagItens)
+
+
+        NomeGrupoOPC = "PRODUCAO_SP_L" & _linhaID
+        partialNameAlias = "ERRO_MAX_BALANCA"
+        tagPartial_1 = "F123"
+        indiceInicialTag = 40
+        __opcTagItens = GerarItensOPC(_linhaID,
+                                      numeroElementos,
+                                      _balancaNumero,
+                                      NomeGrupoOPC,
+                                      partialNameAlias,
+                                      tagPartial_1,
+                                      indiceInicialTag,
+                                      0,
+                                      1,
+                                      0,
+                                      0)
+
+        GravarOpcTagItens(__opcTagItens)
+
+
+        NomeGrupoOPC = "PRODUCAO_SP_L" & _linhaID
+        partialNameAlias = "QTDE_REAL_ONLINE_BALANCA"
+        tagPartial_1 = "F123"
+        indiceInicialTag = 60
+        __opcTagItens = GerarItensOPC(_linhaID,
+                                      numeroElementos,
+                                      _balancaNumero,
+                                      NomeGrupoOPC,
+                                      partialNameAlias,
+                                      tagPartial_1,
+                                      indiceInicialTag,
+                                      0,
+                                      1,
+                                      0,
+                                      0)
+
+        GravarOpcTagItens(__opcTagItens)
+
+
+        NomeGrupoOPC = "PRODUCAO_CL_L" & _linhaID
+        partialNameAlias = "QTDE_REAL_BALANCA"
+        tagPartial_1 = "F26"
+        indiceInicialTag = 60
+        __opcTagItens = GerarItensOPC(_linhaID,
+                                      numeroElementos,
+                                      _balancaNumero,
+                                      NomeGrupoOPC,
+                                      partialNameAlias,
+                                      tagPartial_1,
+                                      indiceInicialTag,
+                                      0,
+                                      1,
+                                      0,
+                                      0)
+
+        GravarOpcTagItens(__opcTagItens)
+
+#End Region
+
+#Region "MISTURADOR 1 - BALANCA 5"
 
         _balancaNumero = 5
         NomeGrupoOPC = "PRODUCAO_SP_L" & _linhaID
 
         partialNameAlias = "SILO_BALANCA"
         tagPartial_1 = "N25"
-        indiceInicialTag = 60
+        indiceInicialTag = 80
         __opcTagItens = GerarItensOPC(_linhaID,
                                       numeroElementos,
                                       _balancaNumero,
@@ -1498,11 +1737,131 @@ Erro:
 
 #End Region
 
+#Region "MISTURADOR 1 - BALANCA 6"
 
-#Region "LINHA 2 - BALANCA 4"
+        _balancaNumero = 6
+        NomeGrupoOPC = "PRODUCAO_SP_L" & _linhaID
+
+        partialNameAlias = "SILO_BALANCA"
+        tagPartial_1 = "N25"
+        indiceInicialTag = 100
+        __opcTagItens = GerarItensOPC(_linhaID,
+                                      numeroElementos,
+                                      _balancaNumero,
+                                      NomeGrupoOPC,
+                                      partialNameAlias,
+                                      tagPartial_1,
+                                      indiceInicialTag,
+                                      0,
+                                      1,
+                                      0,
+                                      0)
+
+        GravarOpcTagItens(__opcTagItens)
+
+
+        NomeGrupoOPC = "PRODUCAO_SP_L" & _linhaID
+        partialNameAlias = "QTDE_DESEJADA_BALANCA"
+        tagPartial_1 = "F124"
+        indiceInicialTag = 0
+        __opcTagItens = GerarItensOPC(_linhaID,
+                                      numeroElementos,
+                                      _balancaNumero,
+                                      NomeGrupoOPC,
+                                      partialNameAlias,
+                                      tagPartial_1,
+                                      indiceInicialTag,
+                                      0,
+                                      1,
+                                      0,
+                                      0)
+
+        GravarOpcTagItens(__opcTagItens)
+
+
+        NomeGrupoOPC = "PRODUCAO_SP_L" & _linhaID
+        partialNameAlias = "ERRO_MIN_BALANCA"
+        tagPartial_1 = "F124"
+        indiceInicialTag = 20
+        __opcTagItens = GerarItensOPC(_linhaID,
+                                      numeroElementos,
+                                      _balancaNumero,
+                                      NomeGrupoOPC,
+                                      partialNameAlias,
+                                      tagPartial_1,
+                                      indiceInicialTag,
+                                      0,
+                                      1,
+                                      0,
+                                      0)
+
+        GravarOpcTagItens(__opcTagItens)
+
+
+        NomeGrupoOPC = "PRODUCAO_SP_L" & _linhaID
+        partialNameAlias = "ERRO_MAX_BALANCA"
+        tagPartial_1 = "F124"
+        indiceInicialTag = 40
+        __opcTagItens = GerarItensOPC(_linhaID,
+                                      numeroElementos,
+                                      _balancaNumero,
+                                      NomeGrupoOPC,
+                                      partialNameAlias,
+                                      tagPartial_1,
+                                      indiceInicialTag,
+                                      0,
+                                      1,
+                                      0,
+                                      0)
+
+        GravarOpcTagItens(__opcTagItens)
+
+
+        NomeGrupoOPC = "PRODUCAO_SP_L" & _linhaID
+        partialNameAlias = "QTDE_REAL_ONLINE_BALANCA"
+        tagPartial_1 = "F124"
+        indiceInicialTag = 60
+        __opcTagItens = GerarItensOPC(_linhaID,
+                                      numeroElementos,
+                                      _balancaNumero,
+                                      NomeGrupoOPC,
+                                      partialNameAlias,
+                                      tagPartial_1,
+                                      indiceInicialTag,
+                                      0,
+                                      1,
+                                      0,
+                                      0)
+
+        GravarOpcTagItens(__opcTagItens)
+
+
+        NomeGrupoOPC = "PRODUCAO_CL_L" & _linhaID
+        partialNameAlias = "QTDE_REAL_BALANCA"
+        tagPartial_1 = "F26"
+        indiceInicialTag = 100
+        __opcTagItens = GerarItensOPC(_linhaID,
+                                      numeroElementos,
+                                      _balancaNumero,
+                                      NomeGrupoOPC,
+                                      partialNameAlias,
+                                      tagPartial_1,
+                                      indiceInicialTag,
+                                      0,
+                                      1,
+                                      0,
+                                      0)
+
+        GravarOpcTagItens(__opcTagItens)
+
+#End Region
+
+
+
+#Region "MISTURADOR 2 - BALANCA 1"
 
         _linhaID = 2
-        _balancaNumero = 2
+        _balancaNumero = 1
         NomeGrupoOPC = "PRODUCAO_SP_L" & _linhaID
 
 
@@ -1611,7 +1970,119 @@ Erro:
 
 #End Region
 
-#Region "LINHA 2 - BALANCA 4"
+#Region "MISTURADOR 2 - BALANCA 2"
+
+        _linhaID = 2
+        _balancaNumero = 2
+        NomeGrupoOPC = "PRODUCAO_SP_L" & _linhaID
+
+
+        partialNameAlias = "SILO_BALANCA"
+        tagPartial_1 = "N29"
+        indiceInicialTag = 0
+        __opcTagItens = GerarItensOPC(_linhaID,
+                                      numeroElementos,
+                                      _balancaNumero,
+                                      NomeGrupoOPC,
+                                      partialNameAlias,
+                                      tagPartial_1,
+                                      indiceInicialTag,
+                                      0,
+                                      1,
+                                      0,
+                                      0)
+
+        GravarOpcTagItens(__opcTagItens)
+
+        partialNameAlias = "QTDE_DESEJADA_BALANCA"
+        tagPartial_1 = "F121"
+        indiceInicialTag = 0
+        __opcTagItens = GerarItensOPC(_linhaID,
+                                      numeroElementos,
+                                      _balancaNumero,
+                                      NomeGrupoOPC,
+                                      partialNameAlias,
+                                      tagPartial_1,
+                                      indiceInicialTag,
+                                      0,
+                                      1,
+                                      0,
+                                      0)
+
+        GravarOpcTagItens(__opcTagItens)
+
+        partialNameAlias = "ERRO_MIN_BALANCA"
+        tagPartial_1 = "F121"
+        indiceInicialTag = 20
+        __opcTagItens = GerarItensOPC(_linhaID,
+                                      numeroElementos,
+                                      _balancaNumero,
+                                      NomeGrupoOPC,
+                                      partialNameAlias,
+                                      tagPartial_1,
+                                      indiceInicialTag,
+                                      0,
+                                      1,
+                                      0,
+                                      0)
+
+        GravarOpcTagItens(__opcTagItens)
+
+        partialNameAlias = "ERRO_MAX_BALANCA"
+        tagPartial_1 = "F121"
+        indiceInicialTag = 40
+        __opcTagItens = GerarItensOPC(_linhaID,
+                                      numeroElementos,
+                                      _balancaNumero,
+                                      NomeGrupoOPC,
+                                      partialNameAlias,
+                                      tagPartial_1,
+                                      indiceInicialTag,
+                                      0,
+                                      1,
+                                      0,
+                                      0)
+
+        GravarOpcTagItens(__opcTagItens)
+
+        partialNameAlias = "QTDE_REAL_ONLINE_BALANCA"
+        tagPartial_1 = "F121"
+        indiceInicialTag = 60
+        __opcTagItens = GerarItensOPC(_linhaID,
+                                      numeroElementos,
+                                      _balancaNumero,
+                                      NomeGrupoOPC,
+                                      partialNameAlias,
+                                      tagPartial_1,
+                                      indiceInicialTag,
+                                      0,
+                                      1,
+                                      0,
+                                      0)
+
+        GravarOpcTagItens(__opcTagItens)
+
+        NomeGrupoOPC = "PRODUCAO_CL_L" & _linhaID
+        partialNameAlias = "QTDE_REAL_BALANCA"
+        tagPartial_1 = "F26"
+        indiceInicialTag = 20
+        __opcTagItens = GerarItensOPC(_linhaID,
+                                      numeroElementos,
+                                      _balancaNumero,
+                                      NomeGrupoOPC,
+                                      partialNameAlias,
+                                      tagPartial_1,
+                                      indiceInicialTag,
+                                      0,
+                                      1,
+                                      0,
+                                      0)
+
+        GravarOpcTagItens(__opcTagItens)
+
+#End Region
+
+#Region "MISTURADOR 2 - BALANCA 3"
 
         _balancaNumero = 4
         NomeGrupoOPC = "PRODUCAO_SP_L" & _linhaID
@@ -1722,9 +2193,120 @@ Erro:
 
 #End Region
 
-#Region "LINHA 2 - BALANCA 6"
+#Region "MISTURADOR 2 - BALANCA 4"
 
-        _balancaNumero = 6
+        _balancaNumero = 4
+        NomeGrupoOPC = "PRODUCAO_SP_L" & _linhaID
+
+        partialNameAlias = "SILO_BALANCA"
+        tagPartial_1 = "N29"
+        indiceInicialTag = 60
+        __opcTagItens = GerarItensOPC(_linhaID,
+                                      numeroElementos,
+                                      _balancaNumero,
+                                      NomeGrupoOPC,
+                                      partialNameAlias,
+                                      tagPartial_1,
+                                      indiceInicialTag,
+                                      0,
+                                      1,
+                                      0,
+                                      0)
+
+        GravarOpcTagItens(__opcTagItens)
+
+        partialNameAlias = "QTDE_DESEJADA_BALANCA"
+        tagPartial_1 = "F123"
+        indiceInicialTag = 0
+        __opcTagItens = GerarItensOPC(_linhaID,
+                                      numeroElementos,
+                                      _balancaNumero,
+                                      NomeGrupoOPC,
+                                      partialNameAlias,
+                                      tagPartial_1,
+                                      indiceInicialTag,
+                                      0,
+                                      1,
+                                      0,
+                                      0)
+
+        GravarOpcTagItens(__opcTagItens)
+
+        partialNameAlias = "ERRO_MIN_BALANCA"
+        tagPartial_1 = "F123"
+        indiceInicialTag = 20
+        __opcTagItens = GerarItensOPC(_linhaID,
+                                      numeroElementos,
+                                      _balancaNumero,
+                                      NomeGrupoOPC,
+                                      partialNameAlias,
+                                      tagPartial_1,
+                                      indiceInicialTag,
+                                      0,
+                                      1,
+                                      0,
+                                      0)
+
+        GravarOpcTagItens(__opcTagItens)
+
+        partialNameAlias = "ERRO_MAX_BALANCA"
+        tagPartial_1 = "F123"
+        indiceInicialTag = 40
+        __opcTagItens = GerarItensOPC(_linhaID,
+                                      numeroElementos,
+                                      _balancaNumero,
+                                      NomeGrupoOPC,
+                                      partialNameAlias,
+                                      tagPartial_1,
+                                      indiceInicialTag,
+                                      0,
+                                      1,
+                                      0,
+                                      0)
+
+        GravarOpcTagItens(__opcTagItens)
+
+
+        partialNameAlias = "QTDE_REAL_ONLINE_BALANCA"
+        tagPartial_1 = "F123"
+        indiceInicialTag = 60
+        __opcTagItens = GerarItensOPC(_linhaID,
+                                      numeroElementos,
+                                      _balancaNumero,
+                                      NomeGrupoOPC,
+                                      partialNameAlias,
+                                      tagPartial_1,
+                                      indiceInicialTag,
+                                      0,
+                                      1,
+                                      0,
+                                      0)
+
+        GravarOpcTagItens(__opcTagItens)
+
+        NomeGrupoOPC = "PRODUCAO_CL_L" & _linhaID
+        partialNameAlias = "QTDE_REAL_BALANCA"
+        tagPartial_1 = "F26"
+        indiceInicialTag = 60
+        __opcTagItens = GerarItensOPC(_linhaID,
+                                      numeroElementos,
+                                      _balancaNumero,
+                                      NomeGrupoOPC,
+                                      partialNameAlias,
+                                      tagPartial_1,
+                                      indiceInicialTag,
+                                      0,
+                                      1,
+                                      0,
+                                      0)
+
+        GravarOpcTagItens(__opcTagItens)
+
+#End Region
+
+#Region "MISTURADOR 2 - BALANCA 5"
+
+        _balancaNumero = 5
         NomeGrupoOPC = "PRODUCAO_SP_L" & _linhaID
 
         partialNameAlias = "SILO_BALANCA"
@@ -1819,8 +2401,124 @@ Erro:
 
         NomeGrupoOPC = "PRODUCAO_CL_L" & _linhaID
         partialNameAlias = "QTDE_REAL_BALANCA"
-        tagPartial_1 = "F27"
+        tagPartial_1 = "F26"
         indiceInicialTag = 80
+        __opcTagItens = GerarItensOPC(_linhaID,
+                                      numeroElementos,
+                                      _balancaNumero,
+                                      NomeGrupoOPC,
+                                      partialNameAlias,
+                                      tagPartial_1,
+                                      indiceInicialTag,
+                                      0,
+                                      1,
+                                      0,
+                                      0)
+
+        GravarOpcTagItens(__opcTagItens)
+
+
+#End Region
+
+#Region "MISTURADOR 2 - BALANCA 6"
+
+        _balancaNumero = 6
+        NomeGrupoOPC = "PRODUCAO_SP_L" & _linhaID
+
+        partialNameAlias = "SILO_BALANCA"
+        tagPartial_1 = "N29"
+        indiceInicialTag = 100
+        __opcTagItens = GerarItensOPC(_linhaID,
+                                          numeroElementos,
+                                          _balancaNumero,
+                                          NomeGrupoOPC,
+                                          partialNameAlias,
+                                          tagPartial_1,
+                                          indiceInicialTag,
+                                          0,
+                                          1,
+                                          0,
+                                          0
+                                      )
+
+        GravarOpcTagItens(__opcTagItens)
+
+        NomeGrupoOPC = "PRODUCAO_SP_L" & _linhaID
+        partialNameAlias = "QTDE_DESEJADA_BALANCA"
+        tagPartial_1 = "F127"
+        indiceInicialTag = 0
+        __opcTagItens = GerarItensOPC(_linhaID,
+                                      numeroElementos,
+                                      _balancaNumero,
+                                      NomeGrupoOPC,
+                                      partialNameAlias,
+                                      tagPartial_1,
+                                      indiceInicialTag,
+                                      0,
+                                      1,
+                                      0,
+                                      0)
+
+        GravarOpcTagItens(__opcTagItens)
+
+        NomeGrupoOPC = "PRODUCAO_SP_L" & _linhaID
+        partialNameAlias = "ERRO_MIN_BALANCA"
+        tagPartial_1 = "F127"
+        indiceInicialTag = 20
+        __opcTagItens = GerarItensOPC(_linhaID,
+                                      numeroElementos,
+                                      _balancaNumero,
+                                      NomeGrupoOPC,
+                                      partialNameAlias,
+                                      tagPartial_1,
+                                      indiceInicialTag,
+                                      0,
+                                      1,
+                                      0,
+                                      0)
+
+        GravarOpcTagItens(__opcTagItens)
+
+        NomeGrupoOPC = "PRODUCAO_SP_L" & _linhaID
+        partialNameAlias = "ERRO_MAX_BALANCA"
+        tagPartial_1 = "F127"
+        indiceInicialTag = 40
+        __opcTagItens = GerarItensOPC(_linhaID,
+                                      numeroElementos,
+                                      _balancaNumero,
+                                      NomeGrupoOPC,
+                                      partialNameAlias,
+                                      tagPartial_1,
+                                      indiceInicialTag,
+                                      0,
+                                      1,
+                                      0,
+                                      0)
+
+        GravarOpcTagItens(__opcTagItens)
+
+        NomeGrupoOPC = "PRODUCAO_SP_L" & _linhaID
+        partialNameAlias = "QTDE_REAL_ONLINE_BALANCA"
+        tagPartial_1 = "F127"
+        indiceInicialTag = 60
+        __opcTagItens = GerarItensOPC(_linhaID,
+                                      numeroElementos,
+                                      _balancaNumero,
+                                      NomeGrupoOPC,
+                                      partialNameAlias,
+                                      tagPartial_1,
+                                      indiceInicialTag,
+                                      0,
+                                      1,
+                                      0,
+                                      0)
+
+        GravarOpcTagItens(__opcTagItens)
+
+        NomeGrupoOPC = "PRODUCAO_CL_L" & _linhaID
+        partialNameAlias = "QTDE_REAL_BALANCA"
+        tagPartial_1 = "F26"
+        indiceInicialTag = 100
         __opcTagItens = GerarItensOPC(_linhaID,
                                       numeroElementos,
                                       _balancaNumero,
