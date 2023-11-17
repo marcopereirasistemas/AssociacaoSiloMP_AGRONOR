@@ -36,7 +36,7 @@ Public Class formPrincipal
     Dim formTrocarSiloNova As Object
     Dim RotinasDiversas As New ClasseRotinasDiversas
     Dim teclaCtrlPressionada As Boolean
-    Dim Versao As String = " - Versão 1.0.8 - 14/11/2023"
+    Dim Versao As String = " - Versão 1.0.9 - 17/11/2023"
     Dim horaInicioEnvio As String
     Dim horaFinalEnvio As String
     Dim horaInicial As DateTime
@@ -653,6 +653,13 @@ Erro:
 
         Me.Width = 1598
         Me.Height = 892
+
+        btnAtualizaTAGS.Visible = False
+        If HabilitarTestesLOG() Then
+
+            btnAtualizaTAGS.Visible = True
+
+        End If
 
         StartPosition = FormStartPosition.CenterParent
 
@@ -2084,7 +2091,7 @@ Erro:
 
 #Region "MISTURADOR 2 - BALANCA 3"
 
-        _balancaNumero = 4
+        _balancaNumero = 3
         NomeGrupoOPC = "PRODUCAO_SP_L" & _linhaID
 
         partialNameAlias = "SILO_BALANCA"
@@ -2634,3 +2641,115 @@ Erro:
     'End Function
 
 End Class
+
+
+
+
+
+'********************************
+'Misturador 1
+'********************************
+
+'00-19=Peso Desejado
+'20-39=Peso Min B1
+'40-59=Peso Max B1
+'60-79=Peso Real B1
+
+
+
+'1   N25[00] - Silo
+'	F20[00] - Desejado
+'	F20[20] - Erro Minimo
+'	F20[40] - Erro Maximo
+'	F20[60] - Real Online
+'1. ok
+
+
+
+'2   N25[20]
+'	F120[00] - Desejado
+'	F120[20] - Erro Minimo
+'	F120[40] - Erro Maximo
+'	F120[60] - Real Online
+
+'3   N25[40]
+'	F22[00] - Desejado
+'	F22[20] - Erro Minimo
+'	F22[40] - Erro Maximo
+'	F22[60] - Real Online
+
+'3. ok
+
+
+'4   N25[60]
+'	F122[00] - Desejado
+'	F122[20] - Erro Minimo
+'	F122[40] - Erro Maximo
+'	F122[60] - Real Online
+
+'5   N25[80]
+'	F24[00] - Desejado
+'	F24[20] - Erro Minimo
+'	F24[40] - Erro Maximo
+'	F24[60] - Real Online
+
+'5. ok
+
+'6   N25[100]
+'	F124[00] - Desejado
+'	F124[20] - Erro Minimo
+'	F124[40] - Erro Maximo
+'	F124[60] - Real Online
+
+
+'********************************
+'Misturador 2
+'********************************
+
+'1   N29[00] - Silo
+'	F21[00] - Desejado
+'	F21[20] - Erro Minimo
+'	F21[40] - Erro Maximo
+'	F21[60] - Real Online
+
+'2   N29[20]
+'	F121[00] - Desejado
+'	F121[20] - Erro Minimo
+'	F121[40] - Erro Maximo
+'	F121[60] - Real Online
+
+'3   N29[40]
+'	F23[00] - Desejado
+'	F23[20] - Erro Minimo
+'	F23[40] - Erro Maximo
+'	F23[60] - Real Online
+
+'4   N29[60]
+'	F123[00] - Desejado
+'	F123[20] - Erro Minimo
+'	F123[40] - Erro Maximo
+'	F123[60] - Real Online
+
+'5   N29[80]
+'	F27[00] - Desejado
+'	F27[20] - Erro Minimo
+'	F27[40] - Erro Maximo
+'	F27[60] - Real Online
+
+'6   N29[100]
+'	F127[00] - Desejado
+'	F127[20] - Erro Minimo
+'	F127[40] - Erro Maximo
+'	F127[60] - Real Online
+
+'********************************
+'Coletor
+'********************************
+
+'1   F26[00] - Real B1 ok
+'2   F26[20] - Real B2
+'3   F26[40] - Real B3 ok 
+'4   F26[60] - Real B4
+'5   F26[80] - Real B5
+'6   F26[100] - Real B6
+

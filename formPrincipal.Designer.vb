@@ -9,6 +9,9 @@ Partial Class formPrincipal
             components.Dispose()
         End If
         MyBase.Dispose(disposing)
+
+
+
     End Sub
 
     'Required by the Windows Form Designer
@@ -52,7 +55,7 @@ Partial Class formPrincipal
         '
         'lblMensagem
         '
-        Me.lblMensagem.Size = New System.Drawing.Size(50983, 17)
+        Me.lblMensagem.Size = New System.Drawing.Size(52130, 17)
         Me.lblMensagem.Text = ""
         '
         'DataGridView1
@@ -263,6 +266,7 @@ Partial Class formPrincipal
         Me.btnAtualizaTAGS.TabIndex = 33
         Me.btnAtualizaTAGS.Text = "Button1"
         Me.btnAtualizaTAGS.UseVisualStyleBackColor = True
+        Me.btnAtualizaTAGS.Visible = False
         '
         'btnAtualizar
         '
