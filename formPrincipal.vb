@@ -956,7 +956,7 @@ Erro:
 
         retornoHabilitaTestes = False
 
-        If Rotinas.ArquivoExiste(Application.StartupPath & "\TESTE.TXT") Then
+        If Rotinas.ArquivoExiste(Application.StartupPath & "\TESTE_TAGS.TXT") Then
             retornoHabilitaTestes = True
         End If
 
