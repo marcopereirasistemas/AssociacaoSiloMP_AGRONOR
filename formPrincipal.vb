@@ -14,7 +14,6 @@ Imports System.Threading
 Imports System.ComponentModel
 Imports VB = Microsoft.VisualBasic
 
-
 Public Class formPrincipal
 
     Enum TipoTagParaLimpeza
@@ -50,7 +49,6 @@ Public Class formPrincipal
 
     Private vAppRValue As Object
 
-
     Private MyOPCServer As RsiOPCAuto.OPCServer
     '-- DADOS DE PRODUCAO
     Private WithEvents AssMpSiloOPC As RsiOPCAuto.OPCGroup
@@ -60,7 +58,6 @@ Public Class formPrincipal
 
     '-- BITS DE CONTROLE
     Const GROUP_NAME = "ASSOCIACAO_SILO_MP"
-
 
     Public Sub ConnectServer()
 
