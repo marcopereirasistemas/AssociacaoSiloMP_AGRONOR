@@ -1,0 +1,520 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+AssociacaoSiloMP
+</name>
+</assembly>
+<members>
+<member name="T:AssociacaoSiloMP.My.Resources.FCadastro">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.FCadastro.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.FCadastro.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.FCadastro.btnAdicionar_Image">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.FCadastro.btnCancelar_Image">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.FCadastro.btnEditar_Image">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.FCadastro.btnGravar_Image">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.FCadastro.btnImprimir_Image">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.FCadastro.btnLocalizar_Image">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.FCadastro.btnSair_Image">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.FCadastro.Panel1_BackgroundImage">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="T:AssociacaoSiloMP.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="T:AssociacaoSiloMP.My.Resources.Resource1">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1._1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1._121">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1._2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1._2000px_Approve_icon_svg">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1._5">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1._7">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1._9">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1.Admin">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1.alert_146730_640">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1.apply">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1.apply_32x32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1.Aprovado">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1.atualiar_32x32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1.bg_login_box">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1.bola_concluido">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1.cancel">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1.cancel_32x32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1.CheckLimpo">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1.CheckSelecionado">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1.Clipboard_Copy">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1.Descarregamento">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1.Editar">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1.excel">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1.exchange_512">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1.Excluir">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1.FINALIZAR">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1.FINALIZAR1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1.guabi">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1.guabi_fundo_branco">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1.guabi_fundo_branco1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1.Guabi_Icon_1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1.Guabi_Icon_2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1.images__12_">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1.Imprimir">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1.limpar">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1.lock_user_man_secure_512">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1.login">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1.logo_aqua">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1.Logo_NutriService_01">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1.Logo_NutriService_Sombra_Transparente">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1.quailita">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1.Sair1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1.Sair3">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1.SelecionarPasta">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1.SelecionarPasta1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1.Sistema2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1.teamviewer_icon">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1.torrenegra_horizontal_sombra_transparente">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1.TorreNegra_logo_comp_horz_cor_pos_bgB">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1.TorreNegra_logo_comp_horz_cor_pos_bgB1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1.transferir">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1.Usuarios">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssociacaoSiloMP.My.Resources.Resource1.website_maintenance_icon">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="T:AssociacaoSiloMP.ClasseBancoDados">
+ <summary>
+ Classe para acesso ao banco de dados, neste caso SQL Server
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:AssociacaoSiloMP.ClasseBancoDados.Abrir">
+ <summary>
+ Abertura do banco de dados
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:AssociacaoSiloMP.ClasseBancoDados.Fechar">
+ <summary>
+ Fechamento do banco de dados
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:AssociacaoSiloMP.ClasseBancoDados.Operacao">
+ <summary>
+ Ajusta membro da operacao
+ </summary>
+ <value>Tipo de operação no cadastro</value>
+ <returns>Retorna o tipo de operação</returns>
+ <remarks></remarks>
+</member>
+<member name="M:AssociacaoSiloMP.ClasseBancoDados.RetornaDataTable(System.Data.SqlClient.SqlConnection@,System.String,System.String)">
+ <summary>
+ Executa um script sql e retorna uma DataTable
+ </summary>
+ <param name="parConexao">Conexao ativa</param>
+ <param name="parScriptSelect">Script SQL, select</param>
+ <param name="parTabelaNome">Nome da tabela</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:AssociacaoSiloMP.ClasseRotinasDiversas">
+ <summary>
+ Classe com rotinas diversas utilizadas no sistema.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:AssociacaoSiloMP.ClasseRotinasDiversas.Tipo">
+ <summary>
+ Parametro que define o tipo de log
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:AssociacaoSiloMP.ClasseRotinasDiversas.ArquivoExiste(System.String)">
+ <summary>
+ Verifica se um arquivo passado como parametro existe em uma pasta
+ </summary>
+ <param name="parArquivoVerificar">O nome, extensao e caminho do arquivo deve ser </param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:AssociacaoSiloMP.ClasseRotinasDiversas.HabilitaBotao(System.String,System.String,System.Int32)">
+ <summary>
+ Retorna se o usuario possui ou nao acesso ao botão do formulario de cadastro
+ </summary>
+ <param name="strTabela">Tabela do banco de dados a verifica o acesso</param>
+ <param name="strBotao">Botão a validar</param>
+ <param name="intNivelAcesso">Nivel de acesso</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:AssociacaoSiloMP.ClasseRotinasDiversas.CorEntrada(System.Object)">
+ <summary>
+ Altera a cor do fundo quando o controle recebe o foco
+ </summary>
+ <param name="Sender"></param>
+ <remarks></remarks>
+</member>
+<member name="M:AssociacaoSiloMP.ClasseRotinasDiversas.CorSaida(System.Object)">
+ <summary>
+ Altera a cor do fundo quando o controle perde o foco
+ </summary>
+ <param name="sender"></param>
+ <remarks></remarks>
+</member>
+<member name="M:AssociacaoSiloMP.ClasseRotinasDiversas.ChecarObrigatorio(System.Object)">
+ <summary>
+ verifica se o  preenchimento de controle é obrigatório
+ </summary>
+ <param name="Objeto">Valida o campo</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:AssociacaoSiloMP.ClasseRotinasDiversas.BloquearCampo(System.Object)">
+ <summary>
+ Bloqueia os controles de entrada de dados
+ </summary>
+ <param name="Controle">O controle do formulario a ser bloqueado</param>
+ <remarks></remarks>
+</member>
+<member name="M:AssociacaoSiloMP.ClasseRotinasDiversas.DesbloquearCampo(System.Object)">
+ <summary>
+ desbloqueia os controles de entrada de dados
+ </summary>
+ <param name="Controle">O controle a ser desbloqueado</param>
+ <remarks></remarks>
+</member>
+<member name="T:AssociacaoSiloMP.Declaracoes">
+ <summary>
+ Modulo de declarações de variaveis publicas utilizadas no sistema
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:AssociacaoSiloMP.Declaracoes.ProducaoColunas">
+ <summary>
+ Enum das colunas da tabela de produção
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:AssociacaoSiloMP.Declaracoes.SoNumeros(System.Int16)">
+ <summary>
+ Permite somente numeros digitado em um campo
+ </summary>
+ <param name="Keyascii"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:AssociacaoSiloMP.Declaracoes.CarregarConfiguracoesSistema(System.Data.SqlClient.SqlConnection)">
+ <summary>
+ Carrega as configurações do sistema
+ </summary>
+ <param name="conexaoValida"></param>
+ <remarks></remarks>
+</member>
+<member name="M:AssociacaoSiloMP.Declaracoes.EscreveMsgLog(System.String)">
+ <summary>
+ Gravar mensagem de log em arquivo txt
+ </summary>
+ <param name="strMensagemTexto">Mensagem a ser gravarda</param>
+ <remarks></remarks>
+</member>
+<member name="M:AssociacaoSiloMP.Declaracoes.GravarLogTxt(System.String)">
+ <summary>
+ Escreve mensagens de log no arquivo txt
+ </summary>
+ <param name="strTexto"></param>
+ <remarks></remarks>
+</member>
+<member name="T:AssociacaoSiloMP.Formula">
+ <summary>
+ Classe que ira gerenciar os itens da formula
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:AssociacaoSiloMP.iFIX.LerTag(System.String,System.String,AssociacaoSiloMP.iFIX.TipoRetorno)">
+ <summary>
+ Metodo de leitura de um determinado tag
+ </summary>
+ <param name="tagGrupo">Grupo de tags no banco de dados do iFIX</param>
+ <param name="tagLeitura">TAG a ser lido do supervisorio</param>
+ <returns>Retorno é do tipo variant com o valor lido do tag</returns>
+</member>
+</members>
+</doc>

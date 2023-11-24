@@ -1,0 +1,245 @@
+08:41:40  Associação Iniciada.
+08:42:01  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 1 _SILO_<NUMERO> 1
+---------------------------------------------------------------------------------
+08:42:01  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B1_MIST01_SILO_1.A_DESC - Valor Escrita: CIMENTO VOTORAN
+08:42:05  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 1 _SILO_<NUMERO> 2
+---------------------------------------------------------------------------------
+08:42:05  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B1_MIST01_SILO_2.A_DESC - Valor Escrita: <VAZIO> 
+08:42:05  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 1 _SILO_<NUMERO> 3
+---------------------------------------------------------------------------------
+08:42:05  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B1_MIST01_SILO_3.A_DESC - Valor Escrita: <VAZIO> 
+08:42:05  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 1 _SILO_<NUMERO> 4
+---------------------------------------------------------------------------------
+08:42:06  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B1_MIST01_SILO_4.A_DESC - Valor Escrita: <VAZIO> 
+08:42:06  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 1 _SILO_<NUMERO> 5
+---------------------------------------------------------------------------------
+08:42:06  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B1_MIST01_SILO_5.A_DESC - Valor Escrita: AREIA MÉDIA ARTIFICIAL
+08:42:06  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 1 _SILO_<NUMERO> 6
+---------------------------------------------------------------------------------
+08:42:06  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B1_MIST01_SILO_6.A_DESC - Valor Escrita: AREIA FINA NATURAL
+08:42:06  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 3 _SILO_<NUMERO> 1
+---------------------------------------------------------------------------------
+08:42:06  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B3_MIST01_SILO_1.A_DESC - Valor Escrita: AREIA MÉDIA ARTIFICIAL
+08:42:07  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 3 _SILO_<NUMERO> 2
+---------------------------------------------------------------------------------
+08:42:07  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B3_MIST01_SILO_2.A_DESC - Valor Escrita: <VAZIO> 
+08:42:07  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 3 _SILO_<NUMERO> 3
+---------------------------------------------------------------------------------
+08:42:07  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B3_MIST01_SILO_3.A_DESC - Valor Escrita: <VAZIO> 
+08:42:07  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 3 _SILO_<NUMERO> 4
+---------------------------------------------------------------------------------
+08:42:07  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B3_MIST01_SILO_4.A_DESC - Valor Escrita: <VAZIO> 
+08:42:07  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 3 _SILO_<NUMERO> 5
+---------------------------------------------------------------------------------
+08:42:07  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B3_MIST01_SILO_5.A_DESC - Valor Escrita: <VAZIO> 
+08:42:08  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 5 _SILO_<NUMERO> 1
+---------------------------------------------------------------------------------
+08:42:08  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B5_MIST01_SILO_1.A_DESC - Valor Escrita: ADITIVO DARAVAIR
+08:42:08  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 5 _SILO_<NUMERO> 2
+---------------------------------------------------------------------------------
+08:42:08  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B5_MIST01_SILO_2.A_DESC - Valor Escrita: <VAZIO> 
+08:42:08  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 5 _SILO_<NUMERO> 3
+---------------------------------------------------------------------------------
+08:42:08  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B5_MIST01_SILO_3.A_DESC - Valor Escrita: <VAZIO> 
+08:42:08  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 5 _SILO_<NUMERO> 4
+---------------------------------------------------------------------------------
+08:42:08  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B5_MIST01_SILO_4.A_DESC - Valor Escrita: AREIA FINA ARTIFICIAL
+08:42:09  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 5 _SILO_<NUMERO> 5
+---------------------------------------------------------------------------------
+08:42:09  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B5_MIST01_SILO_5.A_DESC - Valor Escrita: <VAZIO> 
+08:43:40  Associação Iniciada.
+08:43:53  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 1 _SILO_<NUMERO> 1
+---------------------------------------------------------------------------------
+08:43:53  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B1_MIST01_SILO_1.A_DESC - Valor Escrita: CIMENTO VOTORAN
+08:43:56  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 1 _SILO_<NUMERO> 2
+---------------------------------------------------------------------------------
+08:43:56  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B1_MIST01_SILO_2.A_DESC - Valor Escrita: <VAZIO> 
+08:43:56  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 1 _SILO_<NUMERO> 3
+---------------------------------------------------------------------------------
+08:43:56  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B1_MIST01_SILO_3.A_DESC - Valor Escrita: <VAZIO> 
+08:43:56  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 1 _SILO_<NUMERO> 4
+---------------------------------------------------------------------------------
+08:43:56  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B1_MIST01_SILO_4.A_DESC - Valor Escrita: <VAZIO> 
+08:43:56  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 1 _SILO_<NUMERO> 5
+---------------------------------------------------------------------------------
+08:43:56  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B1_MIST01_SILO_5.A_DESC - Valor Escrita: AREIA MÉDIA ARTIFICIAL
+08:43:56  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 1 _SILO_<NUMERO> 6
+---------------------------------------------------------------------------------
+08:43:56  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B1_MIST01_SILO_6.A_DESC - Valor Escrita: AREIA FINA NATURAL
+08:43:56  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 3 _SILO_<NUMERO> 1
+---------------------------------------------------------------------------------
+08:43:56  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B3_MIST01_SILO_1.A_DESC - Valor Escrita: AREIA MÉDIA ARTIFICIAL
+08:43:57  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 3 _SILO_<NUMERO> 2
+---------------------------------------------------------------------------------
+08:43:57  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B3_MIST01_SILO_2.A_DESC - Valor Escrita: <VAZIO> 
+08:43:57  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 3 _SILO_<NUMERO> 3
+---------------------------------------------------------------------------------
+08:43:57  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B3_MIST01_SILO_3.A_DESC - Valor Escrita: <VAZIO> 
+08:43:57  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 3 _SILO_<NUMERO> 4
+---------------------------------------------------------------------------------
+08:43:57  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B3_MIST01_SILO_4.A_DESC - Valor Escrita: <VAZIO> 
+08:43:57  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 3 _SILO_<NUMERO> 5
+---------------------------------------------------------------------------------
+08:43:57  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B3_MIST01_SILO_5.A_DESC - Valor Escrita: <VAZIO> 
+08:43:57  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 5 _SILO_<NUMERO> 1
+---------------------------------------------------------------------------------
+08:43:57  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B5_MIST01_SILO_1.A_DESC - Valor Escrita: ADITIVO DARAVAIR
+08:43:57  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 5 _SILO_<NUMERO> 2
+---------------------------------------------------------------------------------
+08:43:57  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B5_MIST01_SILO_2.A_DESC - Valor Escrita: <VAZIO> 
+08:43:58  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 5 _SILO_<NUMERO> 3
+---------------------------------------------------------------------------------
+08:43:58  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B5_MIST01_SILO_3.A_DESC - Valor Escrita: <VAZIO> 
+08:43:58  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 5 _SILO_<NUMERO> 4
+---------------------------------------------------------------------------------
+08:43:58  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B5_MIST01_SILO_4.A_DESC - Valor Escrita: AREIA FINA ARTIFICIAL
+08:43:58  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 5 _SILO_<NUMERO> 5
+---------------------------------------------------------------------------------
+08:43:58  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B5_MIST01_SILO_5.A_DESC - Valor Escrita: <VAZIO> 
+08:45:28  Associação Iniciada.
+08:45:33  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 1 _SILO_<NUMERO> 1
+---------------------------------------------------------------------------------
+08:45:33  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B1_MIST01_SILO_1.A_DESC - Valor Escrita: CIMENTO VOTORAN
+08:45:35  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 1 _SILO_<NUMERO> 2
+---------------------------------------------------------------------------------
+08:45:35  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B1_MIST01_SILO_2.A_DESC - Valor Escrita: <VAZIO> 
+08:45:35  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 1 _SILO_<NUMERO> 3
+---------------------------------------------------------------------------------
+08:45:35  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B1_MIST01_SILO_3.A_DESC - Valor Escrita: <VAZIO> 
+08:45:35  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 1 _SILO_<NUMERO> 4
+---------------------------------------------------------------------------------
+08:45:35  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B1_MIST01_SILO_4.A_DESC - Valor Escrita: <VAZIO> 
+08:45:36  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 1 _SILO_<NUMERO> 5
+---------------------------------------------------------------------------------
+08:45:36  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B1_MIST01_SILO_5.A_DESC - Valor Escrita: AREIA MÉDIA ARTIFICIAL
+08:45:36  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 1 _SILO_<NUMERO> 6
+---------------------------------------------------------------------------------
+08:45:36  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B1_MIST01_SILO_6.A_DESC - Valor Escrita: AREIA FINA NATURAL
+08:45:36  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 3 _SILO_<NUMERO> 1
+---------------------------------------------------------------------------------
+08:45:36  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B3_MIST01_SILO_1.A_DESC - Valor Escrita: AREIA MÉDIA ARTIFICIAL
+08:45:36  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 3 _SILO_<NUMERO> 2
+---------------------------------------------------------------------------------
+08:45:36  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B3_MIST01_SILO_2.A_DESC - Valor Escrita: <VAZIO> 
+08:45:36  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 3 _SILO_<NUMERO> 3
+---------------------------------------------------------------------------------
+08:45:36  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B3_MIST01_SILO_3.A_DESC - Valor Escrita: <VAZIO> 
+08:45:36  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 3 _SILO_<NUMERO> 4
+---------------------------------------------------------------------------------
+08:45:36  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B3_MIST01_SILO_4.A_DESC - Valor Escrita: <VAZIO> 
+08:45:36  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 3 _SILO_<NUMERO> 5
+---------------------------------------------------------------------------------
+08:45:36  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B3_MIST01_SILO_5.A_DESC - Valor Escrita: <VAZIO> 
+08:45:37  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 5 _SILO_<NUMERO> 1
+---------------------------------------------------------------------------------
+08:45:37  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B5_MIST01_SILO_1.A_DESC - Valor Escrita: ADITIVO DARAVAIR
+08:45:37  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 5 _SILO_<NUMERO> 2
+---------------------------------------------------------------------------------
+08:45:37  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B5_MIST01_SILO_2.A_DESC - Valor Escrita: <VAZIO> 
+08:45:37  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 5 _SILO_<NUMERO> 3
+---------------------------------------------------------------------------------
+08:45:37  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B5_MIST01_SILO_3.A_DESC - Valor Escrita: <VAZIO> 
+08:45:37  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 5 _SILO_<NUMERO> 4
+---------------------------------------------------------------------------------
+08:45:37  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B5_MIST01_SILO_4.A_DESC - Valor Escrita: AREIA FINA ARTIFICIAL
+08:45:37  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 5 _SILO_<NUMERO> 5
+---------------------------------------------------------------------------------
+08:45:37  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B5_MIST01_SILO_5.A_DESC - Valor Escrita: <VAZIO> 
+08:50:45  Associação Iniciada.
+08:50:57  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 1 _SILO_<NUMERO> 1
+---------------------------------------------------------------------------------
+08:50:57  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B1_MIST01_SILO_1.A_DESC - Valor Escrita: CIMENTO VOTORAN
+08:51:01  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 1 _SILO_<NUMERO> 2
+---------------------------------------------------------------------------------
+08:51:01  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B1_MIST01_SILO_2.A_DESC - Valor Escrita: <VAZIO> 
+08:51:01  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 1 _SILO_<NUMERO> 3
+---------------------------------------------------------------------------------
+08:51:01  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B1_MIST01_SILO_3.A_DESC - Valor Escrita: <VAZIO> 
+08:51:02  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 1 _SILO_<NUMERO> 4
+---------------------------------------------------------------------------------
+08:51:02  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B1_MIST01_SILO_4.A_DESC - Valor Escrita: <VAZIO> 
+08:51:02  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 1 _SILO_<NUMERO> 5
+---------------------------------------------------------------------------------
+08:51:02  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B1_MIST01_SILO_5.A_DESC - Valor Escrita: AREIA MÉDIA ARTIFICIAL
+08:51:02  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 1 _SILO_<NUMERO> 6
+---------------------------------------------------------------------------------
+08:51:02  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B1_MIST01_SILO_6.A_DESC - Valor Escrita: AREIA FINA NATURAL
+08:51:02  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 3 _SILO_<NUMERO> 1
+---------------------------------------------------------------------------------
+08:51:02  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B3_MIST01_SILO_1.A_DESC - Valor Escrita: AREIA MÉDIA ARTIFICIAL
+08:51:02  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 3 _SILO_<NUMERO> 2
+---------------------------------------------------------------------------------
+08:51:02  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B3_MIST01_SILO_2.A_DESC - Valor Escrita: <VAZIO> 
+08:51:03  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 3 _SILO_<NUMERO> 3
+---------------------------------------------------------------------------------
+08:51:03  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B3_MIST01_SILO_3.A_DESC - Valor Escrita: <VAZIO> 
+08:51:03  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 3 _SILO_<NUMERO> 4
+---------------------------------------------------------------------------------
+08:51:03  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B3_MIST01_SILO_4.A_DESC - Valor Escrita: <VAZIO> 
+08:51:03  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 3 _SILO_<NUMERO> 5
+---------------------------------------------------------------------------------
+08:51:03  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B3_MIST01_SILO_5.A_DESC - Valor Escrita: <VAZIO> 
+08:51:03  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 5 _SILO_<NUMERO> 1
+---------------------------------------------------------------------------------
+08:51:03  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B5_MIST01_SILO_1.A_DESC - Valor Escrita: ADITIVO DARAVAIR
+08:51:03  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 5 _SILO_<NUMERO> 2
+---------------------------------------------------------------------------------
+08:51:03  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B5_MIST01_SILO_2.A_DESC - Valor Escrita: <VAZIO> 
+08:51:03  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 5 _SILO_<NUMERO> 3
+---------------------------------------------------------------------------------
+08:51:03  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B5_MIST01_SILO_3.A_DESC - Valor Escrita: <VAZIO> 
+08:51:04  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 5 _SILO_<NUMERO> 4
+---------------------------------------------------------------------------------
+08:51:04  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B5_MIST01_SILO_4.A_DESC - Valor Escrita: AREIA FINA ARTIFICIAL
+08:51:04  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 5 _SILO_<NUMERO> 5
+---------------------------------------------------------------------------------
+08:51:04  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B5_MIST01_SILO_5.A_DESC - Valor Escrita: <VAZIO> 
+08:54:08  Associação Iniciada.
+08:54:15  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 1 _SILO_<NUMERO> 1
+---------------------------------------------------------------------------------
+08:54:15  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B1_MIST01_SILO_1.A_DESC - Valor Escrita: CIMENTO VOTORAN
+08:54:17  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 1 _SILO_<NUMERO> 2
+---------------------------------------------------------------------------------
+08:54:17  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B1_MIST01_SILO_2.A_DESC - Valor Escrita: <VAZIO> 
+08:54:17  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 1 _SILO_<NUMERO> 3
+---------------------------------------------------------------------------------
+08:54:17  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B1_MIST01_SILO_3.A_DESC - Valor Escrita: <VAZIO> 
+08:54:17  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 1 _SILO_<NUMERO> 4
+---------------------------------------------------------------------------------
+08:54:17  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B1_MIST01_SILO_4.A_DESC - Valor Escrita: <VAZIO> 
+08:54:17  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 1 _SILO_<NUMERO> 5
+---------------------------------------------------------------------------------
+08:54:18  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B1_MIST01_SILO_5.A_DESC - Valor Escrita: AREIA MÉDIA ARTIFICIAL
+08:54:18  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 1 _SILO_<NUMERO> 6
+---------------------------------------------------------------------------------
+08:54:18  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B1_MIST01_SILO_6.A_DESC - Valor Escrita: AREIA FINA NATURAL
+08:54:18  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 3 _SILO_<NUMERO> 1
+---------------------------------------------------------------------------------
+08:54:18  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B3_MIST01_SILO_1.A_DESC - Valor Escrita: AREIA MÉDIA ARTIFICIAL
+08:54:18  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 3 _SILO_<NUMERO> 2
+---------------------------------------------------------------------------------
+08:54:18  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B3_MIST01_SILO_2.A_DESC - Valor Escrita: <VAZIO> 
+08:54:18  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 3 _SILO_<NUMERO> 3
+---------------------------------------------------------------------------------
+08:54:18  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B3_MIST01_SILO_3.A_DESC - Valor Escrita: <VAZIO> 
+08:54:18  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 3 _SILO_<NUMERO> 4
+---------------------------------------------------------------------------------
+08:54:18  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B3_MIST01_SILO_4.A_DESC - Valor Escrita: <VAZIO> 
+08:54:18  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 3 _SILO_<NUMERO> 5
+---------------------------------------------------------------------------------
+08:54:18  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B3_MIST01_SILO_5.A_DESC - Valor Escrita: <VAZIO> 
+08:54:18  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 5 _SILO_<NUMERO> 1
+---------------------------------------------------------------------------------
+08:54:18  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B5_MIST01_SILO_1.A_DESC - Valor Escrita: ADITIVO DARAVAIR
+08:54:18  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 5 _SILO_<NUMERO> 2
+---------------------------------------------------------------------------------
+08:54:18  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B5_MIST01_SILO_2.A_DESC - Valor Escrita: <VAZIO> 
+08:54:18  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 5 _SILO_<NUMERO> 3
+---------------------------------------------------------------------------------
+08:54:18  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B5_MIST01_SILO_3.A_DESC - Valor Escrita: <VAZIO> 
+08:54:19  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 5 _SILO_<NUMERO> 4
+---------------------------------------------------------------------------------
+08:54:19  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B5_MIST01_SILO_4.A_DESC - Valor Escrita: AREIA FINA ARTIFICIAL
+08:54:19  AtualizaAssociacoesSupervisorio(): DESC_MP_ASSOCIADA_B<BalancaID> 5 _SILO_<NUMERO> 5
+---------------------------------------------------------------------------------
+08:54:19  AtualizaAssociacoesSupervisorio(): Escrevendo no tag: Fix32.GUABI.DESC_MP_B5_MIST01_SILO_5.A_DESC - Valor Escrita: <VAZIO> 

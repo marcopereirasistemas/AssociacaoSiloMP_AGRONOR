@@ -1,0 +1,91 @@
+D:\SISTEMAS\FONTES\DOTNET\Torre Negra\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP\bin\Debug\AssociacaoSiloMP.exe.config
+D:\SISTEMAS\FONTES\DOTNET\Torre Negra\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP\bin\Debug\AssociacaoSiloMP.exe
+D:\SISTEMAS\FONTES\DOTNET\Torre Negra\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP\bin\Debug\AssociacaoSiloMP.pdb
+D:\SISTEMAS\FONTES\DOTNET\Torre Negra\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP\bin\Debug\AssociacaoSiloMP.xml
+D:\SISTEMAS\FONTES\DOTNET\Torre Negra\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP\obj\x86\Debug\Interop.FixDataSystems.dll
+D:\SISTEMAS\FONTES\DOTNET\Torre Negra\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP\obj\x86\Debug\AssociacaoSiloMP.vbproj.ResolveComReference.cache
+D:\SISTEMAS\FONTES\DOTNET\Torre Negra\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP\obj\x86\Debug\AssociacaoSiloMP.formAssociacaoFormulaAtual.resources
+D:\SISTEMAS\FONTES\DOTNET\Torre Negra\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP\obj\x86\Debug\AssociacaoSiloMP.formAssociacaoSelecaoMP.resources
+D:\SISTEMAS\FONTES\DOTNET\Torre Negra\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP\obj\x86\Debug\AssociacaoSiloMP.formPrincipal.resources
+D:\SISTEMAS\FONTES\DOTNET\Torre Negra\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP\obj\x86\Debug\AssociacaoSiloMP.formCadastro.resources
+D:\SISTEMAS\FONTES\DOTNET\Torre Negra\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP\obj\x86\Debug\AssociacaoSiloMP.FCadastroSemBotoes.resources
+D:\SISTEMAS\FONTES\DOTNET\Torre Negra\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP\obj\x86\Debug\AssociacaoSiloMP.formLocalizar.resources
+D:\SISTEMAS\FONTES\DOTNET\Torre Negra\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP\obj\x86\Debug\AssociacaoSiloMP.Resources.resources
+D:\SISTEMAS\FONTES\DOTNET\Torre Negra\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP\obj\x86\Debug\AssociacaoSiloMP.Resource1.resources
+D:\SISTEMAS\FONTES\DOTNET\Torre Negra\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP\obj\x86\Debug\AssociacaoSiloMP.vbproj.GenerateResource.Cache
+D:\SISTEMAS\FONTES\DOTNET\Torre Negra\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP\obj\x86\Debug\AssociacaoSiloMP.exe
+D:\SISTEMAS\FONTES\DOTNET\Torre Negra\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP\obj\x86\Debug\AssociacaoSiloMP.xml
+D:\SISTEMAS\FONTES\DOTNET\Torre Negra\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP\obj\x86\Debug\AssociacaoSiloMP.pdb
+C:\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP\bin\Debug\AssociacaoSiloMP.exe.config
+C:\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP\bin\Debug\AssociacaoSiloMP.exe
+C:\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP\bin\Debug\AssociacaoSiloMP.pdb
+C:\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP\bin\Debug\AssociacaoSiloMP.xml
+C:\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP\obj\x86\Debug\Interop.FixDataSystems.dll
+C:\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP\obj\x86\Debug\AssociacaoSiloMP.vbproj.ResolveComReference.cache
+C:\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP\obj\x86\Debug\AssociacaoSiloMP.formAssociacaoFormulaAtual.resources
+C:\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP\obj\x86\Debug\AssociacaoSiloMP.formAssociacaoSelecaoMP.resources
+C:\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP\obj\x86\Debug\AssociacaoSiloMP.formPrincipal.resources
+C:\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP\obj\x86\Debug\AssociacaoSiloMP.formCadastro.resources
+C:\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP\obj\x86\Debug\AssociacaoSiloMP.FCadastroSemBotoes.resources
+C:\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP\obj\x86\Debug\AssociacaoSiloMP.formLocalizar.resources
+C:\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP\obj\x86\Debug\AssociacaoSiloMP.Resources.resources
+C:\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP\obj\x86\Debug\AssociacaoSiloMP.Resource1.resources
+C:\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP\obj\x86\Debug\AssociacaoSiloMP.vbproj.GenerateResource.Cache
+C:\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP\obj\x86\Debug\AssociacaoSiloMP.exe
+C:\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP\obj\x86\Debug\AssociacaoSiloMP.xml
+C:\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP\obj\x86\Debug\AssociacaoSiloMP.pdb
+C:\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP_2019\bin\Debug\AssociacaoSiloMP.exe.config
+C:\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP_2019\bin\Debug\AssociacaoSiloMP.exe
+C:\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP_2019\bin\Debug\AssociacaoSiloMP.pdb
+C:\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP_2019\bin\Debug\AssociacaoSiloMP.xml
+C:\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP_2019\obj\x86\Debug\Interop.FixDataSystems.dll
+C:\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP_2019\obj\x86\Debug\AssociacaoSiloMP.vbproj.ResolveComReference.cache
+C:\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP_2019\obj\x86\Debug\AssociacaoSiloMP.formAssociacaoSelecaoMP.resources
+C:\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP_2019\obj\x86\Debug\AssociacaoSiloMP.formPrincipal.resources
+C:\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP_2019\obj\x86\Debug\AssociacaoSiloMP.formCadastro.resources
+C:\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP_2019\obj\x86\Debug\AssociacaoSiloMP.FCadastroSemBotoes.resources
+C:\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP_2019\obj\x86\Debug\AssociacaoSiloMP.formLocalizar.resources
+C:\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP_2019\obj\x86\Debug\AssociacaoSiloMP.Resources.resources
+C:\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP_2019\obj\x86\Debug\AssociacaoSiloMP.Resource1.resources
+C:\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP_2019\obj\x86\Debug\AssociacaoSiloMP.vbproj.GenerateResource.Cache
+C:\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP_2019\obj\x86\Debug\AssociacaoSiloMP.exe
+C:\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP_2019\obj\x86\Debug\AssociacaoSiloMP.xml
+C:\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP_2019\obj\x86\Debug\AssociacaoSiloMP.pdb
+C:\SISTEMAS\DOTNET\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP_2019\bin\Debug\AssociacaoSiloMP.exe.config
+C:\SISTEMAS\DOTNET\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP_2019\bin\Debug\AssociacaoSiloMP.exe
+C:\SISTEMAS\DOTNET\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP_2019\bin\Debug\AssociacaoSiloMP.pdb
+C:\SISTEMAS\DOTNET\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP_2019\bin\Debug\AssociacaoSiloMP.xml
+C:\SISTEMAS\DOTNET\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP_2019\obj\x86\Debug\AssociacaoSiloMP.vbproj.AssemblyReference.cache
+C:\SISTEMAS\DOTNET\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP_2019\obj\x86\Debug\Interop.FixDataSystems.dll
+C:\SISTEMAS\DOTNET\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP_2019\obj\x86\Debug\AssociacaoSiloMP.vbproj.ResolveComReference.cache
+C:\SISTEMAS\DOTNET\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP_2019\obj\x86\Debug\AssociacaoSiloMP.formAssociacaoSelecaoMP.resources
+C:\SISTEMAS\DOTNET\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP_2019\obj\x86\Debug\AssociacaoSiloMP.formPrincipal.resources
+C:\SISTEMAS\DOTNET\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP_2019\obj\x86\Debug\AssociacaoSiloMP.formCadastro.resources
+C:\SISTEMAS\DOTNET\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP_2019\obj\x86\Debug\AssociacaoSiloMP.FCadastroSemBotoes.resources
+C:\SISTEMAS\DOTNET\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP_2019\obj\x86\Debug\AssociacaoSiloMP.formLocalizar.resources
+C:\SISTEMAS\DOTNET\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP_2019\obj\x86\Debug\AssociacaoSiloMP.Resources.resources
+C:\SISTEMAS\DOTNET\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP_2019\obj\x86\Debug\AssociacaoSiloMP.Resource1.resources
+C:\SISTEMAS\DOTNET\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP_2019\obj\x86\Debug\AssociacaoSiloMP.vbproj.GenerateResource.cache
+C:\SISTEMAS\DOTNET\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP_2019\obj\x86\Debug\AssociacaoSiloMP.vbproj.CoreCompileInputs.cache
+C:\SISTEMAS\DOTNET\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP_2019\obj\x86\Debug\AssociacaoSiloMP.exe
+C:\SISTEMAS\DOTNET\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP_2019\obj\x86\Debug\AssociacaoSiloMP.xml
+C:\SISTEMAS\DOTNET\MPS\FONTES\Guabi Salles - SC Dosagem Mistura\SC_Dosagem\WindowsApplication1\AssociacaoSiloMP_2019\obj\x86\Debug\AssociacaoSiloMP.pdb
+C:\SISTEMAS\DOTNET\MPS\FONTES\JofegeArgamassaNET\SC_Dosagem_2019\AssociacaoSiloMP_JOFEGE\obj\x86\Debug\AssociacaoSiloMP.vbproj.AssemblyReference.cache
+C:\SISTEMAS\DOTNET\MPS\FONTES\JofegeArgamassaNET\SC_Dosagem_2019\AssociacaoSiloMP_JOFEGE\obj\x86\Debug\Interop.FixDataSystems.dll
+C:\SISTEMAS\DOTNET\MPS\FONTES\JofegeArgamassaNET\SC_Dosagem_2019\AssociacaoSiloMP_JOFEGE\obj\x86\Debug\AssociacaoSiloMP.vbproj.ResolveComReference.cache
+C:\SISTEMAS\DOTNET\MPS\FONTES\JofegeArgamassaNET\SC_Dosagem_2019\AssociacaoSiloMP_JOFEGE\obj\x86\Debug\AssociacaoSiloMP.vbproj.GenerateResource.cache
+C:\SISTEMAS\DOTNET\MPS\FONTES\JofegeArgamassaNET\SC_Dosagem_2019\AssociacaoSiloMP_JOFEGE\obj\x86\Debug\AssociacaoSiloMP.vbproj.CoreCompileInputs.cache
+C:\SISTEMAS\DOTNET\MPS\FONTES\JofegeArgamassaNET\SC_Dosagem_2019\AssociacaoSiloMP_JOFEGE\bin\Debug\AssociacaoSiloMP.exe.config
+C:\SISTEMAS\DOTNET\MPS\FONTES\JofegeArgamassaNET\SC_Dosagem_2019\AssociacaoSiloMP_JOFEGE\bin\Debug\AssociacaoSiloMP.exe
+C:\SISTEMAS\DOTNET\MPS\FONTES\JofegeArgamassaNET\SC_Dosagem_2019\AssociacaoSiloMP_JOFEGE\bin\Debug\AssociacaoSiloMP.pdb
+C:\SISTEMAS\DOTNET\MPS\FONTES\JofegeArgamassaNET\SC_Dosagem_2019\AssociacaoSiloMP_JOFEGE\bin\Debug\AssociacaoSiloMP.xml
+C:\SISTEMAS\DOTNET\MPS\FONTES\JofegeArgamassaNET\SC_Dosagem_2019\AssociacaoSiloMP_JOFEGE\obj\x86\Debug\AssociacaoSiloMP.formAssociacaoSelecaoMP.resources
+C:\SISTEMAS\DOTNET\MPS\FONTES\JofegeArgamassaNET\SC_Dosagem_2019\AssociacaoSiloMP_JOFEGE\obj\x86\Debug\AssociacaoSiloMP.formPrincipal.resources
+C:\SISTEMAS\DOTNET\MPS\FONTES\JofegeArgamassaNET\SC_Dosagem_2019\AssociacaoSiloMP_JOFEGE\obj\x86\Debug\AssociacaoSiloMP.formCadastro.resources
+C:\SISTEMAS\DOTNET\MPS\FONTES\JofegeArgamassaNET\SC_Dosagem_2019\AssociacaoSiloMP_JOFEGE\obj\x86\Debug\AssociacaoSiloMP.FCadastroSemBotoes.resources
+C:\SISTEMAS\DOTNET\MPS\FONTES\JofegeArgamassaNET\SC_Dosagem_2019\AssociacaoSiloMP_JOFEGE\obj\x86\Debug\AssociacaoSiloMP.formLocalizar.resources
+C:\SISTEMAS\DOTNET\MPS\FONTES\JofegeArgamassaNET\SC_Dosagem_2019\AssociacaoSiloMP_JOFEGE\obj\x86\Debug\AssociacaoSiloMP.Resources.resources
+C:\SISTEMAS\DOTNET\MPS\FONTES\JofegeArgamassaNET\SC_Dosagem_2019\AssociacaoSiloMP_JOFEGE\obj\x86\Debug\AssociacaoSiloMP.Resource1.resources
+C:\SISTEMAS\DOTNET\MPS\FONTES\JofegeArgamassaNET\SC_Dosagem_2019\AssociacaoSiloMP_JOFEGE\obj\x86\Debug\AssociacaoSiloMP.exe
+C:\SISTEMAS\DOTNET\MPS\FONTES\JofegeArgamassaNET\SC_Dosagem_2019\AssociacaoSiloMP_JOFEGE\obj\x86\Debug\AssociacaoSiloMP.xml
+C:\SISTEMAS\DOTNET\MPS\FONTES\JofegeArgamassaNET\SC_Dosagem_2019\AssociacaoSiloMP_JOFEGE\obj\x86\Debug\AssociacaoSiloMP.pdb
