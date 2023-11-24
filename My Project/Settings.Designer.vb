@@ -68,7 +68,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("JOFEGE - Argamassa")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("AGRONOR")>  _
         Public Property UNIDADE_DESCRICAO() As String
             Get
                 Return CType(Me("UNIDADE_DESCRICAO"),String)
@@ -81,8 +81,8 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=JFGPC000379\SQLEXPRESS;Initial Catalog=ARGAMASSA_ITA;User ID=sa;Passw"& _ 
-            "ord=@Jofege@itatiba;MultipleActiveResultSets=TRUE")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=.\SQL2014;Initial Catalog=AGRONOR;User ID=sa;Password=sa@123;Multiple"& _ 
+            "ActiveResultSets=TRUE")>  _
         Public ReadOnly Property JOFEGE_ARGAMASSA_ConnectionString() As String
             Get
                 Return CType(Me("JOFEGE_ARGAMASSA_ConnectionString"),String)
@@ -123,9 +123,9 @@ Namespace My
     Friend Module MySettingsProperty
         
         <Global.System.ComponentModel.Design.HelpKeywordAttribute("My.Settings")>  _
-        Friend ReadOnly Property Settings() As Global.AssociacaoSiloMP_JOFEGE.My.MySettings
+        Friend ReadOnly Property Settings() As Global.AssociacaoSiloMP_AGRONOR.My.MySettings
             Get
-                Return Global.AssociacaoSiloMP_JOFEGE.My.MySettings.Default
+                Return Global.AssociacaoSiloMP_AGRONOR.My.MySettings.Default
             End Get
         End Property
     End Module

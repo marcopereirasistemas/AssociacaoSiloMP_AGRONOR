@@ -8,9 +8,9 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{627913E8-0CB3-4F9A-BA66-9D4CA4CA6D4A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>AssociacaoSiloMP_JOFEGE.My.MyApplication</StartupObject>
-    <RootNamespace>AssociacaoSiloMP_JOFEGE</RootNamespace>
-    <AssemblyName>AssociacaoSiloMP_JOFEGE</AssemblyName>
+    <StartupObject>AssociacaoSiloMP_AGRONOR.My.MyApplication</StartupObject>
+    <RootNamespace>AssociacaoSiloMP_AGRONOR</RootNamespace>
+    <AssemblyName>AssociacaoSiloMP_AGRONOR</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
@@ -38,7 +38,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>AssociacaoSiloMP_JOFEGE.xml</DocumentationFile>
+    <DocumentationFile>AssociacaoSiloMP_AGRONOR.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
@@ -48,7 +48,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>AssociacaoSiloMP_JOFEGE.xml</DocumentationFile>
+    <DocumentationFile>AssociacaoSiloMP_AGRONOR.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -402,17 +402,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="OBS.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <COMReference Include="RsiOPCAuto">
-      <Guid>{DFB83232-A952-11D2-A46B-00C04F796375}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

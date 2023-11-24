@@ -1,6 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class formAssociacaoSelecaoMP
-    Inherits AssociacaoSiloMP_JOFEGE.FCadastroSemBotoes
+    Inherits AssociacaoSiloMP_AGRONOR.FCadastroSemBotoes
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()> _
@@ -113,7 +113,7 @@ Partial Class formAssociacaoSelecaoMP
         Me.btnConfirma.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LemonChiffon
         Me.btnConfirma.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnConfirma.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnConfirma.Image = Global.AssociacaoSiloMP_JOFEGE.My.Resources.Resource1.apply
+        Me.btnConfirma.Image = Global.AssociacaoSiloMP_AGRONOR.My.Resources.Resource1.apply
         Me.btnConfirma.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnConfirma.Location = New System.Drawing.Point(639, 406)
         Me.btnConfirma.Name = "btnConfirma"
@@ -129,7 +129,7 @@ Partial Class formAssociacaoSelecaoMP
         Me.btnFechar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LemonChiffon
         Me.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnFechar.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnFechar.Image = Global.AssociacaoSiloMP_JOFEGE.My.Resources.Resource1.Sair1
+        Me.btnFechar.Image = Global.AssociacaoSiloMP_AGRONOR.My.Resources.Resource1.Sair1
         Me.btnFechar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnFechar.Location = New System.Drawing.Point(1311, 406)
         Me.btnFechar.Name = "btnFechar"

@@ -6,14 +6,14 @@
       <Value Profile="(Default)">1</Value>
     </Setting>
     <Setting Name="UNIDADE_DESCRICAO" Type="System.String" Scope="User">
-      <Value Profile="(Default)">JOFEGE - Argamassa</Value>
+      <Value Profile="(Default)">AGRONOR</Value>
     </Setting>
     <Setting Name="JOFEGE_ARGAMASSA_ConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=JFGPC000379\SQLEXPRESS;Initial Catalog=ARGAMASSA_ITA;User ID=sa;Password=@Jofege@itatiba;MultipleActiveResultSets=TRUE&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Data Source=.\SQL2014;Initial Catalog=AGRONOR;User ID=sa;Password=sa@123;MultipleActiveResultSets=TRUE&lt;/ConnectionString&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=JFGPC000379\SQLEXPRESS;Initial Catalog=ARGAMASSA_ITA;User ID=sa;Password=@Jofege@itatiba;MultipleActiveResultSets=TRUE</Value>
+      <Value Profile="(Default)">Data Source=.\SQL2014;Initial Catalog=AGRONOR;User ID=sa;Password=sa@123;MultipleActiveResultSets=TRUE</Value>
     </Setting>
     <Setting Name="OPC_UPDATE_RATE" Type="System.String" Scope="User">
       <Value Profile="(Default)">1000</Value>

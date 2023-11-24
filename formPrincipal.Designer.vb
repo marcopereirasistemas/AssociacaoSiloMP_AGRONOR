@@ -1,6 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class formPrincipal
-    Inherits AssociacaoSiloMP_JOFEGE.FCadastroSemBotoes
+    Inherits AssociacaoSiloMP_AGRONOR.FCadastroSemBotoes
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()> _
@@ -26,7 +26,6 @@ Partial Class formPrincipal
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(formPrincipal))
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SILONUMERO = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -55,7 +54,7 @@ Partial Class formPrincipal
         '
         'lblMensagem
         '
-        Me.lblMensagem.Size = New System.Drawing.Size(52130, 17)
+        Me.lblMensagem.Size = New System.Drawing.Size(53277, 17)
         Me.lblMensagem.Text = ""
         '
         'DataGridView1
@@ -166,7 +165,7 @@ Partial Class formPrincipal
         Me.btnFechar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LemonChiffon
         Me.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnFechar.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnFechar.Image = Global.AssociacaoSiloMP_JOFEGE.My.Resources.Resource1.Sair1
+        Me.btnFechar.Image = Global.AssociacaoSiloMP_AGRONOR.My.Resources.Resource1.Sair1
         Me.btnFechar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnFechar.Location = New System.Drawing.Point(1484, 452)
         Me.btnFechar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
@@ -183,7 +182,7 @@ Partial Class formPrincipal
         Me.btnDesassociarTodos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LemonChiffon
         Me.btnDesassociarTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnDesassociarTodos.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDesassociarTodos.Image = Global.AssociacaoSiloMP_JOFEGE.My.Resources.Resource1.cancel
+        Me.btnDesassociarTodos.Image = Global.AssociacaoSiloMP_AGRONOR.My.Resources.Resource1.cancel
         Me.btnDesassociarTodos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnDesassociarTodos.Location = New System.Drawing.Point(918, 77)
         Me.btnDesassociarTodos.Margin = New System.Windows.Forms.Padding(10)
@@ -202,7 +201,7 @@ Partial Class formPrincipal
         Me.btnDesassociar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LemonChiffon
         Me.btnDesassociar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnDesassociar.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDesassociar.Image = Global.AssociacaoSiloMP_JOFEGE.My.Resources.Resource1.cancel
+        Me.btnDesassociar.Image = Global.AssociacaoSiloMP_AGRONOR.My.Resources.Resource1.cancel
         Me.btnDesassociar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnDesassociar.Location = New System.Drawing.Point(171, 452)
         Me.btnDesassociar.Margin = New System.Windows.Forms.Padding(10)
@@ -220,7 +219,7 @@ Partial Class formPrincipal
         Me.btnAssociar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LemonChiffon
         Me.btnAssociar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAssociar.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAssociar.Image = Global.AssociacaoSiloMP_JOFEGE.My.Resources.Resource1.apply
+        Me.btnAssociar.Image = Global.AssociacaoSiloMP_AGRONOR.My.Resources.Resource1.apply
         Me.btnAssociar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnAssociar.Location = New System.Drawing.Point(13, 452)
         Me.btnAssociar.Margin = New System.Windows.Forms.Padding(10)
@@ -274,7 +273,7 @@ Partial Class formPrincipal
         Me.btnAtualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LemonChiffon
         Me.btnAtualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAtualizar.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAtualizar.Image = Global.AssociacaoSiloMP_JOFEGE.My.Resources.Resource1.atualiar_32x32
+        Me.btnAtualizar.Image = Global.AssociacaoSiloMP_AGRONOR.My.Resources.Resource1.atualiar_32x32
         Me.btnAtualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnAtualizar.Location = New System.Drawing.Point(1322, 452)
         Me.btnAtualizar.Margin = New System.Windows.Forms.Padding(10)
@@ -297,8 +296,9 @@ Partial Class formPrincipal
         Me.Controls.Add(Me.btnFechar)
         Me.Controls.Add(Me.btnDesassociar)
         Me.Controls.Add(Me.btnAssociar)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = True
+        Me.MinimizeBox = True
         Me.Name = "formPrincipal"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = " Associação de Silo com Matéria-Prima"
