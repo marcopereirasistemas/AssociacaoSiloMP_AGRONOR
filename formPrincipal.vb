@@ -653,7 +653,7 @@ Public Class formPrincipal
 
         btnAtualizaTAGS.Visible = False
         If HabilitarTestesLOG() Then
-
+            DataGridView1.Height = DataGridView1.Height - 35
             btnAtualizaTAGS.Visible = True
 
         End If
@@ -953,7 +953,7 @@ Public Class formPrincipal
 
         retornoHabilitaTestes = False
 
-        If Rotinas.ArquivoExiste(Application.StartupPath & "\TESTE_TAGS.TXT") Then
+        If Rotinas.ArquivoExiste(Application.StartupPath & "\TESTE.TXT") Then
             retornoHabilitaTestes = True
         End If
 
@@ -961,6 +961,43 @@ Public Class formPrincipal
 
     End Function
 
+    Private Function GerarItemOPC(ByVal _linhaID As Integer,
+                                    ByVal _nameGrupo As String,
+                                    ByVal _indiceGrupoPar As Integer,
+                                    ByVal _partialNameAlias As String,
+                                    ByVal _tagName As String,
+                                    ByVal _indiceTabela As String,
+                                    ByVal _limpar As Integer,
+                                    ByVal _status As Integer,
+                                    Optional ByVal _valor As Double = 0) As List(Of OpcTagItem)
+
+        Dim _opcTagItens As New List(Of OpcTagItem)()
+        Dim _opcTagItem As OpcTagItem
+
+        _opcTagItem = New OpcTagItem()
+
+        _indiceGrupo += 1
+
+        _opcTagItem.LinhaID = _linhaID
+        _opcTagItem.GrupoOPC = _nameGrupo
+        _opcTagItem.IndiceGrupo = _indiceGrupoPar
+        _opcTagItem.Indice = _indiceGrupoPar
+        _opcTagItem.Apelido = _partialNameAlias
+        _opcTagItem.TAG = _tagName
+        _opcTagItem.Indexado = 0
+        _opcTagItem.IndiceMatriz = _indiceTabela
+        _opcTagItem.Valor = _valor
+        _opcTagItem.NumeroElementos = 0
+        _opcTagItem.Limpar = _limpar
+        _opcTagItem.Status = _status
+
+        _opcTagItens.Add(_opcTagItem)
+
+        Debug.Print($"TAG: {_tagName}")
+
+        Return _opcTagItens
+
+    End Function
 
     Private Function GerarItensOPC(ByVal _linhaID As Integer,
                                    ByVal _numeroElementos As Integer,
@@ -1035,6 +1072,19 @@ Public Class formPrincipal
         'Dim iLinhaID As Integer
         Dim _step As Integer
 
+        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%BIT_INICIA%'"))
+        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%BIT_PAUSA%'"))
+        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%BIT_ABORTA%'"))
+        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%BIT_FILA_MOVE_BATCH%'"))
+        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%BIT_COLETA_BATCH_PRODUZIDO%'"))
+        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%BIT_DOSAGEM_MANUAL%'"))
+        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%QTDE_BATCHS_DESEJADOS%'"))
+        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%QTDE_BATCHS_REALIZADOS%'"))
+        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%DESTINO_NUMERO_PRODUCAO%'"))
+        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%NUMERO_OP%'"))
+        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%COLETA_OP%'"))
+        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%COLETA_BATCH%'"))
+
         ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%SILO_BALANCA%'"))
         ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%CODIGO_MP_BALANCA%'"))
         ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%QTDE_DESEJADO_BALANCA%'"))
@@ -1056,6 +1106,156 @@ Public Class formPrincipal
             BancoDados.CriaComandoSQL()
             BancoDados.ExecutaSQL()
         Next
+
+
+
+        _indiceGrupo = 0
+        _linhaID = 1
+        tagPartial_1 = "DB1O1O."
+        tagPartial_2 = "DBX0.0"
+        NomeGrupoOPC = "CONTROLE_SP_L" & _linhaID
+        partialNameAlias = "INICIA_L" & _linhaID
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1O1O."
+        tagPartial_2 = "DBX0.1"
+        NomeGrupoOPC = "CONTROLE_SP_L" & _linhaID
+        partialNameAlias = "PAUSA_L" & _linhaID
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1O1O."
+        tagPartial_2 = "DBX0.2"
+        NomeGrupoOPC = "CONTROLE_SP_L" & _linhaID
+        partialNameAlias = "ABORTA_L" & _linhaID
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1O1O."
+        tagPartial_2 = "DBX0.3"
+        NomeGrupoOPC = "CONTROLE_CL_L" & _linhaID
+        partialNameAlias = "FILA_L" & _linhaID
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1O1O."
+        tagPartial_2 = "DBX0.4"
+        NomeGrupoOPC = "CONTROLE_CL_L" & _linhaID
+        partialNameAlias = "COLETA_L" & _linhaID
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1O1O."
+        tagPartial_2 = "DBX0.5"
+        NomeGrupoOPC = "CONTROLE_SP_L" & _linhaID
+        partialNameAlias = "DOSAGEM_MANUAL_L" & _linhaID
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+
+
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1O1O."
+        tagPartial_2 = "DBX2"
+        NomeGrupoOPC = "CONTROLE_SP_L" & _linhaID
+        partialNameAlias = "BATCH_DESEJADO_L" & _linhaID
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1O1O."
+        tagPartial_2 = "DBX6"
+        NomeGrupoOPC = "CONTROLE_SP_L" & _linhaID
+        partialNameAlias = "BATCH_REALIZADO_L" & _linhaID
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1O1O."
+        tagPartial_2 = "DBX10"
+        NomeGrupoOPC = "CONTROLE_SP_L" & _linhaID
+        partialNameAlias = "DESTINO_L" & _linhaID
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1O1O."
+        tagPartial_2 = "DBX14"
+        NomeGrupoOPC = "CONTROLE_SP_L" & _linhaID
+        partialNameAlias = "NUMERO_OP_L" & _linhaID
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1O1O."
+        tagPartial_2 = "DBX18"
+        NomeGrupoOPC = "CONTROLE_CL_L" & _linhaID
+        partialNameAlias = "COLETA_OP_L" & _linhaID
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+
+
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1O1O."
+        tagPartial_2 = "DBX22"
+        NomeGrupoOPC = "CONTROLE_CL_L" & _linhaID
+        partialNameAlias = "COLETA_BATCH_L" & _linhaID
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+
+
 
         _indiceGrupo = 0
         _linhaID = 1

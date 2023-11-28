@@ -54,7 +54,7 @@ Partial Class formPrincipal
         '
         'lblMensagem
         '
-        Me.lblMensagem.Size = New System.Drawing.Size(53277, 17)
+        Me.lblMensagem.Size = New System.Drawing.Size(54424, 17)
         Me.lblMensagem.Text = ""
         '
         'DataGridView1
@@ -100,7 +100,7 @@ Partial Class formPrincipal
         Me.DataGridView1.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Verdana", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DataGridView1.RowTemplate.Height = 50
         Me.DataGridView1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.Size = New System.Drawing.Size(1591, 432)
+        Me.DataGridView1.Size = New System.Drawing.Size(1591, 433)
         Me.DataGridView1.TabIndex = 29
         '
         'ID
