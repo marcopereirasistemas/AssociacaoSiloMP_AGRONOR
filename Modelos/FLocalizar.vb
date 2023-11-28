@@ -6,7 +6,7 @@
     Protected Rotinas As ClasseRotinasDiversas
 
     Private Sub formLocalizar_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-        BancoDados = New ClasseBancoDados(My.Settings.JOFEGE_ARGAMASSA_ConnectionString)
+        BancoDados = New ClasseBancoDados(My.Settings.AGRONOR_ConnectionString)
 
         Rotinas = New ClasseRotinasDiversas
 

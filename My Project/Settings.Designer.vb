@@ -81,11 +81,11 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=.\SQL2014;Initial Catalog=AGRONOR;User ID=sa;Password=sa@123;Multiple"& _ 
-            "ActiveResultSets=TRUE")>  _
-        Public ReadOnly Property JOFEGE_ARGAMASSA_ConnectionString() As String
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=.\SQL2014;Initial Catalog=AGRONOR;User ID=sa;Password=Agronor@123;Mul"& _ 
+            "tipleActiveResultSets=TRUE")>  _
+        Public ReadOnly Property AGRONOR_ConnectionString() As String
             Get
-                Return CType(Me("JOFEGE_ARGAMASSA_ConnectionString"),String)
+                Return CType(Me("AGRONOR_ConnectionString"),String)
             End Get
         End Property
         
