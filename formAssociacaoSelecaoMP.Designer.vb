@@ -136,6 +136,7 @@ Partial Class formAssociacaoSelecaoMP
         Me.btnFechar.Size = New System.Drawing.Size(116, 53)
         Me.btnFechar.TabIndex = 22
         Me.btnFechar.Text = "Fechar"
+        Me.btnFechar.Visible = True
         Me.btnFechar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnFechar.UseVisualStyleBackColor = True
         '

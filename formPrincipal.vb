@@ -35,7 +35,7 @@ Public Class formPrincipal
     Dim formTrocarSiloNova As Object
     Dim RotinasDiversas As New ClasseRotinasDiversas
     Dim teclaCtrlPressionada As Boolean
-    Dim Versao As String = " - Versão 1.0.10 - 24/11/2023"
+    Dim Versao As String = " - Versão 1.0.10 - 30/11/2023"
     Dim horaInicioEnvio As String
     Dim horaFinalEnvio As String
     Dim horaInicial As DateTime
@@ -617,24 +617,24 @@ Public Class formPrincipal
         Dim fin As String
         Dim temp As String
 
-        If MsgBox(TextoMensagem, MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirmação") = vbYes Then
+        'If MsgBox(TextoMensagem, MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirmação") = vbYes Then
 
-            AtualizaAssociacoesSupervisorio()
+        '    AtualizaAssociacoesSupervisorio()
 
-            If Rotinas.ArquivoExistePastaAplicacao("TESTE.TXT") Then
+        '    If Rotinas.ArquivoExistePastaAplicacao("TESTE.TXT") Then
 
-                ini = $"Inicio: {horaInicial}"
-                fin = $"Fim...: {horaFinal}"
-                temp = $"{DateDiff(DateInterval.Second, horaInicial, horaFinal)} segundos"
+        '        ini = $"Inicio: {horaInicial}"
+        '        fin = $"Fim...: {horaFinal}"
+        '        temp = $"{DateDiff(DateInterval.Second, horaInicial, horaFinal)} segundos"
 
-                MsgBox($"Descricões atualizadas: " & vbCrLf & vbCrLf &
-                       ini & vbCrLf &
-                       fin & vbCrLf & vbCrLf &
-                       temp, MessageBoxButtons.OK + MessageBoxIcon.Information, "Aviso")
+        '        MsgBox($"Descricões atualizadas: " & vbCrLf & vbCrLf &
+        '               ini & vbCrLf &
+        '               fin & vbCrLf & vbCrLf &
+        '               temp, MessageBoxButtons.OK + MessageBoxIcon.Information, "Aviso")
 
-            End If
+        '    End If
 
-        End If
+        'End If
 
         Close()
 
@@ -1111,7 +1111,7 @@ Public Class formPrincipal
 
         _indiceGrupo = 0
         _linhaID = 1
-        tagPartial_1 = "DB1O1O."
+        tagPartial_1 = "DB1010."
         tagPartial_2 = "DBX0.0"
         NomeGrupoOPC = "CONTROLE_SP_L" & _linhaID
         partialNameAlias = "INICIA_L" & _linhaID
@@ -1123,7 +1123,7 @@ Public Class formPrincipal
 
         _indiceGrupo += 1
         _linhaID = 1
-        tagPartial_1 = "DB1O1O."
+        tagPartial_1 = "DB1010."
         tagPartial_2 = "DBX0.1"
         NomeGrupoOPC = "CONTROLE_SP_L" & _linhaID
         partialNameAlias = "PAUSA_L" & _linhaID
@@ -1135,7 +1135,7 @@ Public Class formPrincipal
 
         _indiceGrupo += 1
         _linhaID = 1
-        tagPartial_1 = "DB1O1O."
+        tagPartial_1 = "DB1010."
         tagPartial_2 = "DBX0.2"
         NomeGrupoOPC = "CONTROLE_SP_L" & _linhaID
         partialNameAlias = "ABORTA_L" & _linhaID
@@ -1147,7 +1147,7 @@ Public Class formPrincipal
 
         _indiceGrupo += 1
         _linhaID = 1
-        tagPartial_1 = "DB1O1O."
+        tagPartial_1 = "DB1010."
         tagPartial_2 = "DBX0.3"
         NomeGrupoOPC = "CONTROLE_CL_L" & _linhaID
         partialNameAlias = "FILA_L" & _linhaID
@@ -1159,7 +1159,7 @@ Public Class formPrincipal
 
         _indiceGrupo += 1
         _linhaID = 1
-        tagPartial_1 = "DB1O1O."
+        tagPartial_1 = "DB1010."
         tagPartial_2 = "DBX0.4"
         NomeGrupoOPC = "CONTROLE_CL_L" & _linhaID
         partialNameAlias = "COLETA_L" & _linhaID
@@ -1171,7 +1171,7 @@ Public Class formPrincipal
 
         _indiceGrupo += 1
         _linhaID = 1
-        tagPartial_1 = "DB1O1O."
+        tagPartial_1 = "DB1010."
         tagPartial_2 = "DBX0.5"
         NomeGrupoOPC = "CONTROLE_SP_L" & _linhaID
         partialNameAlias = "DOSAGEM_MANUAL_L" & _linhaID
@@ -1184,7 +1184,7 @@ Public Class formPrincipal
 
         _indiceGrupo += 1
         _linhaID = 1
-        tagPartial_1 = "DB1O1O."
+        tagPartial_1 = "DB1010."
         tagPartial_2 = "DBX2"
         NomeGrupoOPC = "CONTROLE_SP_L" & _linhaID
         partialNameAlias = "BATCH_DESEJADO_L" & _linhaID
@@ -1196,7 +1196,7 @@ Public Class formPrincipal
 
         _indiceGrupo += 1
         _linhaID = 1
-        tagPartial_1 = "DB1O1O."
+        tagPartial_1 = "DB1010."
         tagPartial_2 = "DBX6"
         NomeGrupoOPC = "CONTROLE_SP_L" & _linhaID
         partialNameAlias = "BATCH_REALIZADO_L" & _linhaID
@@ -1208,7 +1208,7 @@ Public Class formPrincipal
 
         _indiceGrupo += 1
         _linhaID = 1
-        tagPartial_1 = "DB1O1O."
+        tagPartial_1 = "DB1010."
         tagPartial_2 = "DBX10"
         NomeGrupoOPC = "CONTROLE_SP_L" & _linhaID
         partialNameAlias = "DESTINO_L" & _linhaID
@@ -1220,7 +1220,7 @@ Public Class formPrincipal
 
         _indiceGrupo += 1
         _linhaID = 1
-        tagPartial_1 = "DB1O1O."
+        tagPartial_1 = "DB1010."
         tagPartial_2 = "DBX14"
         NomeGrupoOPC = "CONTROLE_SP_L" & _linhaID
         partialNameAlias = "NUMERO_OP_L" & _linhaID
@@ -1232,7 +1232,7 @@ Public Class formPrincipal
 
         _indiceGrupo += 1
         _linhaID = 1
-        tagPartial_1 = "DB1O1O."
+        tagPartial_1 = "DB1010."
         tagPartial_2 = "DBX18"
         NomeGrupoOPC = "CONTROLE_CL_L" & _linhaID
         partialNameAlias = "COLETA_OP_L" & _linhaID
@@ -1245,7 +1245,7 @@ Public Class formPrincipal
 
         _indiceGrupo += 1
         _linhaID = 1
-        tagPartial_1 = "DB1O1O."
+        tagPartial_1 = "DB1010."
         tagPartial_2 = "DBX22"
         NomeGrupoOPC = "CONTROLE_CL_L" & _linhaID
         partialNameAlias = "COLETA_BATCH_L" & _linhaID
