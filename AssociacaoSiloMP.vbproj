@@ -71,6 +71,14 @@
     </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ASTrialExpiredDialog, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\Automated Solutions\ASComm.NET 3.11 Trial\ASTrialExpiredDialog.dll</HintPath>
+    </Reference>
+    <Reference Include="AutomatedSolutions.ASComm, Version=3.11.0.0, Culture=neutral, PublicKeyToken=67272fe3f372ded3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\Automated Solutions\ASComm.NET 3.11 Trial\AutomatedSolutions.ASComm.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />

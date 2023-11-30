@@ -15,11 +15,8 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=.\SQL2014;Initial Catalog=AGRONOR;User ID=sa;Password=Agronor@123;MultipleActiveResultSets=TRUE</Value>
     </Setting>
-    <Setting Name="OPC_UPDATE_RATE" Type="System.String" Scope="User">
-      <Value Profile="(Default)">1000</Value>
-    </Setting>
-    <Setting Name="OPC_TOPICO" Type="System.String" Scope="User">
-      <Value Profile="(Default)">ARGAMASSA</Value>
+    <Setting Name="IP_PLC" Type="System.String" Scope="User">
+      <Value Profile="(Default)">192.168.0.150,0,1</Value>
     </Setting>
   </Settings>
 </SettingsFile>
