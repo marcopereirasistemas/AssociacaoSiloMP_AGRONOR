@@ -8,3 +8,6 @@
 00:51:04  Materia-prima: 6 - Associada ao Silo: 2
 00:51:10  Materia-prima: 2 - Associada ao Silo: 6
 00:51:26  Associação Iniciada.
+15:53:08  Associação Iniciada.
+15:59:17  Associação Iniciada.
+16:02:10  Associação Iniciada.

@@ -1118,7 +1118,7 @@ Public Class formPrincipal
         tagPartial_1 = "DB1010."
         tagPartial_2 = "DBX0.0"
         NomeGrupoOPC = "CONTROLE_SP_L" & _linhaID
-        partialNameAlias = "INICIA_L" & _linhaID
+        partialNameAlias = "INICIA"
         indiceInicialTag = 0
         tagPartial_1 += tagPartial_2
         __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
@@ -1130,7 +1130,7 @@ Public Class formPrincipal
         tagPartial_1 = "DB1010."
         tagPartial_2 = "DBX0.1"
         NomeGrupoOPC = "CONTROLE_SP_L" & _linhaID
-        partialNameAlias = "PAUSA_L" & _linhaID
+        partialNameAlias = "PAUSA"
         indiceInicialTag = 0
         tagPartial_1 += tagPartial_2
         __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
@@ -1142,7 +1142,7 @@ Public Class formPrincipal
         tagPartial_1 = "DB1010."
         tagPartial_2 = "DBX0.2"
         NomeGrupoOPC = "CONTROLE_SP_L" & _linhaID
-        partialNameAlias = "ABORTA_L" & _linhaID
+        partialNameAlias = "ABORTA"
         indiceInicialTag = 0
         tagPartial_1 += tagPartial_2
         __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
@@ -1154,7 +1154,7 @@ Public Class formPrincipal
         tagPartial_1 = "DB1010."
         tagPartial_2 = "DBX0.3"
         NomeGrupoOPC = "CONTROLE_CL_L" & _linhaID
-        partialNameAlias = "FILA_L" & _linhaID
+        partialNameAlias = "FILA"
         indiceInicialTag = 0
         tagPartial_1 += tagPartial_2
         __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
@@ -1166,7 +1166,7 @@ Public Class formPrincipal
         tagPartial_1 = "DB1010."
         tagPartial_2 = "DBX0.4"
         NomeGrupoOPC = "CONTROLE_CL_L" & _linhaID
-        partialNameAlias = "COLETA_L" & _linhaID
+        partialNameAlias = "COLETA"
         indiceInicialTag = 0
         tagPartial_1 += tagPartial_2
         __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
@@ -1178,7 +1178,7 @@ Public Class formPrincipal
         tagPartial_1 = "DB1010."
         tagPartial_2 = "DBX0.5"
         NomeGrupoOPC = "CONTROLE_SP_L" & _linhaID
-        partialNameAlias = "DOSAGEM_MANUAL_L" & _linhaID
+        partialNameAlias = "DOSAGEM_MANUAL"
         indiceInicialTag = 0
         tagPartial_1 += tagPartial_2
         __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
@@ -1191,7 +1191,7 @@ Public Class formPrincipal
         tagPartial_1 = "DB1010."
         tagPartial_2 = "DBD2"
         NomeGrupoOPC = "CONTROLE_SP_L" & _linhaID
-        partialNameAlias = "BATCH_DESEJADO_L" & _linhaID
+        partialNameAlias = "BATCH_DESEJADO"
         indiceInicialTag = 0
         tagPartial_1 += tagPartial_2
         __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
@@ -1203,7 +1203,7 @@ Public Class formPrincipal
         tagPartial_1 = "DB1010."
         tagPartial_2 = "DBD6"
         NomeGrupoOPC = "CONTROLE_SP_L" & _linhaID
-        partialNameAlias = "BATCH_REALIZADO_L" & _linhaID
+        partialNameAlias = "BATCH_REALIZADO"
         indiceInicialTag = 0
         tagPartial_1 += tagPartial_2
         __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
@@ -1215,7 +1215,7 @@ Public Class formPrincipal
         tagPartial_1 = "DB1010."
         tagPartial_2 = "DBD10"
         NomeGrupoOPC = "CONTROLE_SP_L" & _linhaID
-        partialNameAlias = "DESTINO_L" & _linhaID
+        partialNameAlias = "DESTINO"
         indiceInicialTag = 0
         tagPartial_1 += tagPartial_2
         __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
@@ -1227,7 +1227,7 @@ Public Class formPrincipal
         tagPartial_1 = "DB1010."
         tagPartial_2 = "DBD14"
         NomeGrupoOPC = "CONTROLE_SP_L" & _linhaID
-        partialNameAlias = "NUMERO_OP_L" & _linhaID
+        partialNameAlias = "NUMERO_OP"
         indiceInicialTag = 0
         tagPartial_1 += tagPartial_2
         __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
@@ -1239,7 +1239,7 @@ Public Class formPrincipal
         tagPartial_1 = "DB1010."
         tagPartial_2 = "DBD18"
         NomeGrupoOPC = "CONTROLE_CL_L" & _linhaID
-        partialNameAlias = "COLETA_OP_L" & _linhaID
+        partialNameAlias = "COLETA_OP"
         indiceInicialTag = 0
         tagPartial_1 += tagPartial_2
         __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
@@ -1252,7 +1252,7 @@ Public Class formPrincipal
         tagPartial_1 = "DB1010."
         tagPartial_2 = "DBD22"
         NomeGrupoOPC = "CONTROLE_CL_L" & _linhaID
-        partialNameAlias = "COLETA_BATCH_L" & _linhaID
+        partialNameAlias = "COLETA_BATCH"
         indiceInicialTag = 0
         tagPartial_1 += tagPartial_2
         __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
@@ -1264,7 +1264,7 @@ Public Class formPrincipal
         tagPartial_1 = "DB1010."
         tagPartial_2 = "DBD26"
         NomeGrupoOPC = "CONTROLE_SP_L" & _linhaID
-        partialNameAlias = "TAMANHO_TOTAL_BATCH_L" & _linhaID
+        partialNameAlias = "TAMANHO_TOTAL_BATCH"
         indiceInicialTag = 0
         tagPartial_1 += tagPartial_2
         __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
@@ -1277,7 +1277,7 @@ Public Class formPrincipal
         tagPartial_1 = "DB1010."
         tagPartial_2 = "DBW30"
         NomeGrupoOPC = "CONTROLE_SP_L" & _linhaID
-        partialNameAlias = "FORMULA_DESCRICAO_" & _linhaID
+        partialNameAlias = "FORMULA_DESCRICAO"
         indiceInicialTag = 0
         tagPartial_1 += tagPartial_2
         __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
@@ -1290,7 +1290,7 @@ Public Class formPrincipal
         tagPartial_1 = "DB1010."
         tagPartial_2 = "DBD286"
         NomeGrupoOPC = "CONTROLE_SP_L" & _linhaID
-        partialNameAlias = "PRODUTO_DESCRICAO_L" & _linhaID
+        partialNameAlias = "PRODUTO_DESCRICAO"
         indiceInicialTag = 0
         tagPartial_1 += tagPartial_2
         __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
