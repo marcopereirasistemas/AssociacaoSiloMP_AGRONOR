@@ -1085,6 +1085,8 @@ Public Class formPrincipal
         ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%COLETA_OP%'"))
         ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%COLETA_BATCH%'"))
         ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%TAMANHO_TOTAL_BATCH%'"))
+        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%PRODUTO_DESCRICAO%'"))
+        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%FORMULA_DESCRICAO%'"))
 
 
         ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%SILO_BALANCA%'"))
@@ -1263,6 +1265,32 @@ Public Class formPrincipal
         tagPartial_2 = "DBD26"
         NomeGrupoOPC = "CONTROLE_SP_L" & _linhaID
         partialNameAlias = "TAMANHO_TOTAL_BATCH_L" & _linhaID
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+
+
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1010."
+        tagPartial_2 = "DBW30"
+        NomeGrupoOPC = "CONTROLE_SP_L" & _linhaID
+        partialNameAlias = "FORMULA_DESCRICAO_" & _linhaID
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+
+
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1010."
+        tagPartial_2 = "DBD286"
+        NomeGrupoOPC = "CONTROLE_SP_L" & _linhaID
+        partialNameAlias = "PRODUTO_DESCRICAO_L" & _linhaID
         indiceInicialTag = 0
         tagPartial_1 += tagPartial_2
         __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
