@@ -100,6 +100,18 @@ Namespace My
                 Me("IP_PLC") = value
             End Set
         End Property
+
+        <Global.System.Configuration.UserScopedSettingAttribute(),
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),
+         Global.System.Configuration.DefaultSettingValueAttribute("192.168.0.122,0,1")>
+        Public Property IP_PLC_TESTE() As String
+            Get
+                Return CType(Me("IP_PLC_TESTE"), String)
+            End Get
+            Set
+                Me("IP_PLC_TESTE") = Value
+            End Set
+        End Property
     End Class
 End Namespace
 

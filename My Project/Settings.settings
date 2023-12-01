@@ -18,5 +18,8 @@
     <Setting Name="IP_PLC" Type="System.String" Scope="User">
       <Value Profile="(Default)">192.168.0.150,0,1</Value>
     </Setting>
+    <Setting Name="IP_PLC_TESTE" Type="System.String" Scope="User">
+      <Value Profile="(Default)">192.168.0.122,0,1</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
