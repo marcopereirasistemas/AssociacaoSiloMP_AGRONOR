@@ -1072,18 +1072,20 @@ Public Class formPrincipal
         'Dim iLinhaID As Integer
         Dim _step As Integer
 
-        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%BIT_INICIA%'"))
-        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%BIT_PAUSA%'"))
-        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%BIT_ABORTA%'"))
-        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%BIT_FILA_MOVE_BATCH%'"))
-        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%BIT_COLETA_BATCH_PRODUZIDO%'"))
-        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%BIT_DOSAGEM_MANUAL%'"))
-        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%QTDE_BATCHS_DESEJADOS%'"))
-        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%QTDE_BATCHS_REALIZADOS%'"))
-        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%DESTINO_NUMERO_PRODUCAO%'"))
+        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%INICIA%'"))
+        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%PAUSA%'"))
+        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%ABORTA%'"))
+        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%FILA%'"))
+        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%COLETA%'"))
+        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%DOSAGEM_MANUAL%'"))
+        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%BATCH_DESEJADO%'"))
+        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%BATCH_REALIZADO%'"))
+        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%DESTINO%'"))
         ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%NUMERO_OP%'"))
         ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%COLETA_OP%'"))
         ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%COLETA_BATCH%'"))
+        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%TAMANHO_TOTAL_BATCH%'"))
+
 
         ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%SILO_BALANCA%'"))
         ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%CODIGO_MP_BALANCA%'"))
@@ -1185,7 +1187,7 @@ Public Class formPrincipal
         _indiceGrupo += 1
         _linhaID = 1
         tagPartial_1 = "DB1010."
-        tagPartial_2 = "DBX2"
+        tagPartial_2 = "DBD2"
         NomeGrupoOPC = "CONTROLE_SP_L" & _linhaID
         partialNameAlias = "BATCH_DESEJADO_L" & _linhaID
         indiceInicialTag = 0
@@ -1197,7 +1199,7 @@ Public Class formPrincipal
         _indiceGrupo += 1
         _linhaID = 1
         tagPartial_1 = "DB1010."
-        tagPartial_2 = "DBX6"
+        tagPartial_2 = "DBD6"
         NomeGrupoOPC = "CONTROLE_SP_L" & _linhaID
         partialNameAlias = "BATCH_REALIZADO_L" & _linhaID
         indiceInicialTag = 0
@@ -1209,7 +1211,7 @@ Public Class formPrincipal
         _indiceGrupo += 1
         _linhaID = 1
         tagPartial_1 = "DB1010."
-        tagPartial_2 = "DBX10"
+        tagPartial_2 = "DBD10"
         NomeGrupoOPC = "CONTROLE_SP_L" & _linhaID
         partialNameAlias = "DESTINO_L" & _linhaID
         indiceInicialTag = 0
@@ -1221,7 +1223,7 @@ Public Class formPrincipal
         _indiceGrupo += 1
         _linhaID = 1
         tagPartial_1 = "DB1010."
-        tagPartial_2 = "DBX14"
+        tagPartial_2 = "DBD14"
         NomeGrupoOPC = "CONTROLE_SP_L" & _linhaID
         partialNameAlias = "NUMERO_OP_L" & _linhaID
         indiceInicialTag = 0
@@ -1233,7 +1235,7 @@ Public Class formPrincipal
         _indiceGrupo += 1
         _linhaID = 1
         tagPartial_1 = "DB1010."
-        tagPartial_2 = "DBX18"
+        tagPartial_2 = "DBD18"
         NomeGrupoOPC = "CONTROLE_CL_L" & _linhaID
         partialNameAlias = "COLETA_OP_L" & _linhaID
         indiceInicialTag = 0
@@ -1246,9 +1248,21 @@ Public Class formPrincipal
         _indiceGrupo += 1
         _linhaID = 1
         tagPartial_1 = "DB1010."
-        tagPartial_2 = "DBX22"
+        tagPartial_2 = "DBD22"
         NomeGrupoOPC = "CONTROLE_CL_L" & _linhaID
         partialNameAlias = "COLETA_BATCH_L" & _linhaID
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1010."
+        tagPartial_2 = "DBD26"
+        NomeGrupoOPC = "CONTROLE_SP_L" & _linhaID
+        partialNameAlias = "TAMANHO_TOTAL_BATCH_L" & _linhaID
         indiceInicialTag = 0
         tagPartial_1 += tagPartial_2
         __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
@@ -1260,7 +1274,7 @@ Public Class formPrincipal
         _indiceGrupo = 0
         _linhaID = 1
 
-        For _balancaNumero = 1 To 8
+        For _balancaNumero = 1 To 9
 
             tagPartial_1 = $"DB100{_balancaNumero}."
 
