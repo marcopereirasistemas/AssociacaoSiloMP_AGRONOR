@@ -1069,7 +1069,6 @@ Public Class formPrincipal
         Dim __opcTagItens As New List(Of OpcTagItem)()
         Dim _linhaID As Integer
         Dim ScritpsSqlExecutar As New List(Of ScriptExecutar)()
-        'Dim iLinhaID As Integer
         Dim _step As Integer
 
         ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%INICIA%'"))
@@ -1275,7 +1274,7 @@ Public Class formPrincipal
         _indiceGrupo += 1
         _linhaID = 1
         tagPartial_1 = "DB1010."
-        tagPartial_2 = "DBW30"
+        tagPartial_2 = "DBB30"
         NomeGrupoOPC = "CONTROLE_SP_L" & _linhaID
         partialNameAlias = "FORMULA_DESCRICAO"
         indiceInicialTag = 0
@@ -1288,7 +1287,7 @@ Public Class formPrincipal
         _indiceGrupo += 1
         _linhaID = 1
         tagPartial_1 = "DB1010."
-        tagPartial_2 = "DBD286"
+        tagPartial_2 = "DBB286"
         NomeGrupoOPC = "CONTROLE_SP_L" & _linhaID
         partialNameAlias = "PRODUTO_DESCRICAO"
         indiceInicialTag = 0
