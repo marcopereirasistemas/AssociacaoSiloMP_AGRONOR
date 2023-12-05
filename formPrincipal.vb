@@ -35,7 +35,7 @@ Public Class formPrincipal
     Dim formTrocarSiloNova As Object
     Dim RotinasDiversas As New ClasseRotinasDiversas
     Dim teclaCtrlPressionada As Boolean
-    Dim Versao As String = " - Versão 1.0.10 - 30/11/2023"
+    Dim Versao As String = " - Versão 1.0.11 - 05/12/2023"
     Dim horaInicioEnvio As String
     Dim horaFinalEnvio As String
     Dim horaInicial As DateTime
@@ -648,8 +648,8 @@ Public Class formPrincipal
 
         Rotinas.EscreverEmLog("Associação Iniciada.", ClasseRotinasDiversas.Tipo.Geral)
 
-        Me.Width = 1598
-        Me.Height = 892
+        'Me.Width = 1598
+        'Me.Height = 892
 
         btnAtualizaTAGS.Visible = False
         If HabilitarTestesLOG() Then
@@ -1087,6 +1087,12 @@ Public Class formPrincipal
         ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%PRODUTO_DESCRICAO%'"))
         ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%FORMULA_DESCRICAO%'"))
 
+        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%MG001.%'"))
+        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%MG002.%'"))
+        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%MG003.%'"))
+        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%FARELO.%'"))
+        ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%EXPEDICAO.%'"))
+
 
         ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%SILO_BALANCA%'"))
         ScritpsSqlExecutar.Add(New ScriptExecutar("DELETE From OpcTagItens Where LINHAID = 1 And ALIAS Like '%CODIGO_MP_BALANCA%'"))
@@ -1294,6 +1300,498 @@ Public Class formPrincipal
         tagPartial_1 += tagPartial_2
         __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
         GravarOpcTagItens(__opcTagItens)
+
+
+
+
+        '-- MGOO1
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1101."
+        tagPartial_2 = "DWB0"
+        NomeGrupoOPC = "RECEPCAO"
+        partialNameAlias = "MG001.ORIGEM"
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1101."
+        tagPartial_2 = "DWB2"
+        NomeGrupoOPC = "RECEPCAO"
+        partialNameAlias = "MG001.DESTINO"
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1101."
+        tagPartial_2 = "DBX4.0"
+        NomeGrupoOPC = "RECEPCAO"
+        partialNameAlias = "MG001.INICIA"
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1101."
+        tagPartial_2 = "DBX4.1"
+        NomeGrupoOPC = "RECEPCAO"
+        partialNameAlias = "MG001.FINALIZA"
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1101."
+        tagPartial_2 = "DBX4.2"
+        NomeGrupoOPC = "RECEPCAO"
+        partialNameAlias = "MG001.ANDAMENTO"
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1101."
+        tagPartial_2 = "DBW6"
+        NomeGrupoOPC = "RECEPCAO"
+        partialNameAlias = "MG001.ESTADO"
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1101."
+        tagPartial_2 = "DBD8"
+        NomeGrupoOPC = "RECEPCAO"
+        partialNameAlias = "MG001.QUANTIDADE_DESEJADA"
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1101."
+        tagPartial_2 = "DBD12"
+        NomeGrupoOPC = "RECEPCAO"
+        partialNameAlias = "MG001.QUANTIDADE_REAL"
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+
+
+
+
+
+
+
+
+
+        '-- MGOO2
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1102."
+        tagPartial_2 = "DWB0"
+        NomeGrupoOPC = "RECEPCAO"
+        partialNameAlias = "MG002.ORIGEM"
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1102."
+        tagPartial_2 = "DWB2"
+        NomeGrupoOPC = "RECEPCAO"
+        partialNameAlias = "MG002.DESTINO"
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1102."
+        tagPartial_2 = "DBX4.0"
+        NomeGrupoOPC = "RECEPCAO"
+        partialNameAlias = "MG002.INICIA"
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1102."
+        tagPartial_2 = "DBX4.1"
+        NomeGrupoOPC = "RECEPCAO"
+        partialNameAlias = "MG002.FINALIZA"
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1102."
+        tagPartial_2 = "DBX4.2"
+        NomeGrupoOPC = "RECEPCAO"
+        partialNameAlias = "MG002.ANDAMENTO"
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1102."
+        tagPartial_2 = "DBW6"
+        NomeGrupoOPC = "RECEPCAO"
+        partialNameAlias = "MG002.ESTADO"
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1102."
+        tagPartial_2 = "DBD8"
+        NomeGrupoOPC = "RECEPCAO"
+        partialNameAlias = "MG002.QUANTIDADE_DESEJADA"
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1102."
+        tagPartial_2 = "DBD12"
+        NomeGrupoOPC = "RECEPCAO"
+        partialNameAlias = "MG002.QUANTIDADE_REAL"
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+
+
+
+
+
+
+        '-- MGOO3
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1103."
+        tagPartial_2 = "DWB0"
+        NomeGrupoOPC = "RECEPCAO"
+        partialNameAlias = "MG003.ORIGEM"
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1103."
+        tagPartial_2 = "DWB2"
+        NomeGrupoOPC = "RECEPCAO"
+        partialNameAlias = "MG003.DESTINO"
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1103."
+        tagPartial_2 = "DBX4.0"
+        NomeGrupoOPC = "RECEPCAO"
+        partialNameAlias = "MG003.INICIA"
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1103."
+        tagPartial_2 = "DBX4.1"
+        NomeGrupoOPC = "RECEPCAO"
+        partialNameAlias = "MG003.FINALIZA"
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1103."
+        tagPartial_2 = "DBX4.2"
+        NomeGrupoOPC = "RECEPCAO"
+        partialNameAlias = "MG003.ANDAMENTO"
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1103."
+        tagPartial_2 = "DBW6"
+        NomeGrupoOPC = "RECEPCAO"
+        partialNameAlias = "MG003.ESTADO"
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1103."
+        tagPartial_2 = "DBD8"
+        NomeGrupoOPC = "RECEPCAO"
+        partialNameAlias = "MG003.QUANTIDADE_DESEJADA"
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1103."
+        tagPartial_2 = "DBD12"
+        NomeGrupoOPC = "RECEPCAO"
+        partialNameAlias = "MG003.QUANTIDADE_REAL"
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+
+
+
+
+
+
+
+
+        '-- FARELO
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1104."
+        tagPartial_2 = "DWB0"
+        NomeGrupoOPC = "FARELO"
+        partialNameAlias = "FARELO.ORIGEM"
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1104."
+        tagPartial_2 = "DWB2"
+        NomeGrupoOPC = "FARELO"
+        partialNameAlias = "FARELO.DESTINO"
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1104."
+        tagPartial_2 = "DBX4.0"
+        NomeGrupoOPC = "FARELO"
+        partialNameAlias = "FARELO.INICIA"
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1104."
+        tagPartial_2 = "DBX4.1"
+        NomeGrupoOPC = "FARELO"
+        partialNameAlias = "FARELO.FINALIZA"
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1104."
+        tagPartial_2 = "DBX4.2"
+        NomeGrupoOPC = "FARELO"
+        partialNameAlias = "FARELO.ANDAMENTO"
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1104."
+        tagPartial_2 = "DBW6"
+        NomeGrupoOPC = "FARELO"
+        partialNameAlias = "FARELO.ESTADO"
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1104."
+        tagPartial_2 = "DBD8"
+        NomeGrupoOPC = "FARELO"
+        partialNameAlias = "FARELO.QUANTIDADE_DESEJADA"
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1104."
+        tagPartial_2 = "DBD12"
+        NomeGrupoOPC = "FARELO"
+        partialNameAlias = "FARELO.QUANTIDADE_REAL"
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+
+
+
+
+        '-- EXPEDICAO
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1105."
+        tagPartial_2 = "DWB0"
+        NomeGrupoOPC = "EXPEDICAO"
+        partialNameAlias = "EXPEDICAO.ORIGEM"
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1105."
+        tagPartial_2 = "DWB2"
+        NomeGrupoOPC = "EXPEDICAO"
+        partialNameAlias = "EXPEDICAO.DESTINO"
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1105."
+        tagPartial_2 = "DBX4.0"
+        NomeGrupoOPC = "EXPEDICAO"
+        partialNameAlias = "EXPEDICAO.INICIA"
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1105."
+        tagPartial_2 = "DBX4.1"
+        NomeGrupoOPC = "EXPEDICAO"
+        partialNameAlias = "EXPEDICAO.FINALIZA"
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1105."
+        tagPartial_2 = "DBX4.2"
+        NomeGrupoOPC = "EXPEDICAO"
+        partialNameAlias = "EXPEDICAO.ANDAMENTO"
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1105."
+        tagPartial_2 = "DBW6"
+        NomeGrupoOPC = "EXPEDICAO"
+        partialNameAlias = "EXPEDICAO.ESTADO"
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1105."
+        tagPartial_2 = "DBD8"
+        NomeGrupoOPC = "EXPEDICAO"
+        partialNameAlias = "EXPEDICAO.QUANTIDADE_DESEJADA"
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+        _indiceGrupo += 1
+        _linhaID = 1
+        tagPartial_1 = "DB1105."
+        tagPartial_2 = "DBD12"
+        NomeGrupoOPC = "EXPEDICAO"
+        partialNameAlias = "EXPEDICAO.QUANTIDADE_REAL"
+        indiceInicialTag = 0
+        tagPartial_1 += tagPartial_2
+        __opcTagItens = GerarItemOPC(_linhaID, NomeGrupoOPC, _indiceGrupo, partialNameAlias, tagPartial_1, indiceInicialTag, 0, 1, 0)
+        GravarOpcTagItens(__opcTagItens)
+
+
 
 
 

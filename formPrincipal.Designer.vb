@@ -49,14 +49,14 @@ Partial Class formPrincipal
         '
         'pnlMensagens
         '
-        Me.pnlMensagens.Location = New System.Drawing.Point(0, 688)
+        Me.pnlMensagens.Location = New System.Drawing.Point(0, 756)
         Me.pnlMensagens.Margin = New System.Windows.Forms.Padding(3)
-        Me.pnlMensagens.Size = New System.Drawing.Size(1749, 22)
+        Me.pnlMensagens.Size = New System.Drawing.Size(1603, 22)
         '
         'lblMensagem
         '
         Me.lblMensagem.Margin = New System.Windows.Forms.Padding(3, 0, 3, 0)
-        Me.lblMensagem.Size = New System.Drawing.Size(47345, 17)
+        Me.lblMensagem.Size = New System.Drawing.Size(50822, 17)
         Me.lblMensagem.Text = ""
         '
         'DataGridView1
@@ -86,7 +86,8 @@ Partial Class formPrincipal
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle3
-        Me.DataGridView1.Location = New System.Drawing.Point(14, 11)
+        Me.DataGridView1.Location = New System.Drawing.Point(10, 10)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(10)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -102,7 +103,7 @@ Partial Class formPrincipal
         Me.DataGridView1.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Verdana", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DataGridView1.RowTemplate.Height = 50
         Me.DataGridView1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.Size = New System.Drawing.Size(2313, 600)
+        Me.DataGridView1.Size = New System.Drawing.Size(1583, 668)
         Me.DataGridView1.TabIndex = 29
         '
         'ID
@@ -179,7 +180,7 @@ Partial Class formPrincipal
         Me.btnFechar.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnFechar.Image = Global.AssociacaoSiloMP_AGRONOR.My.Resources.Resource1.Sair1
         Me.btnFechar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnFechar.Location = New System.Drawing.Point(1619, 624)
+        Me.btnFechar.Location = New System.Drawing.Point(1473, 692)
         Me.btnFechar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnFechar.Name = "btnFechar"
         Me.btnFechar.Size = New System.Drawing.Size(118, 54)
@@ -196,7 +197,7 @@ Partial Class formPrincipal
         Me.btnDesassociarTodos.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDesassociarTodos.Image = Global.AssociacaoSiloMP_AGRONOR.My.Resources.Resource1.cancel
         Me.btnDesassociarTodos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnDesassociarTodos.Location = New System.Drawing.Point(918, 249)
+        Me.btnDesassociarTodos.Location = New System.Drawing.Point(918, 317)
         Me.btnDesassociarTodos.Margin = New System.Windows.Forms.Padding(10)
         Me.btnDesassociarTodos.Name = "btnDesassociarTodos"
         Me.btnDesassociarTodos.Padding = New System.Windows.Forms.Padding(2)
@@ -215,7 +216,7 @@ Partial Class formPrincipal
         Me.btnDesassociar.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDesassociar.Image = Global.AssociacaoSiloMP_AGRONOR.My.Resources.Resource1.cancel
         Me.btnDesassociar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnDesassociar.Location = New System.Drawing.Point(171, 624)
+        Me.btnDesassociar.Location = New System.Drawing.Point(171, 692)
         Me.btnDesassociar.Margin = New System.Windows.Forms.Padding(10)
         Me.btnDesassociar.Name = "btnDesassociar"
         Me.btnDesassociar.Padding = New System.Windows.Forms.Padding(2)
@@ -233,7 +234,7 @@ Partial Class formPrincipal
         Me.btnAssociar.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAssociar.Image = Global.AssociacaoSiloMP_AGRONOR.My.Resources.Resource1.apply
         Me.btnAssociar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAssociar.Location = New System.Drawing.Point(14, 624)
+        Me.btnAssociar.Location = New System.Drawing.Point(10, 692)
         Me.btnAssociar.Margin = New System.Windows.Forms.Padding(10)
         Me.btnAssociar.Name = "btnAssociar"
         Me.btnAssociar.Size = New System.Drawing.Size(149, 54)
@@ -248,7 +249,7 @@ Partial Class formPrincipal
         Me.Panel2.BackColor = System.Drawing.Color.Yellow
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel2.Controls.Add(Me.Label3)
-        Me.Panel2.Location = New System.Drawing.Point(507, 624)
+        Me.Panel2.Location = New System.Drawing.Point(507, 692)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(924, 46)
         Me.Panel2.TabIndex = 30
@@ -271,8 +272,8 @@ Partial Class formPrincipal
         'btnAtualizaTAGS
         '
         Me.btnAtualizaTAGS.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnAtualizaTAGS.Location = New System.Drawing.Point(14, 580)
-        'Me.btnAtualizaTAGS.Name = "btnAtualizaTAGS"
+        Me.btnAtualizaTAGS.Location = New System.Drawing.Point(14, 648)
+        Me.btnAtualizaTAGS.Name = "btnAtualizaTAGS"
         Me.btnAtualizaTAGS.Size = New System.Drawing.Size(86, 31)
         Me.btnAtualizaTAGS.TabIndex = 33
         Me.btnAtualizaTAGS.Text = "Button1"
@@ -287,7 +288,7 @@ Partial Class formPrincipal
         Me.btnAtualizar.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAtualizar.Image = Global.AssociacaoSiloMP_AGRONOR.My.Resources.Resource1.atualiar_32x32
         Me.btnAtualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAtualizar.Location = New System.Drawing.Point(2044, 624)
+        Me.btnAtualizar.Location = New System.Drawing.Point(1898, 692)
         Me.btnAtualizar.Margin = New System.Windows.Forms.Padding(10)
         Me.btnAtualizar.Name = "btnAtualizar"
         Me.btnAtualizar.Size = New System.Drawing.Size(149, 54)
@@ -299,7 +300,7 @@ Partial Class formPrincipal
         'formPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
-        Me.ClientSize = New System.Drawing.Size(1749, 710)
+        Me.ClientSize = New System.Drawing.Size(1603, 778)
         Me.Controls.Add(Me.btnAtualizar)
         Me.Controls.Add(Me.btnAtualizaTAGS)
         Me.Controls.Add(Me.btnDesassociarTodos)
@@ -315,7 +316,6 @@ Partial Class formPrincipal
         Me.Name = "formPrincipal"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = " Associação de Silo com Matéria-Prima"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Controls.SetChildIndex(Me.btnAssociar, 0)
         Me.Controls.SetChildIndex(Me.btnDesassociar, 0)
         Me.Controls.SetChildIndex(Me.btnFechar, 0)
