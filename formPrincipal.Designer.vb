@@ -22,18 +22,11 @@ Partial Class formPrincipal
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SILONUMERO = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SILODESCRICAO = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.BalancaDescricao = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CodigoMateriaPrima = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MateriaPrima = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Lote = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnFechar = New System.Windows.Forms.Button()
         Me.btnDesassociarTodos = New System.Windows.Forms.Button()
         Me.btnDesassociar = New System.Windows.Forms.Button()
@@ -42,6 +35,13 @@ Partial Class formPrincipal
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnAtualizaTAGS = New System.Windows.Forms.Button()
         Me.btnAtualizar = New System.Windows.Forms.Button()
+        Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SILONUMERO = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SILODESCRICAO = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BalancaDescricao = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CodigoMateriaPrima = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MateriaPrima = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Lote = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.pnlMensagens.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -56,48 +56,48 @@ Partial Class formPrincipal
         'lblMensagem
         '
         Me.lblMensagem.Margin = New System.Windows.Forms.Padding(3, 0, 3, 0)
-        Me.lblMensagem.Size = New System.Drawing.Size(50822, 17)
+        Me.lblMensagem.Size = New System.Drawing.Size(51957, 17)
         Me.lblMensagem.Text = ""
         '
         'DataGridView1
         '
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Verdana", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Verdana", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView1.ColumnHeadersHeight = 50
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.SILONUMERO, Me.SILODESCRICAO, Me.BalancaDescricao, Me.CodigoMateriaPrima, Me.MateriaPrima, Me.Lote})
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridView1.Location = New System.Drawing.Point(10, 10)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(10)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.Color.DarkGray
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkGray
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.DataGridView1.RowHeadersWidth = 30
         Me.DataGridView1.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White
         Me.DataGridView1.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Verdana", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -105,72 +105,6 @@ Partial Class formPrincipal
         Me.DataGridView1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridView1.Size = New System.Drawing.Size(1583, 668)
         Me.DataGridView1.TabIndex = 29
-        '
-        'ID
-        '
-        Me.ID.DataPropertyName = "ID"
-        Me.ID.HeaderText = "ID"
-        Me.ID.MinimumWidth = 8
-        Me.ID.Name = "ID"
-        Me.ID.ReadOnly = True
-        Me.ID.Visible = False
-        Me.ID.Width = 150
-        '
-        'SILONUMERO
-        '
-        Me.SILONUMERO.DataPropertyName = "SILONUMERO"
-        Me.SILONUMERO.HeaderText = "SILONUMERO"
-        Me.SILONUMERO.MinimumWidth = 8
-        Me.SILONUMERO.Name = "SILONUMERO"
-        Me.SILONUMERO.ReadOnly = True
-        Me.SILONUMERO.Visible = False
-        Me.SILONUMERO.Width = 150
-        '
-        'SILODESCRICAO
-        '
-        Me.SILODESCRICAO.DataPropertyName = "SILODESCRICAO"
-        Me.SILODESCRICAO.HeaderText = "Silo"
-        Me.SILODESCRICAO.MinimumWidth = 8
-        Me.SILODESCRICAO.Name = "SILODESCRICAO"
-        Me.SILODESCRICAO.ReadOnly = True
-        Me.SILODESCRICAO.Width = 200
-        '
-        'BalancaDescricao
-        '
-        Me.BalancaDescricao.DataPropertyName = "BalancaDescricao"
-        Me.BalancaDescricao.HeaderText = "Balança"
-        Me.BalancaDescricao.MinimumWidth = 8
-        Me.BalancaDescricao.Name = "BalancaDescricao"
-        Me.BalancaDescricao.ReadOnly = True
-        Me.BalancaDescricao.Width = 450
-        '
-        'CodigoMateriaPrima
-        '
-        Me.CodigoMateriaPrima.DataPropertyName = "CodigoMateriaPrima"
-        Me.CodigoMateriaPrima.HeaderText = "CodigoMateriaPrima"
-        Me.CodigoMateriaPrima.MinimumWidth = 8
-        Me.CodigoMateriaPrima.Name = "CodigoMateriaPrima"
-        Me.CodigoMateriaPrima.ReadOnly = True
-        Me.CodigoMateriaPrima.Visible = False
-        Me.CodigoMateriaPrima.Width = 150
-        '
-        'MateriaPrima
-        '
-        Me.MateriaPrima.DataPropertyName = "MateriaPrima"
-        Me.MateriaPrima.HeaderText = "MateriaPrima"
-        Me.MateriaPrima.MinimumWidth = 8
-        Me.MateriaPrima.Name = "MateriaPrima"
-        Me.MateriaPrima.ReadOnly = True
-        Me.MateriaPrima.Width = 600
-        '
-        'Lote
-        '
-        Me.Lote.DataPropertyName = "Lote"
-        Me.Lote.HeaderText = "Lote"
-        Me.Lote.MinimumWidth = 8
-        Me.Lote.Name = "Lote"
-        Me.Lote.ReadOnly = True
-        Me.Lote.Width = 275
         '
         'btnFechar
         '
@@ -297,6 +231,72 @@ Partial Class formPrincipal
         Me.btnAtualizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnAtualizar.UseVisualStyleBackColor = True
         '
+        'ID
+        '
+        Me.ID.DataPropertyName = "ID"
+        Me.ID.HeaderText = "ID"
+        Me.ID.MinimumWidth = 8
+        Me.ID.Name = "ID"
+        Me.ID.ReadOnly = True
+        Me.ID.Visible = False
+        Me.ID.Width = 150
+        '
+        'SILONUMERO
+        '
+        Me.SILONUMERO.DataPropertyName = "SILONUMERO"
+        Me.SILONUMERO.HeaderText = "SILONUMERO"
+        Me.SILONUMERO.MinimumWidth = 8
+        Me.SILONUMERO.Name = "SILONUMERO"
+        Me.SILONUMERO.ReadOnly = True
+        Me.SILONUMERO.Visible = False
+        Me.SILONUMERO.Width = 150
+        '
+        'SILODESCRICAO
+        '
+        Me.SILODESCRICAO.DataPropertyName = "SILODESCRICAO"
+        Me.SILODESCRICAO.HeaderText = "Silo"
+        Me.SILODESCRICAO.MinimumWidth = 8
+        Me.SILODESCRICAO.Name = "SILODESCRICAO"
+        Me.SILODESCRICAO.ReadOnly = True
+        Me.SILODESCRICAO.Width = 200
+        '
+        'BalancaDescricao
+        '
+        Me.BalancaDescricao.DataPropertyName = "BalancaDescricao"
+        Me.BalancaDescricao.HeaderText = "Balança"
+        Me.BalancaDescricao.MinimumWidth = 8
+        Me.BalancaDescricao.Name = "BalancaDescricao"
+        Me.BalancaDescricao.ReadOnly = True
+        Me.BalancaDescricao.Width = 350
+        '
+        'CodigoMateriaPrima
+        '
+        Me.CodigoMateriaPrima.DataPropertyName = "CodigoMateriaPrima"
+        Me.CodigoMateriaPrima.HeaderText = "CodigoMateriaPrima"
+        Me.CodigoMateriaPrima.MinimumWidth = 8
+        Me.CodigoMateriaPrima.Name = "CodigoMateriaPrima"
+        Me.CodigoMateriaPrima.ReadOnly = True
+        Me.CodigoMateriaPrima.Visible = False
+        Me.CodigoMateriaPrima.Width = 150
+        '
+        'MateriaPrima
+        '
+        Me.MateriaPrima.DataPropertyName = "MateriaPrima"
+        Me.MateriaPrima.HeaderText = "MateriaPrima"
+        Me.MateriaPrima.MinimumWidth = 8
+        Me.MateriaPrima.Name = "MateriaPrima"
+        Me.MateriaPrima.ReadOnly = True
+        Me.MateriaPrima.Width = 700
+        '
+        'Lote
+        '
+        Me.Lote.DataPropertyName = "Lote"
+        Me.Lote.HeaderText = "Lote"
+        Me.Lote.MinimumWidth = 8
+        Me.Lote.Name = "Lote"
+        Me.Lote.ReadOnly = True
+        Me.Lote.Width = 275
+        '
         'formPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -346,6 +346,7 @@ Partial Class formPrincipal
 
     End Sub
     Friend WithEvents btnAtualizaTAGS As Button
+    Friend WithEvents btnAtualizar As Button
     Friend WithEvents ID As DataGridViewTextBoxColumn
     Friend WithEvents SILONUMERO As DataGridViewTextBoxColumn
     Friend WithEvents SILODESCRICAO As DataGridViewTextBoxColumn
@@ -353,5 +354,4 @@ Partial Class formPrincipal
     Friend WithEvents CodigoMateriaPrima As DataGridViewTextBoxColumn
     Friend WithEvents MateriaPrima As DataGridViewTextBoxColumn
     Friend WithEvents Lote As DataGridViewTextBoxColumn
-    Friend WithEvents btnAtualizar As Button
 End Class
