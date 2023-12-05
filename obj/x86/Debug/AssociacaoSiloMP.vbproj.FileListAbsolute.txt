@@ -110,6 +110,7 @@ C:\TN\FONTES\AGRONOR\AssociacaoSiloMP_AGRONOR\bin\Debug\AssociacaoSiloMP_AGRONOR
 C:\TN\FONTES\AGRONOR\AssociacaoSiloMP_AGRONOR\bin\Debug\AssociacaoSiloMP_AGRONOR.exe
 C:\TN\FONTES\AGRONOR\AssociacaoSiloMP_AGRONOR\bin\Debug\AssociacaoSiloMP_AGRONOR.pdb
 C:\TN\FONTES\AGRONOR\AssociacaoSiloMP_AGRONOR\bin\Debug\AssociacaoSiloMP_AGRONOR.xml
+C:\TN\FONTES\AGRONOR\AssociacaoSiloMP_AGRONOR\bin\Debug\ASTrialExpiredDialog.dll
 C:\TN\FONTES\AGRONOR\AssociacaoSiloMP_AGRONOR\obj\x86\Debug\AssociacaoSiloMP_AGRONOR.formAssociacaoSelecaoMP.resources
 C:\TN\FONTES\AGRONOR\AssociacaoSiloMP_AGRONOR\obj\x86\Debug\AssociacaoSiloMP_AGRONOR.formPrincipal.resources
 C:\TN\FONTES\AGRONOR\AssociacaoSiloMP_AGRONOR\obj\x86\Debug\AssociacaoSiloMP_AGRONOR.formCadastro.resources
@@ -119,8 +120,7 @@ C:\TN\FONTES\AGRONOR\AssociacaoSiloMP_AGRONOR\obj\x86\Debug\AssociacaoSiloMP_AGR
 C:\TN\FONTES\AGRONOR\AssociacaoSiloMP_AGRONOR\obj\x86\Debug\AssociacaoSiloMP_AGRONOR.Resource1.resources
 C:\TN\FONTES\AGRONOR\AssociacaoSiloMP_AGRONOR\obj\x86\Debug\AssociacaoSiloMP.vbproj.GenerateResource.cache
 C:\TN\FONTES\AGRONOR\AssociacaoSiloMP_AGRONOR\obj\x86\Debug\AssociacaoSiloMP.vbproj.CoreCompileInputs.cache
+C:\TN\FONTES\AGRONOR\AssociacaoSiloMP_AGRONOR\obj\x86\Debug\AssociacaoSiloMP.vbproj.CopyComplete
 C:\TN\FONTES\AGRONOR\AssociacaoSiloMP_AGRONOR\obj\x86\Debug\AssociacaoSiloMP_AGRONOR.exe
 C:\TN\FONTES\AGRONOR\AssociacaoSiloMP_AGRONOR\obj\x86\Debug\AssociacaoSiloMP_AGRONOR.xml
 C:\TN\FONTES\AGRONOR\AssociacaoSiloMP_AGRONOR\obj\x86\Debug\AssociacaoSiloMP_AGRONOR.pdb
-C:\TN\FONTES\AGRONOR\AssociacaoSiloMP_AGRONOR\bin\Debug\ASTrialExpiredDialog.dll
-C:\TN\FONTES\AGRONOR\AssociacaoSiloMP_AGRONOR\obj\x86\Debug\AssociacaoSiloMP.vbproj.CopyComplete

@@ -653,8 +653,8 @@ Public Class formPrincipal
 
         btnAtualizaTAGS.Visible = False
         If HabilitarTestesLOG() Then
-            DataGridView1.Height = DataGridView1.Height - 35
-            btnAtualizaTAGS.Visible = True
+            'DataGridView1.Height = DataGridView1.Height - 35
+            'btnAtualizaTAGS.Visible = True
 
         End If
 

@@ -1,4 +1,0 @@
-19:42:42  Associação Iniciada.
-19:42:51  Materia-prima: 6 - MATERIA-PRIMA 6 - Desassociada do Silo: 2 - SILO 2 - B1
-20:10:49  Associação Iniciada.
-20:10:55  Materia-prima: 3 - Associada ao Silo: 2
