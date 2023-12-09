@@ -1,18 +1,5 @@
-﻿
-Imports System.IO
-Imports System.Net
-Imports System
-Imports System.String
-Imports System.Text
-Imports System.Collections.Generic
-Imports System.Data.OleDb
-Imports System.Linq
-Imports System.Data.SqlClient
-Imports System.Collections
-Imports System.Diagnostics
+﻿Imports System.Data.SqlClient
 Imports System.Threading
-Imports System.ComponentModel
-Imports VB = Microsoft.VisualBasic
 
 Public Class formPrincipal
 
@@ -35,7 +22,7 @@ Public Class formPrincipal
     Dim formTrocarSiloNova As Object
     Dim RotinasDiversas As New ClasseRotinasDiversas
     Dim teclaCtrlPressionada As Boolean
-    Dim Versao As String = " - Versão 1.0.11 - 05/12/2023"
+    Dim Versao As String = " - Versão 1.0.11 - 07/12/2023"
     Dim horaInicioEnvio As String
     Dim horaFinalEnvio As String
     Dim horaInicial As DateTime
@@ -653,8 +640,8 @@ Public Class formPrincipal
 
         btnAtualizaTAGS.Visible = False
         If HabilitarTestesLOG() Then
-            'DataGridView1.Height = DataGridView1.Height - 35
-            'btnAtualizaTAGS.Visible = True
+            DataGridView1.Height = DataGridView1.Height - 35
+            btnAtualizaTAGS.Visible = True
 
         End If
 
@@ -918,11 +905,11 @@ Public Class formPrincipal
         sqlAssociacoes += "	      cs.id                         "
         sqlAssociacoes += "	    , cs.numero as SiloNumero       "
 
-        If HabilitarTestesLOG() Then
-            sqlAssociacoes += "	    , Ltrim(str(cs.Numero)) + ' - ' + cs.descricao as SiloDescricao "
-        Else
-            sqlAssociacoes += "	    , cs.descricao as SiloDescricao "
-        End If
+        'If HabilitarTestesLOG() Then
+        '    sqlAssociacoes += "	    , Ltrim(str(cs.Numero)) + ' - ' + cs.descricao as SiloDescricao "
+        'Else
+        sqlAssociacoes += "	    , cs.descricao as SiloDescricao "
+        'End If
 
         If HabilitarTestesLOG() Then
             sqlAssociacoes += "     , Ltrim(str(cb.Numero)) + ' - ' + cb.Descricao as BalancaDescricao  "
@@ -937,8 +924,11 @@ Public Class formPrincipal
         sqlAssociacoes += "	LEFT JOIN AssociacaoSiloMP	    asm ON cs.id = asm.SiloID "
         sqlAssociacoes += "	LEFT JOIN CadastroMateriaPrima	cmp ON asm.CodigoMateriaPrima = cmp.CodigoMateriaPrima "
         sqlAssociacoes += " LEFT JOIN CadastroBalancas		cb	ON cs.BalancaID = cb.ID "
+        sqlAssociacoes += " WHERE CS.dosagem=1"
         sqlAssociacoes += " ORDER BY CS.BalancaID, CS.Numero"
 
+        DataGridView1.RowTemplate.Height = 50
+        'DataGridView1.RowTemplate.h RowTemplate.Height = 50
         command.CommandText = sqlAssociacoes
         dtCadastro.Load(command.ExecuteReader)
         command.Dispose()
@@ -1308,7 +1298,7 @@ Public Class formPrincipal
         _indiceGrupo += 1
         _linhaID = 1
         tagPartial_1 = "DB1101."
-        tagPartial_2 = "DWB0"
+        tagPartial_2 = "DBW0"
         NomeGrupoOPC = "RECEPCAO"
         partialNameAlias = "MG001.ORIGEM"
         indiceInicialTag = 0
@@ -1319,7 +1309,7 @@ Public Class formPrincipal
         _indiceGrupo += 1
         _linhaID = 1
         tagPartial_1 = "DB1101."
-        tagPartial_2 = "DWB2"
+        tagPartial_2 = "DBW2"
         NomeGrupoOPC = "RECEPCAO"
         partialNameAlias = "MG001.DESTINO"
         indiceInicialTag = 0
@@ -1377,7 +1367,7 @@ Public Class formPrincipal
         _indiceGrupo += 1
         _linhaID = 1
         tagPartial_1 = "DB1101."
-        tagPartial_2 = "DBD8"
+        tagPartial_2 = "DBW8"
         NomeGrupoOPC = "RECEPCAO"
         partialNameAlias = "MG001.QUANTIDADE_DESEJADA"
         indiceInicialTag = 0
@@ -1388,7 +1378,7 @@ Public Class formPrincipal
         _indiceGrupo += 1
         _linhaID = 1
         tagPartial_1 = "DB1101."
-        tagPartial_2 = "DBD12"
+        tagPartial_2 = "DBW12"
         NomeGrupoOPC = "RECEPCAO"
         partialNameAlias = "MG001.QUANTIDADE_REAL"
         indiceInicialTag = 0
@@ -1409,7 +1399,7 @@ Public Class formPrincipal
         _indiceGrupo += 1
         _linhaID = 1
         tagPartial_1 = "DB1102."
-        tagPartial_2 = "DWB0"
+        tagPartial_2 = "DBW0"
         NomeGrupoOPC = "RECEPCAO"
         partialNameAlias = "MG002.ORIGEM"
         indiceInicialTag = 0
@@ -1420,7 +1410,7 @@ Public Class formPrincipal
         _indiceGrupo += 1
         _linhaID = 1
         tagPartial_1 = "DB1102."
-        tagPartial_2 = "DWB2"
+        tagPartial_2 = "DBW2"
         NomeGrupoOPC = "RECEPCAO"
         partialNameAlias = "MG002.DESTINO"
         indiceInicialTag = 0
@@ -1478,7 +1468,7 @@ Public Class formPrincipal
         _indiceGrupo += 1
         _linhaID = 1
         tagPartial_1 = "DB1102."
-        tagPartial_2 = "DBD8"
+        tagPartial_2 = "DBW8"
         NomeGrupoOPC = "RECEPCAO"
         partialNameAlias = "MG002.QUANTIDADE_DESEJADA"
         indiceInicialTag = 0
@@ -1489,7 +1479,7 @@ Public Class formPrincipal
         _indiceGrupo += 1
         _linhaID = 1
         tagPartial_1 = "DB1102."
-        tagPartial_2 = "DBD12"
+        tagPartial_2 = "DBW12"
         NomeGrupoOPC = "RECEPCAO"
         partialNameAlias = "MG002.QUANTIDADE_REAL"
         indiceInicialTag = 0
@@ -1507,7 +1497,7 @@ Public Class formPrincipal
         _indiceGrupo += 1
         _linhaID = 1
         tagPartial_1 = "DB1103."
-        tagPartial_2 = "DWB0"
+        tagPartial_2 = "DBW0"
         NomeGrupoOPC = "RECEPCAO"
         partialNameAlias = "MG003.ORIGEM"
         indiceInicialTag = 0
@@ -1576,7 +1566,7 @@ Public Class formPrincipal
         _indiceGrupo += 1
         _linhaID = 1
         tagPartial_1 = "DB1103."
-        tagPartial_2 = "DBD8"
+        tagPartial_2 = "DBW8"
         NomeGrupoOPC = "RECEPCAO"
         partialNameAlias = "MG003.QUANTIDADE_DESEJADA"
         indiceInicialTag = 0
@@ -1587,7 +1577,7 @@ Public Class formPrincipal
         _indiceGrupo += 1
         _linhaID = 1
         tagPartial_1 = "DB1103."
-        tagPartial_2 = "DBD12"
+        tagPartial_2 = "DBW12"
         NomeGrupoOPC = "RECEPCAO"
         partialNameAlias = "MG003.QUANTIDADE_REAL"
         indiceInicialTag = 0
@@ -1676,7 +1666,7 @@ Public Class formPrincipal
         _indiceGrupo += 1
         _linhaID = 1
         tagPartial_1 = "DB1104."
-        tagPartial_2 = "DBD8"
+        tagPartial_2 = "DBW8"
         NomeGrupoOPC = "FARELO"
         partialNameAlias = "FARELO.QUANTIDADE_DESEJADA"
         indiceInicialTag = 0
@@ -1687,7 +1677,7 @@ Public Class formPrincipal
         _indiceGrupo += 1
         _linhaID = 1
         tagPartial_1 = "DB1104."
-        tagPartial_2 = "DBD12"
+        tagPartial_2 = "DBW12"
         NomeGrupoOPC = "FARELO"
         partialNameAlias = "FARELO.QUANTIDADE_REAL"
         indiceInicialTag = 0
@@ -1772,7 +1762,7 @@ Public Class formPrincipal
         _indiceGrupo += 1
         _linhaID = 1
         tagPartial_1 = "DB1105."
-        tagPartial_2 = "DBD8"
+        tagPartial_2 = "DBW8"
         NomeGrupoOPC = "EXPEDICAO"
         partialNameAlias = "EXPEDICAO.QUANTIDADE_DESEJADA"
         indiceInicialTag = 0
@@ -1783,7 +1773,7 @@ Public Class formPrincipal
         _indiceGrupo += 1
         _linhaID = 1
         tagPartial_1 = "DB1105."
-        tagPartial_2 = "DBD12"
+        tagPartial_2 = "DBW12"
         NomeGrupoOPC = "EXPEDICAO"
         partialNameAlias = "EXPEDICAO.QUANTIDADE_REAL"
         indiceInicialTag = 0

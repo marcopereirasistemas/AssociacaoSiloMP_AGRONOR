@@ -22,11 +22,18 @@ Partial Class formPrincipal
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SILONUMERO = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SILODESCRICAO = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BalancaDescricao = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CodigoMateriaPrima = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MateriaPrima = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Lote = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnFechar = New System.Windows.Forms.Button()
         Me.btnDesassociarTodos = New System.Windows.Forms.Button()
         Me.btnDesassociar = New System.Windows.Forms.Button()
@@ -35,16 +42,16 @@ Partial Class formPrincipal
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnAtualizaTAGS = New System.Windows.Forms.Button()
         Me.btnAtualizar = New System.Windows.Forms.Button()
-        Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SILONUMERO = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SILODESCRICAO = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.BalancaDescricao = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CodigoMateriaPrima = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MateriaPrima = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Lote = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox4 = New System.Windows.Forms.CheckBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.pnlMensagens.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'pnlMensagens
@@ -56,55 +63,121 @@ Partial Class formPrincipal
         'lblMensagem
         '
         Me.lblMensagem.Margin = New System.Windows.Forms.Padding(3, 0, 3, 0)
-        Me.lblMensagem.Size = New System.Drawing.Size(51957, 17)
+        Me.lblMensagem.Size = New System.Drawing.Size(55362, 17)
         Me.lblMensagem.Text = ""
         '
         'DataGridView1
         '
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
         Me.DataGridView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Verdana", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.DataGridView1.ColumnHeadersHeight = 50
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Verdana", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
+        Me.DataGridView1.ColumnHeadersHeight = 40
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.SILONUMERO, Me.SILODESCRICAO, Me.BalancaDescricao, Me.CodigoMateriaPrima, Me.MateriaPrima, Me.Lote})
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle3
-        Me.DataGridView1.Location = New System.Drawing.Point(10, 10)
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle7
+        Me.DataGridView1.Location = New System.Drawing.Point(10, 50)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(10)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkGray
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
-        Me.DataGridView1.RowHeadersWidth = 30
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.DarkGray
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle8
+        Me.DataGridView1.RowHeadersWidth = 40
         Me.DataGridView1.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White
         Me.DataGridView1.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Verdana", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridView1.RowTemplate.Height = 50
+        Me.DataGridView1.RowTemplate.Height = 40
         Me.DataGridView1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.Size = New System.Drawing.Size(1583, 668)
+        Me.DataGridView1.Size = New System.Drawing.Size(1583, 628)
         Me.DataGridView1.TabIndex = 29
+        '
+        'ID
+        '
+        Me.ID.DataPropertyName = "ID"
+        Me.ID.HeaderText = "ID"
+        Me.ID.MinimumWidth = 8
+        Me.ID.Name = "ID"
+        Me.ID.ReadOnly = True
+        Me.ID.Visible = False
+        Me.ID.Width = 150
+        '
+        'SILONUMERO
+        '
+        Me.SILONUMERO.DataPropertyName = "SILONUMERO"
+        Me.SILONUMERO.HeaderText = "SILONUMERO"
+        Me.SILONUMERO.MinimumWidth = 8
+        Me.SILONUMERO.Name = "SILONUMERO"
+        Me.SILONUMERO.ReadOnly = True
+        Me.SILONUMERO.Visible = False
+        Me.SILONUMERO.Width = 150
+        '
+        'SILODESCRICAO
+        '
+        Me.SILODESCRICAO.DataPropertyName = "SILODESCRICAO"
+        Me.SILODESCRICAO.HeaderText = "Silo"
+        Me.SILODESCRICAO.MinimumWidth = 8
+        Me.SILODESCRICAO.Name = "SILODESCRICAO"
+        Me.SILODESCRICAO.ReadOnly = True
+        Me.SILODESCRICAO.Width = 200
+        '
+        'BalancaDescricao
+        '
+        Me.BalancaDescricao.DataPropertyName = "BalancaDescricao"
+        Me.BalancaDescricao.HeaderText = "Balança"
+        Me.BalancaDescricao.MinimumWidth = 8
+        Me.BalancaDescricao.Name = "BalancaDescricao"
+        Me.BalancaDescricao.ReadOnly = True
+        Me.BalancaDescricao.Width = 350
+        '
+        'CodigoMateriaPrima
+        '
+        Me.CodigoMateriaPrima.DataPropertyName = "CodigoMateriaPrima"
+        Me.CodigoMateriaPrima.HeaderText = "CodigoMateriaPrima"
+        Me.CodigoMateriaPrima.MinimumWidth = 8
+        Me.CodigoMateriaPrima.Name = "CodigoMateriaPrima"
+        Me.CodigoMateriaPrima.ReadOnly = True
+        Me.CodigoMateriaPrima.Visible = False
+        Me.CodigoMateriaPrima.Width = 150
+        '
+        'MateriaPrima
+        '
+        Me.MateriaPrima.DataPropertyName = "MateriaPrima"
+        Me.MateriaPrima.HeaderText = "MateriaPrima"
+        Me.MateriaPrima.MinimumWidth = 8
+        Me.MateriaPrima.Name = "MateriaPrima"
+        Me.MateriaPrima.ReadOnly = True
+        Me.MateriaPrima.Width = 700
+        '
+        'Lote
+        '
+        Me.Lote.DataPropertyName = "Lote"
+        Me.Lote.HeaderText = "Lote"
+        Me.Lote.MinimumWidth = 8
+        Me.Lote.Name = "Lote"
+        Me.Lote.ReadOnly = True
+        Me.Lote.Width = 275
         '
         'btnFechar
         '
@@ -231,76 +304,84 @@ Partial Class formPrincipal
         Me.btnAtualizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnAtualizar.UseVisualStyleBackColor = True
         '
-        'ID
+        'Panel1
         '
-        Me.ID.DataPropertyName = "ID"
-        Me.ID.HeaderText = "ID"
-        Me.ID.MinimumWidth = 8
-        Me.ID.Name = "ID"
-        Me.ID.ReadOnly = True
-        Me.ID.Visible = False
-        Me.ID.Width = 150
+        Me.Panel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel1.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Controls.Add(Me.CheckBox4)
+        Me.Panel1.Controls.Add(Me.CheckBox3)
+        Me.Panel1.Controls.Add(Me.CheckBox2)
+        Me.Panel1.Controls.Add(Me.CheckBox1)
+        Me.Panel1.Location = New System.Drawing.Point(10, 12)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1583, 36)
+        Me.Panel1.TabIndex = 35
         '
-        'SILONUMERO
+        'CheckBox1
         '
-        Me.SILONUMERO.DataPropertyName = "SILONUMERO"
-        Me.SILONUMERO.HeaderText = "SILONUMERO"
-        Me.SILONUMERO.MinimumWidth = 8
-        Me.SILONUMERO.Name = "SILONUMERO"
-        Me.SILONUMERO.ReadOnly = True
-        Me.SILONUMERO.Visible = False
-        Me.SILONUMERO.Width = 150
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Checked = True
+        Me.CheckBox1.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckBox1.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox1.Location = New System.Drawing.Point(195, 4)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(128, 27)
+        Me.CheckBox1.TabIndex = 0
+        Me.CheckBox1.Text = "DOSAGEM"
+        Me.CheckBox1.UseVisualStyleBackColor = True
         '
-        'SILODESCRICAO
+        'CheckBox2
         '
-        Me.SILODESCRICAO.DataPropertyName = "SILODESCRICAO"
-        Me.SILODESCRICAO.HeaderText = "Silo"
-        Me.SILODESCRICAO.MinimumWidth = 8
-        Me.SILODESCRICAO.Name = "SILODESCRICAO"
-        Me.SILODESCRICAO.ReadOnly = True
-        Me.SILODESCRICAO.Width = 200
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox2.Location = New System.Drawing.Point(329, 4)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(131, 27)
+        Me.CheckBox2.TabIndex = 0
+        Me.CheckBox2.Text = "RECEPÇÃO"
+        Me.CheckBox2.UseVisualStyleBackColor = True
         '
-        'BalancaDescricao
+        'CheckBox3
         '
-        Me.BalancaDescricao.DataPropertyName = "BalancaDescricao"
-        Me.BalancaDescricao.HeaderText = "Balança"
-        Me.BalancaDescricao.MinimumWidth = 8
-        Me.BalancaDescricao.Name = "BalancaDescricao"
-        Me.BalancaDescricao.ReadOnly = True
-        Me.BalancaDescricao.Width = 350
+        Me.CheckBox3.AutoSize = True
+        Me.CheckBox3.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox3.Location = New System.Drawing.Point(466, 4)
+        Me.CheckBox3.Name = "CheckBox3"
+        Me.CheckBox3.Size = New System.Drawing.Size(103, 27)
+        Me.CheckBox3.TabIndex = 0
+        Me.CheckBox3.Text = "FARELO"
+        Me.CheckBox3.UseVisualStyleBackColor = True
         '
-        'CodigoMateriaPrima
+        'CheckBox4
         '
-        Me.CodigoMateriaPrima.DataPropertyName = "CodigoMateriaPrima"
-        Me.CodigoMateriaPrima.HeaderText = "CodigoMateriaPrima"
-        Me.CodigoMateriaPrima.MinimumWidth = 8
-        Me.CodigoMateriaPrima.Name = "CodigoMateriaPrima"
-        Me.CodigoMateriaPrima.ReadOnly = True
-        Me.CodigoMateriaPrima.Visible = False
-        Me.CodigoMateriaPrima.Width = 150
+        Me.CheckBox4.AutoSize = True
+        Me.CheckBox4.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox4.Location = New System.Drawing.Point(575, 4)
+        Me.CheckBox4.Name = "CheckBox4"
+        Me.CheckBox4.Size = New System.Drawing.Size(141, 27)
+        Me.CheckBox4.TabIndex = 0
+        Me.CheckBox4.Text = "EXPEDIÇÃO"
+        Me.CheckBox4.UseVisualStyleBackColor = True
         '
-        'MateriaPrima
+        'Label1
         '
-        Me.MateriaPrima.DataPropertyName = "MateriaPrima"
-        Me.MateriaPrima.HeaderText = "MateriaPrima"
-        Me.MateriaPrima.MinimumWidth = 8
-        Me.MateriaPrima.Name = "MateriaPrima"
-        Me.MateriaPrima.ReadOnly = True
-        Me.MateriaPrima.Width = 700
-        '
-        'Lote
-        '
-        Me.Lote.DataPropertyName = "Lote"
-        Me.Lote.HeaderText = "Lote"
-        Me.Lote.MinimumWidth = 8
-        Me.Lote.Name = "Lote"
-        Me.Lote.ReadOnly = True
-        Me.Lote.Width = 275
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(11, 6)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(166, 23)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Silos das Áreas:"
         '
         'formPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.ClientSize = New System.Drawing.Size(1603, 778)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.btnAtualizar)
         Me.Controls.Add(Me.btnAtualizaTAGS)
         Me.Controls.Add(Me.btnDesassociarTodos)
@@ -326,9 +407,12 @@ Partial Class formPrincipal
         Me.Controls.SetChildIndex(Me.pnlMensagens, 0)
         Me.Controls.SetChildIndex(Me.btnAtualizaTAGS, 0)
         Me.Controls.SetChildIndex(Me.btnAtualizar, 0)
+        Me.Controls.SetChildIndex(Me.Panel1, 0)
         Me.pnlMensagens.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -354,4 +438,10 @@ Partial Class formPrincipal
     Friend WithEvents CodigoMateriaPrima As DataGridViewTextBoxColumn
     Friend WithEvents MateriaPrima As DataGridViewTextBoxColumn
     Friend WithEvents Lote As DataGridViewTextBoxColumn
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Label1 As Label
+    Friend WithEvents CheckBox4 As CheckBox
+    Friend WithEvents CheckBox3 As CheckBox
+    Friend WithEvents CheckBox2 As CheckBox
+    Friend WithEvents CheckBox1 As CheckBox
 End Class
