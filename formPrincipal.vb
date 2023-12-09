@@ -640,7 +640,7 @@ Public Class formPrincipal
 
         btnAtualizaTAGS.Visible = False
         If HabilitarTestesLOG() Then
-            DataGridView1.Height = DataGridView1.Height - 35
+            'DataGridView1.Height = DataGridView1.Height
             btnAtualizaTAGS.Visible = True
 
         End If
@@ -924,10 +924,10 @@ Public Class formPrincipal
         sqlAssociacoes += "	LEFT JOIN AssociacaoSiloMP	    asm ON cs.id = asm.SiloID "
         sqlAssociacoes += "	LEFT JOIN CadastroMateriaPrima	cmp ON asm.CodigoMateriaPrima = cmp.CodigoMateriaPrima "
         sqlAssociacoes += " LEFT JOIN CadastroBalancas		cb	ON cs.BalancaID = cb.ID "
-        sqlAssociacoes += " WHERE CS.dosagem=1"
+        'sqlAssociacoes += " WHERE CS.dosagem=1"
         sqlAssociacoes += " ORDER BY CS.BalancaID, CS.Numero"
 
-        DataGridView1.RowTemplate.Height = 50
+        DataGridView1.RowTemplate.Height = 40
         'DataGridView1.RowTemplate.h RowTemplate.Height = 50
         command.CommandText = sqlAssociacoes
         dtCadastro.Load(command.ExecuteReader)
