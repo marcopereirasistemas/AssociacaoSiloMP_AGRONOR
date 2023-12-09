@@ -43,11 +43,12 @@ Partial Class formPrincipal
         Me.btnAtualizaTAGS = New System.Windows.Forms.Button()
         Me.btnAtualizar = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox4 = New System.Windows.Forms.CheckBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.chkExpedicao = New System.Windows.Forms.CheckBox()
+        Me.btnCarregarAssociacoes = New System.Windows.Forms.Button()
+        Me.chkFarelo = New System.Windows.Forms.CheckBox()
+        Me.chkRecepcao = New System.Windows.Forms.CheckBox()
+        Me.chkDosagem = New System.Windows.Forms.CheckBox()
         Me.pnlMensagens.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -56,14 +57,14 @@ Partial Class formPrincipal
         '
         'pnlMensagens
         '
-        Me.pnlMensagens.Location = New System.Drawing.Point(0, 756)
+        Me.pnlMensagens.Location = New System.Drawing.Point(0, 725)
         Me.pnlMensagens.Margin = New System.Windows.Forms.Padding(3)
-        Me.pnlMensagens.Size = New System.Drawing.Size(1603, 22)
+        Me.pnlMensagens.Size = New System.Drawing.Size(1615, 22)
         '
         'lblMensagem
         '
         Me.lblMensagem.Margin = New System.Windows.Forms.Padding(3, 0, 3, 0)
-        Me.lblMensagem.Size = New System.Drawing.Size(55362, 17)
+        Me.lblMensagem.Size = New System.Drawing.Size(59914, 17)
         Me.lblMensagem.Text = ""
         '
         'DataGridView1
@@ -110,7 +111,7 @@ Partial Class formPrincipal
         Me.DataGridView1.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Verdana", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DataGridView1.RowTemplate.Height = 40
         Me.DataGridView1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.Size = New System.Drawing.Size(1583, 628)
+        Me.DataGridView1.Size = New System.Drawing.Size(1595, 597)
         Me.DataGridView1.TabIndex = 29
         '
         'ID
@@ -187,7 +188,7 @@ Partial Class formPrincipal
         Me.btnFechar.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnFechar.Image = Global.AssociacaoSiloMP_AGRONOR.My.Resources.Resource1.Sair1
         Me.btnFechar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnFechar.Location = New System.Drawing.Point(1473, 693)
+        Me.btnFechar.Location = New System.Drawing.Point(1485, 662)
         Me.btnFechar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnFechar.Name = "btnFechar"
         Me.btnFechar.Size = New System.Drawing.Size(118, 54)
@@ -204,7 +205,7 @@ Partial Class formPrincipal
         Me.btnDesassociarTodos.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDesassociarTodos.Image = Global.AssociacaoSiloMP_AGRONOR.My.Resources.Resource1.cancel
         Me.btnDesassociarTodos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnDesassociarTodos.Location = New System.Drawing.Point(918, 317)
+        Me.btnDesassociarTodos.Location = New System.Drawing.Point(918, 286)
         Me.btnDesassociarTodos.Margin = New System.Windows.Forms.Padding(10)
         Me.btnDesassociarTodos.Name = "btnDesassociarTodos"
         Me.btnDesassociarTodos.Padding = New System.Windows.Forms.Padding(2)
@@ -223,7 +224,7 @@ Partial Class formPrincipal
         Me.btnDesassociar.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDesassociar.Image = Global.AssociacaoSiloMP_AGRONOR.My.Resources.Resource1.cancel
         Me.btnDesassociar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnDesassociar.Location = New System.Drawing.Point(171, 693)
+        Me.btnDesassociar.Location = New System.Drawing.Point(171, 662)
         Me.btnDesassociar.Margin = New System.Windows.Forms.Padding(10)
         Me.btnDesassociar.Name = "btnDesassociar"
         Me.btnDesassociar.Padding = New System.Windows.Forms.Padding(2)
@@ -241,7 +242,7 @@ Partial Class formPrincipal
         Me.btnAssociar.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAssociar.Image = Global.AssociacaoSiloMP_AGRONOR.My.Resources.Resource1.apply
         Me.btnAssociar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAssociar.Location = New System.Drawing.Point(10, 693)
+        Me.btnAssociar.Location = New System.Drawing.Point(10, 662)
         Me.btnAssociar.Margin = New System.Windows.Forms.Padding(10)
         Me.btnAssociar.Name = "btnAssociar"
         Me.btnAssociar.Size = New System.Drawing.Size(149, 54)
@@ -256,7 +257,7 @@ Partial Class formPrincipal
         Me.Panel2.BackColor = System.Drawing.Color.Yellow
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel2.Controls.Add(Me.Label3)
-        Me.Panel2.Location = New System.Drawing.Point(507, 692)
+        Me.Panel2.Location = New System.Drawing.Point(507, 661)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(924, 46)
         Me.Panel2.TabIndex = 30
@@ -279,7 +280,7 @@ Partial Class formPrincipal
         'btnAtualizaTAGS
         '
         Me.btnAtualizaTAGS.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnAtualizaTAGS.Location = New System.Drawing.Point(369, 707)
+        Me.btnAtualizaTAGS.Location = New System.Drawing.Point(369, 676)
         Me.btnAtualizaTAGS.Name = "btnAtualizaTAGS"
         Me.btnAtualizaTAGS.Size = New System.Drawing.Size(86, 31)
         Me.btnAtualizaTAGS.TabIndex = 33
@@ -295,7 +296,7 @@ Partial Class formPrincipal
         Me.btnAtualizar.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAtualizar.Image = Global.AssociacaoSiloMP_AGRONOR.My.Resources.Resource1.atualiar_32x32
         Me.btnAtualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAtualizar.Location = New System.Drawing.Point(1898, 692)
+        Me.btnAtualizar.Location = New System.Drawing.Point(1910, 661)
         Me.btnAtualizar.Margin = New System.Windows.Forms.Padding(10)
         Me.btnAtualizar.Name = "btnAtualizar"
         Me.btnAtualizar.Size = New System.Drawing.Size(149, 54)
@@ -312,75 +313,87 @@ Partial Class formPrincipal
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.CheckBox4)
-        Me.Panel1.Controls.Add(Me.CheckBox3)
-        Me.Panel1.Controls.Add(Me.CheckBox2)
-        Me.Panel1.Controls.Add(Me.CheckBox1)
+        Me.Panel1.Controls.Add(Me.chkExpedicao)
+        Me.Panel1.Controls.Add(Me.btnCarregarAssociacoes)
+        Me.Panel1.Controls.Add(Me.chkFarelo)
+        Me.Panel1.Controls.Add(Me.chkRecepcao)
+        Me.Panel1.Controls.Add(Me.chkDosagem)
         Me.Panel1.Location = New System.Drawing.Point(10, 12)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1583, 36)
+        Me.Panel1.Size = New System.Drawing.Size(1595, 42)
         Me.Panel1.TabIndex = 35
-        '
-        'CheckBox1
-        '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Checked = True
-        Me.CheckBox1.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.CheckBox1.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox1.Location = New System.Drawing.Point(195, 4)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(128, 27)
-        Me.CheckBox1.TabIndex = 0
-        Me.CheckBox1.Text = "DOSAGEM"
-        Me.CheckBox1.UseVisualStyleBackColor = True
-        '
-        'CheckBox2
-        '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox2.Location = New System.Drawing.Point(329, 4)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(131, 27)
-        Me.CheckBox2.TabIndex = 0
-        Me.CheckBox2.Text = "RECEPÇÃO"
-        Me.CheckBox2.UseVisualStyleBackColor = True
-        '
-        'CheckBox3
-        '
-        Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox3.Location = New System.Drawing.Point(466, 4)
-        Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(103, 27)
-        Me.CheckBox3.TabIndex = 0
-        Me.CheckBox3.Text = "FARELO"
-        Me.CheckBox3.UseVisualStyleBackColor = True
-        '
-        'CheckBox4
-        '
-        Me.CheckBox4.AutoSize = True
-        Me.CheckBox4.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox4.Location = New System.Drawing.Point(575, 4)
-        Me.CheckBox4.Name = "CheckBox4"
-        Me.CheckBox4.Size = New System.Drawing.Size(141, 27)
-        Me.CheckBox4.TabIndex = 0
-        Me.CheckBox4.Text = "EXPEDIÇÃO"
-        Me.CheckBox4.UseVisualStyleBackColor = True
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(11, 6)
+        Me.Label1.Location = New System.Drawing.Point(42, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(166, 23)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Silos das Áreas:"
         '
+        'chkExpedicao
+        '
+        Me.chkExpedicao.AutoSize = True
+        Me.chkExpedicao.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkExpedicao.Location = New System.Drawing.Point(606, 7)
+        Me.chkExpedicao.Name = "chkExpedicao"
+        Me.chkExpedicao.Size = New System.Drawing.Size(141, 27)
+        Me.chkExpedicao.TabIndex = 0
+        Me.chkExpedicao.Text = "EXPEDIÇÃO"
+        Me.chkExpedicao.UseVisualStyleBackColor = True
+        '
+        'btnCarregarAssociacoes
+        '
+        Me.btnCarregarAssociacoes.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnCarregarAssociacoes.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCarregarAssociacoes.Location = New System.Drawing.Point(772, 3)
+        Me.btnCarregarAssociacoes.Name = "btnCarregarAssociacoes"
+        Me.btnCarregarAssociacoes.Size = New System.Drawing.Size(107, 36)
+        Me.btnCarregarAssociacoes.TabIndex = 33
+        Me.btnCarregarAssociacoes.Text = "Atualizar"
+        Me.btnCarregarAssociacoes.UseVisualStyleBackColor = True
+        '
+        'chkFarelo
+        '
+        Me.chkFarelo.AutoSize = True
+        Me.chkFarelo.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkFarelo.Location = New System.Drawing.Point(497, 7)
+        Me.chkFarelo.Name = "chkFarelo"
+        Me.chkFarelo.Size = New System.Drawing.Size(103, 27)
+        Me.chkFarelo.TabIndex = 0
+        Me.chkFarelo.Text = "FARELO"
+        Me.chkFarelo.UseVisualStyleBackColor = True
+        '
+        'chkRecepcao
+        '
+        Me.chkRecepcao.AutoSize = True
+        Me.chkRecepcao.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkRecepcao.Location = New System.Drawing.Point(360, 7)
+        Me.chkRecepcao.Name = "chkRecepcao"
+        Me.chkRecepcao.Size = New System.Drawing.Size(131, 27)
+        Me.chkRecepcao.TabIndex = 0
+        Me.chkRecepcao.Text = "RECEPÇÃO"
+        Me.chkRecepcao.UseVisualStyleBackColor = True
+        '
+        'chkDosagem
+        '
+        Me.chkDosagem.AutoSize = True
+        Me.chkDosagem.Checked = True
+        Me.chkDosagem.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chkDosagem.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkDosagem.Location = New System.Drawing.Point(226, 7)
+        Me.chkDosagem.Name = "chkDosagem"
+        Me.chkDosagem.Size = New System.Drawing.Size(128, 27)
+        Me.chkDosagem.TabIndex = 0
+        Me.chkDosagem.Text = "DOSAGEM"
+        Me.chkDosagem.UseVisualStyleBackColor = True
+        '
         'formPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
-        Me.ClientSize = New System.Drawing.Size(1603, 778)
+        Me.ClientSize = New System.Drawing.Size(1615, 747)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.btnAtualizar)
         Me.Controls.Add(Me.btnAtualizaTAGS)
@@ -390,7 +403,7 @@ Partial Class formPrincipal
         Me.Controls.Add(Me.btnFechar)
         Me.Controls.Add(Me.btnDesassociar)
         Me.Controls.Add(Me.btnAssociar)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.MaximizeBox = True
         Me.MinimizeBox = True
@@ -440,8 +453,9 @@ Partial Class formPrincipal
     Friend WithEvents Lote As DataGridViewTextBoxColumn
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
-    Friend WithEvents CheckBox4 As CheckBox
-    Friend WithEvents CheckBox3 As CheckBox
-    Friend WithEvents CheckBox2 As CheckBox
-    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents chkExpedicao As CheckBox
+    Friend WithEvents chkFarelo As CheckBox
+    Friend WithEvents chkRecepcao As CheckBox
+    Friend WithEvents chkDosagem As CheckBox
+    Friend WithEvents btnCarregarAssociacoes As Button
 End Class

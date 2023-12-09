@@ -240,7 +240,7 @@ Public Class ClasseRotinasDiversas
 
         Try
 
-            stringConexao = My.Settings.AGRONOR_ConnectionString
+            stringConexao = My.Settings.BANCO_DE_DADOS
 
             strComandoSQL = "SELECT  " & parCampo
             strComandoSQL += " FROM  " & parNomeTabela
@@ -290,7 +290,7 @@ Public Class ClasseRotinasDiversas
         blnRetorno = True
         strNomeCampo = ""
 
-        stringConexao = My.Settings.AGRONOR_ConnectionString
+        stringConexao = My.Settings.BANCO_DE_DADOS
 
         BancoDados = New ClasseBancoDados(stringConexao)
 

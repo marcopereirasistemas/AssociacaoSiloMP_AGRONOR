@@ -54,38 +54,14 @@ Namespace My
             End Get
         End Property
         
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("1")>  _
-        Public Property VERIFICA_SUPERVISORIO_ATIVO() As String
-            Get
-                Return CType(Me("VERIFICA_SUPERVISORIO_ATIVO"),String)
-            End Get
-            Set
-                Me("VERIFICA_SUPERVISORIO_ATIVO") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("AGRONOR")>  _
-        Public Property UNIDADE_DESCRICAO() As String
-            Get
-                Return CType(Me("UNIDADE_DESCRICAO"),String)
-            End Get
-            Set
-                Me("UNIDADE_DESCRICAO") = value
-            End Set
-        End Property
-        
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
          Global.System.Configuration.DefaultSettingValueAttribute("Data Source=.\SQL2014;Initial Catalog=AGRONOR;User ID=sa;Password=Agronor@123;Mul"& _ 
             "tipleActiveResultSets=TRUE")>  _
-        Public ReadOnly Property AGRONOR_ConnectionString() As String
+        Public ReadOnly Property BANCO_DE_DADOS() As String
             Get
-                Return CType(Me("AGRONOR_ConnectionString"),String)
+                Return CType(Me("BANCO_DE_DADOS"),String)
             End Get
         End Property
         
@@ -98,18 +74,6 @@ Namespace My
             End Get
             Set
                 Me("IP_PLC") = value
-            End Set
-        End Property
-
-        <Global.System.Configuration.UserScopedSettingAttribute(),
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),
-         Global.System.Configuration.DefaultSettingValueAttribute("192.168.0.122,0,1")>
-        Public Property IP_PLC_TESTE() As String
-            Get
-                Return CType(Me("IP_PLC_TESTE"), String)
-            End Get
-            Set
-                Me("IP_PLC_TESTE") = Value
             End Set
         End Property
     End Class

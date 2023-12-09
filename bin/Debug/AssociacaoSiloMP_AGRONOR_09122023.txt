@@ -1,21 +1,13 @@
-10:54:32  Associação Iniciada.
-11:10:23  Associação Iniciada.
-11:12:43  Associação Iniciada.
-11:27:47  Associação Iniciada.
-11:35:53  Associação Iniciada.
-11:37:49  Associação Iniciada.
-11:38:41  Associação Iniciada.
-11:39:16  Associação Iniciada.
-11:46:00  Associação Iniciada.
-11:46:46  Associação Iniciada.
-11:51:37  Associação Iniciada.
-11:52:30  Associação Iniciada.
-11:57:19  Associação Iniciada.
-11:58:01  Associação Iniciada.
-11:59:09  Associação Iniciada.
-11:59:38  Associação Iniciada.
-11:59:48  Associação Iniciada.
-12:00:25  Associação Iniciada.
-12:00:34  Associação Iniciada.
-12:01:40  Associação Iniciada.
-12:02:24  Associação Iniciada.
+15:17:22  Associação Iniciada.
+15:17:45  Materia-prima: 52 - Associada ao Silo: 28
+15:17:50  Materia-prima: 52 - Associada ao Silo: 30
+15:49:16  Associação Iniciada.
+16:48:13  Associação Iniciada.
+16:48:44  Associação Iniciada.
+16:53:49  Associação Iniciada.
+17:08:00  Associação Iniciada.
+17:13:15  Associação Iniciada.
+17:14:09  Associação Iniciada.
+17:14:21  Associação Iniciada.
+17:14:52  Associação Iniciada.
+17:16:01  Associação Iniciada.

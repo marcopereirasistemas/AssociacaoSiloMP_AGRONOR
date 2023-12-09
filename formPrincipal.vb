@@ -600,29 +600,12 @@ Public Class formPrincipal
         Dim TextoMensagem As String = "ATENÇÃO:" & vbCrLf & vbCrLf &
                                         "Atualizar o supervisório com as descrições" & vbCrLf &
                                         "das matérias-primas associadas aos Silos ???"
-        Dim ini As String
-        Dim fin As String
-        Dim temp As String
 
         'If MsgBox(TextoMensagem, MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirmação") = vbYes Then
-
         '    AtualizaAssociacoesSupervisorio()
-
         '    If Rotinas.ArquivoExistePastaAplicacao("TESTE.TXT") Then
-
-        '        ini = $"Inicio: {horaInicial}"
-        '        fin = $"Fim...: {horaFinal}"
-        '        temp = $"{DateDiff(DateInterval.Second, horaInicial, horaFinal)} segundos"
-
-        '        MsgBox($"Descricões atualizadas: " & vbCrLf & vbCrLf &
-        '               ini & vbCrLf &
-        '               fin & vbCrLf & vbCrLf &
-        '               temp, MessageBoxButtons.OK + MessageBoxIcon.Information, "Aviso")
-
         '    End If
-
         'End If
-
         Close()
 
     End Sub
@@ -631,23 +614,19 @@ Public Class formPrincipal
 
         Me.Text = " Associção Silo X Matéria-Prima" & Versao
 
-        CarregaAssociacoes()
-
         Rotinas.EscreverEmLog("Associação Iniciada.", ClasseRotinasDiversas.Tipo.Geral)
 
-        'Me.Width = 1598
-        'Me.Height = 892
-
         btnAtualizaTAGS.Visible = False
-        If HabilitarTestesLOG() Then
-            'DataGridView1.Height = DataGridView1.Height
-            btnAtualizaTAGS.Visible = True
 
+        If HabilitarTestesLOG() Then
+            btnAtualizaTAGS.Visible = True
         End If
 
-        StartPosition = FormStartPosition.CenterParent
+        chkDosagem.Checked = True
 
-        'WindowState = FormWindowState.Maximized
+        CarregaAssociacoes()
+
+        StartPosition = FormStartPosition.CenterParent
 
     End Sub
 
@@ -910,13 +889,11 @@ Public Class formPrincipal
         'Else
         sqlAssociacoes += "	    , cs.descricao as SiloDescricao "
         'End If
-
         If HabilitarTestesLOG() Then
             sqlAssociacoes += "     , Ltrim(str(cb.Numero)) + ' - ' + cb.Descricao as BalancaDescricao  "
         Else
             sqlAssociacoes += "     , cb.Descricao as BalancaDescricao  "
         End If
-
         sqlAssociacoes += "	    , asm.CodigoMateriaPrima        "
         sqlAssociacoes += "	    , asm.CodigoMateriaPrima + ' - ' + cmp.Descricao as MateriaPrima "
         sqlAssociacoes += "	    , cmp.Lote "
@@ -924,7 +901,30 @@ Public Class formPrincipal
         sqlAssociacoes += "	LEFT JOIN AssociacaoSiloMP	    asm ON cs.id = asm.SiloID "
         sqlAssociacoes += "	LEFT JOIN CadastroMateriaPrima	cmp ON asm.CodigoMateriaPrima = cmp.CodigoMateriaPrima "
         sqlAssociacoes += " LEFT JOIN CadastroBalancas		cb	ON cs.BalancaID = cb.ID "
-        'sqlAssociacoes += " WHERE CS.dosagem=1"
+
+        If chkDosagem.Checked Or chkExpedicao.Checked Or chkFarelo.Checked Or chkRecepcao.Checked Then
+            sqlAssociacoes += " WHERE "
+        End If
+        If chkDosagem.Checked Then
+            sqlAssociacoes += " cs.dosagem = 1 OR "
+        End If
+
+        If chkExpedicao.Checked Then
+            sqlAssociacoes += " cs.Expedicao = 1 OR "
+        End If
+
+        If chkRecepcao.Checked Then
+            sqlAssociacoes += " cs.Recepcao = 1 OR "
+        End If
+
+        If chkFarelo.Checked Then
+            sqlAssociacoes += " cs.Farelo = 1 OR "
+        End If
+
+        If sqlAssociacoes.Substring(sqlAssociacoes.Length - 4) = " OR " Then
+            sqlAssociacoes = sqlAssociacoes.Substring(0, sqlAssociacoes.Length - 4)
+        End If
+
         sqlAssociacoes += " ORDER BY CS.BalancaID, CS.Numero"
 
         DataGridView1.RowTemplate.Height = 40
@@ -1508,7 +1508,7 @@ Public Class formPrincipal
         _indiceGrupo += 1
         _linhaID = 1
         tagPartial_1 = "DB1103."
-        tagPartial_2 = "DWB2"
+        tagPartial_2 = "DBW2"
         NomeGrupoOPC = "RECEPCAO"
         partialNameAlias = "MG003.DESTINO"
         indiceInicialTag = 0
@@ -1597,7 +1597,7 @@ Public Class formPrincipal
         _indiceGrupo += 1
         _linhaID = 1
         tagPartial_1 = "DB1104."
-        tagPartial_2 = "DWB0"
+        tagPartial_2 = "DBW0"
         NomeGrupoOPC = "FARELO"
         partialNameAlias = "FARELO.ORIGEM"
         indiceInicialTag = 0
@@ -1608,7 +1608,7 @@ Public Class formPrincipal
         _indiceGrupo += 1
         _linhaID = 1
         tagPartial_1 = "DB1104."
-        tagPartial_2 = "DWB2"
+        tagPartial_2 = "DBW2"
         NomeGrupoOPC = "FARELO"
         partialNameAlias = "FARELO.DESTINO"
         indiceInicialTag = 0
@@ -1693,7 +1693,7 @@ Public Class formPrincipal
         _indiceGrupo += 1
         _linhaID = 1
         tagPartial_1 = "DB1105."
-        tagPartial_2 = "DWB0"
+        tagPartial_2 = "DBW0"
         NomeGrupoOPC = "EXPEDICAO"
         partialNameAlias = "EXPEDICAO.ORIGEM"
         indiceInicialTag = 0
@@ -1704,7 +1704,7 @@ Public Class formPrincipal
         _indiceGrupo += 1
         _linhaID = 1
         tagPartial_1 = "DB1105."
-        tagPartial_2 = "DWB2"
+        tagPartial_2 = "DBW2"
         NomeGrupoOPC = "EXPEDICAO"
         partialNameAlias = "EXPEDICAO.DESTINO"
         indiceInicialTag = 0
@@ -2044,6 +2044,12 @@ Public Class formPrincipal
     End Sub
 
     Private Sub btnAtualizar_Click(sender As Object, e As EventArgs) Handles btnAtualizar.Click
+
+        CarregaAssociacoes()
+
+    End Sub
+
+    Private Sub btnCarregarAssociacoes_Click(sender As Object, e As EventArgs) Handles btnCarregarAssociacoes.Click
 
         CarregaAssociacoes()
 

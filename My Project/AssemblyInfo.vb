@@ -11,8 +11,8 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyTitle("AssociacaoSiloMP")> 
 <Assembly: AssemblyDescription("")> 
 <Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("AssociacaoSiloMP")> 
-<Assembly: AssemblyCopyright("Copyright ©  2020")> 
+<Assembly: AssemblyProduct("AssociacaoSiloMP")>
+<Assembly: AssemblyCopyright("Copyright ©  2023")>
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)>

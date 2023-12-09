@@ -124,3 +124,4 @@ C:\TN\FONTES\AGRONOR\AssociacaoSiloMP_AGRONOR\obj\x86\Debug\AssociacaoSiloMP.vbp
 C:\TN\FONTES\AGRONOR\AssociacaoSiloMP_AGRONOR\obj\x86\Debug\AssociacaoSiloMP_AGRONOR.exe
 C:\TN\FONTES\AGRONOR\AssociacaoSiloMP_AGRONOR\obj\x86\Debug\AssociacaoSiloMP_AGRONOR.xml
 C:\TN\FONTES\AGRONOR\AssociacaoSiloMP_AGRONOR\obj\x86\Debug\AssociacaoSiloMP_AGRONOR.pdb
+C:\TN\FONTES\AGRONOR\AssociacaoSiloMP_AGRONOR\obj\x86\Debug\AssociacaoSiloMP.vbproj.AssemblyReference.cache
